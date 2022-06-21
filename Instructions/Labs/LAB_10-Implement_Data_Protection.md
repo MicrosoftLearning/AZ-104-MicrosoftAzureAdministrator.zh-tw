@@ -2,12 +2,12 @@
 lab:
   title: 10 - 實作資料保護
   module: Module 10 - Data Protection
-ms.openlocfilehash: 28884df63a3efefa1d426a6fbec194e113cb203b
-ms.sourcegitcommit: 0d47b9c4ded01643654314d8e615045c4e8692bb
+ms.openlocfilehash: f4e79a18ee68068147de54a2bca65e0e879f0419
+ms.sourcegitcommit: e8161696e61bdf61f6fac5641cdf6d5ba65f4739
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "145198091"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "146066369"
 ---
 # <a name="lab-10---backup-virtual-machines"></a>實驗室 10 – 備份虛擬機器
 # <a name="student-lab-manual"></a>學生實驗室手冊
@@ -370,6 +370,8 @@ ms.locfileid: "145198091"
 1. 在 [備份項目 (Azure 備份代理程式)] 刀鋒視窗中，按一下代表 **az104-10-vm1** 備份的項目。
 
 1. 在 [C:\\ on az104-10-vm1.] 刀鋒視窗上，選取 [az104-10-vm1.] 的 [檢視詳細資料]。 .
+
+1. 在 [詳細資料] 刀鋒視窗上，按一下 [az104-10-vm1]。
 
 1. 在 **az104-10-vm1.** [受保護的伺服器] 刀鋒視窗，按一下 [刪除]。
 

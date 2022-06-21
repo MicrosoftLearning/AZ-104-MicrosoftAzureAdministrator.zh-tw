@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3a6d97b55de3c7521ccc4df57f952992a47848bf
-ms.sourcegitcommit: 7bee317d45512510f9d6eb9b05c4ee6ef6c4ada0
+ms.openlocfilehash: a106aae9e7c3de7b5154ce5e889ee057a1b9dff3
+ms.sourcegitcommit: 69083589fed0a226499b3067222e444d3fe0bac8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "145198104"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "146458129"
 ---
 # <a name="az-104-microsoft-azure-administrator"></a>AZ-104：Microsoft Azure 系統管理員
 
@@ -44,7 +44,7 @@ ms.locfileid: "145198104"
 
 ## <a name="what-about-changes-to-the-student-handbook"></a>那對學生手冊的改動呢？
 
-- 此存放庫僅適用於課程實驗室的問題。 課程內容的批註應該張貼在 MCT Courseware 論壇上。 
+- 此存放庫僅適用於課程實驗室的問題。 您可以提交關於[課程內容](https://docs.microsoft.com/learn/certifications/courses/az-104t00)的意見反應或修正。 請使用每個內容頁面底部的「回報問題」連結。
 
 ## <a name="notes"></a>備註
 
