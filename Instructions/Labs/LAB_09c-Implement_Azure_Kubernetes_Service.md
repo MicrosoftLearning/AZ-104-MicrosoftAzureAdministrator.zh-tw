@@ -2,12 +2,12 @@
 lab:
   title: 09c - 實作 Azure Kubernetes Service
   module: Module 09 - Serverless Computing
-ms.openlocfilehash: 42e43fa916e61988df87b3188fba59ab7b57652e
-ms.sourcegitcommit: dd61587ee547d5efa09ad0a63c0b2af272ee1e55
+ms.openlocfilehash: 929e2dfa4aba9df613e8d5ac594d903ede2f9934
+ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "145198102"
+ms.lasthandoff: 06/26/2022
+ms.locfileid: "146587472"
 ---
 # <a name="lab-09c---implement-azure-kubernetes-service"></a>實驗 09c - 實作 Azure Kubernetes Service
 # <a name="student-lab-manual"></a>學員實驗手冊
@@ -41,7 +41,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
@@ -67,7 +67,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
     | 設定 | 值 |
     | ---- | ---- |
-    | 訂用帳戶 | 您在此實驗中使用的 Azure 訂用帳戶名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | 新資源群組 **az104-09c-rg1** 的名稱 |
     | Kubernetes 叢集名稱 | **az104-9c-aks1** |
     | 區域 | 您可以佈建 Kubernetes 叢集的區功能變數名稱 |
@@ -77,7 +77,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
     | 缩放方法 | **手動** |
     | 節點計數 | **1** |
 
-1. 按一下 下一步：**節點集區>** ，然後在 建立 Kubernetes 叢集 刀鋒視窗的 節點集區 索引標籤上，指定下列設定 (讓其他設定保留預設值)：
+1. 按一下 [下一步：**節點集區] >** ，然後在 [建立 Kubernetes 叢集] 刀鋒視窗的 [節點集區] 索引標籤上，指定下列設定 (將其他設定保留為預設值)：
 
     | 設定 | 值 |
     | ---- | ---- |
@@ -178,11 +178,6 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 1. 從 [Cloud Shell] 窗格中，執行下列命令，將 Pod 數目增加為 2 來調整部署：
 
     ```sh
-
-    RESOURCE_GROUP='az104-09c-rg1'
-
-    AKS_CLUSTER='az104-9c-aks1'
-
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
 
@@ -197,6 +192,10 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 1. 從 [Cloud Shell] 窗格中，執行下列命令，將節點數目增加到 2 來相應放大叢集：
 
     ```sh
+    RESOURCE_GROUP='az104-09c-rg1'
+
+    AKS_CLUSTER='az104-9c-aks1'
+
     az aks scale --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --node-count 2
     ```
 
