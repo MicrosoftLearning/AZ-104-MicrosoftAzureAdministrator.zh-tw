@@ -2,12 +2,12 @@
 lab:
   title: 07 - 管理 Azure 儲存體
   module: Module 07 - Azure Storage
-ms.openlocfilehash: 9703d6543f6b3cf7791352a4ee0ba84cda3b5934
-ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
+ms.openlocfilehash: 34b6dba73d87731df935f80a1b5909e44075e871
+ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "145198097"
+ms.lasthandoff: 06/26/2022
+ms.locfileid: "146587463"
 ---
 # <a name="lab-07---manage-azure-storage"></a>實驗室 07 - 管理 Azure 儲存體
 # <a name="student-lab-manual"></a>學生實驗手冊
@@ -102,7 +102,7 @@ ms.locfileid: "145198097"
 
     | 設定 | 值 |
     | --- | --- |
-    | 訂用帳戶 | 您在此實驗中使用的 Azure 訂用帳戶名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | **新** 資源群組 **az104-07-rg1** 的名稱 |
     | 儲存體帳戶名稱 | 長度介於 3 到 24 個字元之間，由字母和數字組成的任何全域唯一名稱 |
     | 區域 | 您可以在其中建立 Azure 儲存體帳戶的 Azure 區域名稱  |
@@ -111,7 +111,7 @@ ms.locfileid: "145198097"
 
 1. 按一下 下一步：**進階 >** ，在 建立儲存體帳戶 刀鋒視窗的 進階 索引標籤上，檢閱可用的選項，接受預設設定，並按一下 **下一步：網路 >** 。
 
-1. 在 [建立儲存體帳戶] 刀鋒視窗的 [網路]索引標籤上，檢閱可用的選項、接受預設選項 [公用端點 (所有網路)]，然後按 [下一步：資料保護>]。
+1. 在 [建立儲存體帳戶] 刀鋒視窗的 [網路] 索引標籤上，檢閱可用的選項，接受預設選項 [在所有網路啟用公用存取]，然後按一下 [下一步: 資料保護>]。
 
 1. 在 [建立儲存體帳戶] 刀鋒視窗的 [資料保護] 索引標籤上，檢閱可用的選項，接受預設值，按一下 [檢閱 + 建立]，等候驗證程式完成，然後按一下 [建立]。
 

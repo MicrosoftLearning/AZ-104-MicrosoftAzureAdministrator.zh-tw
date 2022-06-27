@@ -2,12 +2,12 @@
 lab:
   title: 02a - 管理訂閱與 RBAC
   module: Module 02 - Governance and Compliance
-ms.openlocfilehash: 8318d90573a04b60e4b1cfd79ed2daa621e8401f
-ms.sourcegitcommit: 8282cbcee5f7cd46bdc73d781c460d6a078049bb
+ms.openlocfilehash: 14b37fcd923ad1b45c83c3a6c41889db3869ed40
+ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "145198084"
+ms.lasthandoff: 06/26/2022
+ms.locfileid: "146587436"
 ---
 # <a name="lab-02a---manage-subscriptions-and-rbac"></a>實驗 02a - 管理訂用帳戶與 RBAC
 # <a name="student-lab-manual"></a>學員實驗手冊
@@ -205,7 +205,7 @@ ms.locfileid: "145198084"
    
 1. 選取 [重新整理] 以確認訂用帳戶已成功移至 [租用戶根管理群組]。
 
-1. 瀏覽回到 [管理群組] 刀鋒視窗，以滑鼠右鍵按一下 **az104-02-mg1** 管理群組右邊的 **省略號** 圖示，然後按一下 [刪除]。
+1. 瀏覽回 [管理群組] 刀鋒視窗，按一下 **az104-02-mg1** 管理群組右邊的 **省略號** 圖示，然後按一下 [刪除]。
 
 #### <a name="review"></a>檢閱
 

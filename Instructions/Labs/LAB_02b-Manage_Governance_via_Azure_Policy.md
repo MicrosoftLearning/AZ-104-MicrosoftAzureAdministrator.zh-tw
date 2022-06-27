@@ -2,12 +2,12 @@
 lab:
   title: 02b - 透過 Azure 原則管理治理
   module: Module 02 - Governance and Compliance
-ms.openlocfilehash: 4e61ed82921b3d069646b2de131d765fed23f3d2
-ms.sourcegitcommit: d3c9789a6f4761a9c69901b8aefdabb39769235c
+ms.openlocfilehash: fad481d30818aaea390ed1357c223f3686671383
+ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "145198108"
+ms.lasthandoff: 06/26/2022
+ms.locfileid: "146587427"
 ---
 # <a name="lab-02b---manage-governance-via-azure-policy"></a>實驗 02b - 透過 Azure 原則管理治理
 # <a name="student-lab-manual"></a>學生實驗手冊
@@ -149,7 +149,7 @@ ms.locfileid: "145198108"
 
 1. 在 [撰寫] 區段中，按一下 [指派]。 
 
-1. 在指派清單中，以滑鼠右鍵按一下代表 **需要具有 Infra 值的角色標籤** 原則指派列的省略號圖示，並使用 [刪除指派] 功能表項目來刪除指派。 
+1. 在指派清單中按一下代表 **需要具有 Infra 值的角色標籤** 原則指派列的省略號圖示，並使用 [刪除指派] 功能表項目來刪除指派。
 
 1. 按一下 [指派原則]，然後按一下省略號按鈕並選取下列值來指定 [範圍]：
 

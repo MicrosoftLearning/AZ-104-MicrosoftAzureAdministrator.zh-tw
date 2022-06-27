@@ -2,12 +2,12 @@
 lab:
   title: 08 - 管理虛擬機器
   module: Module 08 - Virtual Machines
-ms.openlocfilehash: ee57d0d4dad96e694ca1315b2e0986b57698c08b
-ms.sourcegitcommit: dc0edbf407335d48b9a98636f4119b335d7426e8
+ms.openlocfilehash: a710fbaf4ea888651012bad592d34667a190c68f
+ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "145198115"
+ms.lasthandoff: 06/26/2022
+ms.locfileid: "146587445"
 ---
 # <a name="lab-08---manage-virtual-machines"></a>實驗 08 – 管理虛擬機器
 # <a name="student-lab-manual"></a>學生實驗手冊
@@ -45,13 +45,13 @@ ms.locfileid: "145198115"
 
 1. 登入 [Azure 入口網站](http://portal.azure.com)。
 
-1. 在 Azure 入口網站中，搜尋並選取 [虛擬機器]，然後在 [虛擬機器] 刀鋒視窗中，按一下 [+ 建立]，按一下 [+ 虛擬機器]。
+1. 在 Azure 入口網站中，搜尋並選取 [虛擬機器]，然後在 [虛擬機器] 刀鋒視窗中，按一下 [+ 建立]，然後再按一下 [+ Azure 虛擬機器]。
 
-1. 在 [建立虛擬機器] 刀鋒視窗的 [基本] 索引標籤上，指定下列設定 (其他設定請保留預設值)：
+1. 在 [建立虛擬機器] 刀鋒視窗的 [基本] 索引標籤上，指定下列設定 (將其他設定保留為預設值)：
 
     | 設定 | 值 |
     | --- | --- |
-    | 訂用帳戶 | 您要在此實驗中使用的 Azure 訂閱名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | 新資源群組 **az104-08-rg01** 的名稱 |
     | 虛擬機器名稱 | **az104-08-vm0** |
     | 區域 | 選取其中一個支援可用性區域的區域，以及您可以在其中佈建 Azure 虛擬機器的區域 |
@@ -360,7 +360,7 @@ ms.locfileid: "145198115"
 
     | 設定 | 值 |
     | --- | --- |
-    | 訂用帳戶 | 您在此實驗中使用的 Azure 訂閱帳戶名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | 新資源群組 **az104-08-rg02** 的名稱 |
     | 虛擬機器擴展集名稱 | **az10408vmss0** |
     | 區域 | 選取其中一個支援可用性區域的區域，您可以在其中佈建不同於您稍早在此實驗室中用來部署虛擬機器的 Azure 虛擬機器 |
@@ -372,7 +372,7 @@ ms.locfileid: "145198115"
     | 密碼 | **提供安全的密碼**  |
     | 已經有 Windows Server 授權了嗎? | **未選取** |
 
-    >**注意**：如需支援將Windows虛擬機器部署至可用性區域的 Azure 區域清單，請參閱[什麼是 Azure 中的可用性區域？](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
+    >**注意**：如需支援將Windows虛擬機器部署至可用性區域的 Azure 區域清單，請參閱 [什麼是 Azure 中的可用性區域？](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 1. 在 [建立虛擬機器擴展集] 刀鋒視窗的 [磁碟] 索引標籤上，接受預設值，然後按 **[下一步：網路 >]** 。
 
