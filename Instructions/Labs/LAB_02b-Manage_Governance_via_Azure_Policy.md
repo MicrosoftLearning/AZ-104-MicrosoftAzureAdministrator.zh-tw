@@ -2,12 +2,12 @@
 lab:
   title: 02b - 透過 Azure 原則管理治理
   module: Module 02 - Governance and Compliance
-ms.openlocfilehash: fad481d30818aaea390ed1357c223f3686671383
-ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
+ms.openlocfilehash: 2bf92c914983a28dc2d3f85abed917a95e88c04f
+ms.sourcegitcommit: d49dae6990730896bd0ea09ba68592d23d4b135f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2022
-ms.locfileid: "146587427"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "146973672"
 ---
 # <a name="lab-02b---manage-governance-via-azure-policy"></a>實驗 02b - 透過 Azure 原則管理治理
 # <a name="student-lab-manual"></a>學生實驗手冊
@@ -179,7 +179,7 @@ ms.locfileid: "146587427"
     | 設定 | 值 |
     | --- | --- |
     | 建立補救工作 | 已啟用 |
-    | 要補救的原則 | **從資源群組繼承標籤 (若遺漏)** |
+    | 要補救的原則 | **若缺少標籤，則從訂用帳戶予以繼承** |
 
     >**注意**：此原則定義包含 **Modify** 效果。
 
