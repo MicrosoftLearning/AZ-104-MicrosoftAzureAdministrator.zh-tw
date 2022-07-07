@@ -2,12 +2,12 @@
 lab:
   title: 02a - 管理訂閱與 RBAC
   module: Module 02 - Governance and Compliance
-ms.openlocfilehash: 14b37fcd923ad1b45c83c3a6c41889db3869ed40
-ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
+ms.openlocfilehash: e8b6f60a421222db74d93715ed63860e3ca3c78d
+ms.sourcegitcommit: d49dae6990730896bd0ea09ba68592d23d4b135f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2022
-ms.locfileid: "146587436"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "146973681"
 ---
 # <a name="lab-02a---manage-subscriptions-and-rbac"></a>實驗 02a - 管理訂用帳戶與 RBAC
 # <a name="student-lab-manual"></a>學員實驗手冊
@@ -146,7 +146,7 @@ ms.locfileid: "146587436"
 
 1. 在 Azure 入口網站中，瀏覽回到 **az104-02-mg1** 管理群組，並顯示其 **詳細資料**。
 
-1. 按一下 [存取控制 (IAM)]，按一下 [+ 新增]，接著按一下 [新增角色指派]，然後將 **[支援要求參與者] (自訂)** 角色指派給新建立的使用者帳戶。
+1. 按一下 [存取控制 (IAM)]，按一下 [+ 新增]，接著按一下 [新增角色指派]，在 [成員] 下進行選取並輸入 **檢閱 + 指派**，然後將 [支援要求參與者] (自訂) 角色指派給新建立的使用者帳戶。
 
 1. 開啟 **InPrivate** 瀏覽器視窗並使用新建立的使用者帳戶登入 [Azure 入口網站](https://portal.azure.com)。 當系統提示您更新密碼時，請變更使用者的密碼。
 
@@ -206,6 +206,7 @@ ms.locfileid: "146587436"
 1. 選取 [重新整理] 以確認訂用帳戶已成功移至 [租用戶根管理群組]。
 
 1. 瀏覽回 [管理群組] 刀鋒視窗，按一下 **az104-02-mg1** 管理群組右邊的 **省略號** 圖示，然後按一下 [刪除]。
+  >**注意**：如果您無法刪除 **租用戶根管理群組**，則可能是因為 **Azure 訂閱** 位於資源群組之下。 您必須將 **租用戶根管理群組** 的 **Azure 訂閱** 移出，然後刪除群組。
 
 #### <a name="review"></a>檢閱
 

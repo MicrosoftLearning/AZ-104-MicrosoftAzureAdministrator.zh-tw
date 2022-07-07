@@ -2,12 +2,12 @@
 lab:
   title: 01 - 管理 Azure Active Directory 身分識別
   module: Module 01 - Identity
-ms.openlocfilehash: de59a0e8c7634ee756fc66301b90f73233a9cf8a
-ms.sourcegitcommit: d3c9789a6f4761a9c69901b8aefdabb39769235c
+ms.openlocfilehash: 589e423af0901c93ef685905e4a01a7246e3c791
+ms.sourcegitcommit: d49dae6990730896bd0ea09ba68592d23d4b135f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "145198112"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "146973690"
 ---
 # <a name="lab-01---manage-azure-active-directory-identities"></a>實驗 01 - 管理 Azure Active Directory 身分識別
 
@@ -15,7 +15,7 @@ ms.locfileid: "145198112"
 
 ## <a name="lab-scenario"></a>實驗案例
 
-為了允許 Contoso 使用者使用 Azure AD 進行驗證，您已獲派佈建使用者和群組帳戶的工作。 群組的成員資格應該根據使用者職稱自動更新。 您也必須使用測試使用者帳戶建立測試 Azure AD 租用戶，並將該帳戶有限的權限授與 Contoso Azure 訂用帳戶中的資源。
+為了允許 Contoso 使用者使用 Azure AD 進行驗證，您必須負責佈建使用者和群組帳戶。  群組的成員資格應該根據使用者職稱自動更新。  您也必須使用測試使用者帳戶建立測試 Azure AD 租用戶，並授與該帳戶針對 Contoso Azure 訂用帳戶中資源的有限權限。
 
 ## <a name="objectives"></a>目標
 
@@ -23,8 +23,8 @@ ms.locfileid: "145198112"
 
 + 工作 1：建立和設定 Azure AD 使用者
 + 工作 2：建立具有已指派和動態成員資格的 Azure AD 群組
-+ 工作 3：建立 Azure Active Directory (AD) 租用戶
-+ 工作 4：管理 Azure AD 客體使用者 
++ 工作 3：建立 Azure Active Directory (AD) 租用戶 (選擇性 - 實驗室環境問題)
++ 工作 4：管理 Azure AD 來賓使用者 (選擇性 - 實驗室環境問題)
 
 ## <a name="estimated-timing-30-minutes"></a>預估時間：30 分鐘
 
@@ -186,9 +186,11 @@ ms.locfileid: "145198112"
 
 1. 瀏覽回 [群組 - 所有群組] 刀鋒視窗，按一下代表 [IT 系統管理員] 群組的項目，然後會顯示其 [成員] 刀鋒視窗。 確認 **az104-01a-aaduser2** 出現在群組成員清單中。
 
-#### <a name="task-3-create-an-azure-active-directory-ad-tenant"></a>工作 3：建立 Azure Active Directory (AD) 租用戶
+#### <a name="task-3-create-an-azure-active-directory-ad-tenant-optional---lab-environment-issue"></a>工作 3：建立 Azure Active Directory (AD) 租用戶 (選擇性 - 實驗室環境問題)
 
-在此工作中，您將建立新的 Azure AD 租用戶。
+在此工作中，您必須建立新的 Azure AD 租用戶。
+
+   >**注意**：實驗室環境中的 Captcha 驗證有已知問題。 如果您遇到此問題，請跳過這項工作和下一個工作。 我們正在著手擬定解決辦法。
 
 1. 在 Azure 入口網站中，搜尋並選取 [Azure Active Directory]。
 
