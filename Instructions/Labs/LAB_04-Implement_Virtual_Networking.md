@@ -82,8 +82,8 @@ ms.locfileid: "145198120"
     | --- | --- |
     | 名稱 | **subnet1** |
     | 位址範圍 (CIDR 區塊) | **10.40.1.0/24** |
-    | 網路安全性群組 | **None** |
-    | 路由表 | **None** |
+    | 網路安全性群組 | **無** |
+    | 路由表 | **無** |
 
 1. 按一下 [儲存] 
 
@@ -222,11 +222,11 @@ ms.locfileid: "145198120"
     | --- | --- |
     | 來源 | **任何** |
     | 來源連接埠範圍 | * |
-    | Destination | **任何** |
+    | 目的地 | **任何** |
     | 服務 | **RDP** |
     | 動作 | **允許** |
     | 優先順序 | **300** |
-    | Name | **AllowRDPInBound** |
+    | 名稱 | **AllowRDPInBound** |
 
 1. 在 **az104-04-nsg01** 網路安全性群組刀鋒視窗的 [設定] 區段中，按一下 [網路介面]，然後按一下 [+ 關聯]。
 
@@ -356,11 +356,11 @@ ms.locfileid: "145198120"
 
 1. 按一下 [檔案] &gt; [新增] &gt; [專案] 
 
-1. 在 [DNS 區域] 刀鋒視窗上，記下 [名稱伺服器 1] 項目的名稱。
+1. 在 [DNS 區域] 刀鋒視窗上，記下 [Name server 1] 項目的名稱。
 
 1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，已在 **Cloud Shell** 開啟 **PowerShell** 工作階段。
 
-1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm0** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的 **名稱伺服器 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
+1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm0** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的 **Name server 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
 
    ```powershell
    nslookup az104-04-vm0.[domain name] [Name server 1]
@@ -368,7 +368,7 @@ ms.locfileid: "145198120"
 
 1. 確認命令的輸出包含 **az104-04-vm0** 的公用 IP 位址。
 
-1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm1** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的 **名稱伺服器 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
+1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm1** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的 **Name server 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
 
    ```powershell
    nslookup az104-04-vm1.[domain name] [Name server 1]
