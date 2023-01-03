@@ -1,19 +1,16 @@
 ---
 lab:
   title: 03b - 使用 ARM 範本管理 Azure 資源
-  module: Module 03 - Azure Administration
-ms.openlocfilehash: 602da542fdf20f6b1be637e792ec47daaa0de04b
-ms.sourcegitcommit: 8282cbcee5f7cd46bdc73d781c460d6a078049bb
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "145198079"
+  module: Administer Azure Resources
 ---
+
 # <a name="lab-03b---manage-azure-resources-by-using-arm-templates"></a>實驗 03b - 使用 ARM 範本管理 Azure 資源
 # <a name="student-lab-manual"></a>學生實驗室手冊
 
 ## <a name="lab-scenario"></a>實驗案例
 現在您已探索與佈建資源相關聯的基本 Azure 管理功能，並使用 Azure 入口網站根據資源群組加以組織，接著您需要使用 Azure Resource Manager 範本來執行對等的工作。
+
+**注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
 ## <a name="objectives"></a>目標
 
@@ -34,8 +31,6 @@ ms.locfileid: "145198079"
 ### <a name="exercise-1"></a>練習 1
 
 #### <a name="task-1-review-an-arm-template-for-deployment-of-an-azure-managed-disk"></a>工作 1：檢閱用於部署 Azure 受控磁碟的 ARM 範本
-
-在此工作中，您將使用 Azure Resource Manager 範本建立 Azure 磁碟資源。
 
 1. 登入 [**Azure 入口網站**](http://portal.azure.com)。
 
@@ -77,12 +72,6 @@ ms.locfileid: "145198079"
    "sourceResourceId": {
        "type": "String"
    },
-   "sourceUri": {
-       "type": "String"
-   },
-   "osType": {
-       "type": "String"
-   },
    ```
 
    ```json
@@ -92,13 +81,9 @@ ms.locfileid: "145198079"
    },      
    ```
 
-   ```json
-   "osType": "[parameters('osType')]",
-   ```
-
     >**注意**：這些參數不適用於目前的部署，因此需要移除。 在這當中，sourceResourceId、sourceUri、osType 和 hyperVGeneration 參數適用於從現有的 VHD 檔案建立 Azure 磁碟。
 
-1. **儲存** 變更。
+1. **儲存**變更。
 
 1. 返回 [自訂部署] 刀鋒視窗，然後按一下 [編輯參數]。  
 
@@ -109,7 +94,7 @@ ms.locfileid: "145198079"
     | 設定 | 值 |
     | --- |--- |
     | 訂用帳戶 | *您在此實驗室中使用的 Azure 訂閱名稱* |
-    | 資源群組 | **新** 資源群組 **az104-03b-rg1** 的名稱 |
+    | 資源群組 | **新**資源群組 **az104-03b-rg1** 的名稱 |
     | 區域 | 您在此實驗室中使用的訂用帳戶中，可用的任何 Azure 區域名稱 |
     | 磁碟名稱 | **az104-03b-disk1** |
     | 位置 | 您在上一個工作中所記錄的位置參數值 |

@@ -1,26 +1,23 @@
 ---
 lab:
   title: 10 - 實作資料保護
-  module: Module 10 - Data Protection
-ms.openlocfilehash: f4e79a18ee68068147de54a2bca65e0e879f0419
-ms.sourcegitcommit: e8161696e61bdf61f6fac5641cdf6d5ba65f4739
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "146066369"
+  module: Administer Data Protection
 ---
+
 # <a name="lab-10---backup-virtual-machines"></a>實驗室 10 – 備份虛擬機器
 # <a name="student-lab-manual"></a>學生實驗室手冊
 
-## <a name="lab-scenario"></a>實驗室案例
+## <a name="lab-scenario"></a>實驗案例
 
 您負責評估使用 Azure 復原服務來備份和還原裝載於 Azure 虛擬機器和內部部署電腦上的檔案。 此外，您想要找到保護復原服務保存庫中所儲存資料免於意外或惡意資料外洩的方法。
 
+**注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
+
 ## <a name="objectives"></a>目標
 
-在此實驗室中，您將會：
+在此實驗中，您將會：
 
-+ 工作 1：布建實驗室環境
++ 工作 1：佈建實驗環境
 + 工作 2：建立恢復服務保存庫
 + 工作 3：實作 Azure 虛擬機器層級備份
 + 工作 4：實作檔案和資料夾備份
@@ -28,13 +25,17 @@ ms.locfileid: "146066369"
 + 工作 6：使用 Azure 虛擬機器快照集來執行檔案復原 (選用)
 + 工作 7：檢閱 Azure 復原服務虛刪除功能 (選用)
 
-## <a name="estimated-timing-50-minutes"></a>預計時間：50 分鐘
+## <a name="estimated-timing-50-minutes"></a>預估時間：50 分鐘
+
+## <a name="architecture-diagram"></a>架構圖
+
+![image](../media/lab10.png)
 
 ## <a name="instructions"></a>指示
 
 ### <a name="exercise-1"></a>練習 1
 
-#### <a name="task-1-provision-the-lab-environment"></a>工作 1：佈建實驗室環境
+#### <a name="task-1-provision-the-lab-environment"></a>工作 1：佈建實驗環境
 
 在此工作中，您將部署兩部虛擬機器，用來測試不同的備份案例。
 
@@ -44,7 +45,7 @@ ms.locfileid: "146066369"
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
-    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現 **您未掛接任何儲存體** 訊息，請選取您在此實驗室中使用的訂用帳戶，並按一下 [建立儲存體]。
+    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
 
 1. 在 [Cloud Shell] 窗格的工具列中，按一下 [上傳/下載檔案] 圖示，在下拉式功能表中，按一下 [上傳]，並將檔案 **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** 和 **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** 上傳至 Cloud Shell 主目錄。
 
@@ -88,7 +89,7 @@ ms.locfileid: "146066369"
 
     | 設定 | 值 |
     | --- | --- |
-    | 訂用帳戶 | 您在此實驗室中使用的 Azure 訂閱名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | 新資源群組 **az104-10-rg1** 的名稱 |
     | 保存庫名稱 | **az104-10-rsv1** |
     | 區域 | 您在上一個工作中部署兩部虛擬機器的區域名稱 |
@@ -195,9 +196,9 @@ ms.locfileid: "146066369"
 
 1. 出現提示時，按一下 [執行] 以使用預設設定開始安裝 **MARSAgentInstaller.exe**。
 
-    >**注意**：在 **Microsoft Azure 復原服務代理程度設定精靈** 的 [Microsoft Update 選擇加入] 頁面上，選取 [我不要使用 Microsoft Update] 選項。
+    >**注意**：在 **Microsoft Azure 復原服務代理程度設定精靈**的 [Microsoft Update 選擇加入] 頁面上，選取 [我不要使用 Microsoft Update] 選項。
 
-1. 在 **Microsoft Azure 復原服務代理程式設定精靈** 的 [安裝] 頁面上，按一下 [繼續註冊]。 這會啟動 [註冊伺服器精靈]。
+1. 在 **Microsoft Azure 復原服務代理程式設定精靈**的 [安裝] 頁面上，按一下 [繼續註冊]。 這會啟動 [註冊伺服器精靈]。
 
 1. 切換至顯示 Azure 入口網站的網頁瀏覽器視窗，在 [準備基礎結構] 刀鋒視窗上，選取 [已下載或正在使用最新的復原伺服器代理程式] 核取方塊，然後按一下 [下載]。
 
@@ -215,7 +216,7 @@ ms.locfileid: "146066369"
 
 1. 在 [瀏覽資料夾] 對話方塊，選取 [文件] 資料夾，並按一下 [確定]。
 
-1. 按一下 [完成]，檢閱 **Microsoft Azure 備份** 警告，然後按一下 [是]，並等候註冊完成。
+1. 按一下 [完成]，檢閱 **Microsoft Azure 備份**警告，然後按一下 [是]，並等候註冊完成。
 
     >**注意**：在實際執行環境中，您應該將複雜密碼檔案儲存在所備份伺服器以外的安全位置。
 
@@ -237,7 +238,7 @@ ms.locfileid: "146066369"
 
 1. 在 [選擇初始備份類型] 頁面上，接受預設值，然後按 [下一步]。
 
-1. 在 [確認] 頁面上，按一下 [完成]。 備份排程建立後，按一下 [關閉]。
+1. 在 [確認]**** 頁面上，按一下 [完成]****。 備份排程建立後，按一下 [關閉]。
 
 1. 在 [Microsoft Azure 備份] 主控台的 [動作] 窗格中，按一下 [立即備份]。
 
@@ -445,17 +446,17 @@ ms.locfileid: "146066369"
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
->**注意**：如果無法立即移除實驗室資源，請不要擔心。 有時候資源具有相依性，需要經過較長的時間才能刪除。 這是監視資源使用量的常見系統管理員工作，因此只需定期檢閱入口網站中的資源，查看清除的運作情況便可。 
+>**注意**：如果無法立即移除實驗資源，請不要擔心。 有時候資源具有相依性，需要經過較長的時間才能刪除。 這是監視資源使用量的常見系統管理員工作，因此只需定期檢閱入口網站中的資源，查看清除的運作情況便可。 
 
 1. 在 Azure 入口網站中，在 [Cloud Shell] 窗格內開啟 [PowerShell] 工作階段。
 
-1. 執行下列命令，列出在本課程模組的任何實驗室中建立的所有資源群組：
+1. 執行下列命令，列出在本課程模組的任何實驗中建立的所有資源群組：
 
    ```powershell
    Get-AzResourceGroup -Name 'az104-10*'
    ```
 
-1. 執行下列命令，刪除您在本課程模組的任何實驗室中建立的所有資源群組：
+1. 執行下列命令，刪除您在本課程模組的任何實驗中建立的所有資源群組：
 
    ```powershell
    Get-AzResourceGroup -Name 'az104-10*' | Remove-AzResourceGroup -Force -AsJob
@@ -467,9 +468,9 @@ ms.locfileid: "146066369"
 
 #### <a name="review"></a>檢閱
 
-在此實驗室中，您已：
+在此實驗中，您已：
 
-+ 佈建實驗室環境
++ 佈建實驗環境
 + 建立復原服務保存庫
 + 實作 Azure 虛擬機器層級備份
 + 實作檔案和資料夾備份

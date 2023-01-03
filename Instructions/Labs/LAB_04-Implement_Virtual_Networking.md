@@ -1,14 +1,9 @@
 ---
 lab:
   title: 04 - 實作虛擬網路
-  module: Module 04 - Virtual Networking
-ms.openlocfilehash: 383f88f2dddb48d498efb3d868330e4bba15c92b
-ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "145198120"
+  module: Administer Virtual Networking
 ---
+
 # <a name="lab-04---implement-virtual-networking"></a>實驗 04 - 實作虛擬網路
 
 # <a name="student-lab-manual"></a>學生實驗手冊
@@ -16,6 +11,8 @@ ms.locfileid: "145198120"
 ## <a name="lab-scenario"></a>實驗案例
 
 您需要探索 Azure 虛擬網路功能。 首先，您規劃在 Azure 中建立將裝載數部 Azure 虛擬機器的虛擬網路。 由於您想要實作以網路為基礎的分割，因此需要會將分割部署到虛擬網路的不同子網路。 您也想要確保其私人和公用 IP 位址將不會隨著時間變更。 若要符合 Contoso 安全性需求，您必須保護可從網際網路存取的 Azure 虛擬機器公用端點。 最後，您必須在虛擬網路和網際網路內實作 Azure 虛擬機器的 DNS 名稱解析。
+
+**注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
 ## <a name="objectives"></a>目標
 
@@ -51,17 +48,13 @@ ms.locfileid: "145198120"
     | 設定 | 值 |
     | --- | --- |
     | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂閱名稱 |
-    | 資源群組 | **新** 資源群組 **az104-04-rg1** 的名稱 |
+    | 資源群組 | **新**資源群組 **az104-04-rg1** 的名稱 |
     | 名稱 | **az104-04-vnet1** |
     | 區域 | 您將在此實驗室中使用的訂用帳戶中，可用的任何 Azure 區域名稱 |
 
-1. 按一下 [下一步:IP 位址]，然後輸入下列值
+1. 按一下 [Next: IP Addresses] \(下一步：IP 位址\)，然後刪除現有的 **IPv4 位址空間**。 在 [IPv4 位址空間] 文字方塊中，鍵入 **10.40.0.0/20**。
 
-    | 設定 | 值 |
-    | --- | --- |
-    | IPv4 位址空間 | **10.40.0.0/20** |
-
-1. 按一下 [+ 新增子網路] 輸入下列值，然後按一下 [新增]
+1. 按一下 [+ Add subnet] \(+ 新增子網路\) 並輸入下列值，然後按一下 [新增]。
 
     | 設定 | 值 |
     | --- | --- |
@@ -82,8 +75,8 @@ ms.locfileid: "145198120"
     | --- | --- |
     | 名稱 | **subnet1** |
     | 位址範圍 (CIDR 區塊) | **10.40.1.0/24** |
-    | 網路安全性群組 | **無** |
-    | 路由表 | **無** |
+    | 網路安全性群組 | **None** |
+    | 路由表 | **None** |
 
 1. 按一下 [儲存] 
 
@@ -95,11 +88,11 @@ ms.locfileid: "145198120"
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
-    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現 **您未掛接任何儲存體** 訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
+    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
 
-1. 在 [Cloud Shell] 窗格的工具列中，按一下 [上傳/下載檔案] 圖示，在下拉式功能表中，按一下 [上傳]，並將檔案 **\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** 和 **\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** 上傳至 Cloud Shell 主目錄。
+1. 在 [Cloud Shell] 窗格的工具列中，按一下**上傳/下載檔案**圖示，並在下拉式清單中，按一下 [上傳]。 將 **\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** 與 **\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** 上傳至 Cloud Shell 主目錄。
 
-    >**注意**：您可能需要將每個檔案個別上傳。
+    >**注意**：您必須個別上傳這兩個檔案。 上傳之後，使用 **dir** 確保已成功上傳這兩個檔案。
 
 1. 編輯參數檔案，並變更密碼。 如果您需要在 Shell 中編輯檔案的協助，請向講師尋求協助。 最佳做法便是秘密 (例如密碼)，這應會在 Key Vault 中儲存時提供更佳的安全性。 
 
@@ -222,7 +215,7 @@ ms.locfileid: "145198120"
     | --- | --- |
     | 來源 | **任何** |
     | 來源連接埠範圍 | * |
-    | 目的地 | **任何** |
+    | Destination | **任何** |
     | 服務 | **RDP** |
     | 動作 | **允許** |
     | 優先順序 | **300** |
@@ -360,7 +353,7 @@ ms.locfileid: "145198120"
 
 1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，已在 **Cloud Shell** 開啟 **PowerShell** 工作階段。
 
-1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm0** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的 **Name server 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
+1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm0** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的**Name server 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
 
    ```powershell
    nslookup az104-04-vm0.[domain name] [Name server 1]
@@ -368,7 +361,7 @@ ms.locfileid: "145198120"
 
 1. 確認命令的輸出包含 **az104-04-vm0** 的公用 IP 位址。
 
-1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm1** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的 **Name server 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
+1. 從 [Cloud Shell] 窗格中，執行下列命令來測試新建立 DNS 區域中 **az104-04-vm1** DNS 記錄集的外部名稱解析 (將預留位置 `[Name server 1]` 取代為您稍早在此工作中記下的**Name server 1**，並將 `[domain name]` 預留位置取代為您稍早在此工作中建立的 DNS 網域名稱稱)：
 
    ```powershell
    nslookup az104-04-vm1.[domain name] [Name server 1]

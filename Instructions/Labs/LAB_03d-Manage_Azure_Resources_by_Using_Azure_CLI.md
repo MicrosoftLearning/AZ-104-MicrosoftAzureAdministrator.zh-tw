@@ -1,20 +1,17 @@
 ---
 lab:
   title: 03d - 使用 Azure CLI 管理 Azure 資源
-  module: Module 03 - Azure Administration
-ms.openlocfilehash: e673423e49d49629c72f1b28a234d82eb776190f
-ms.sourcegitcommit: c360d3abaa6e09814f051b2568340e80d0d0e953
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "145198092"
+  module: Administer Azure Resources
 ---
+
 # <a name="lab-03d---manage-azure-resources-by-using-azure-cli"></a>實驗室 03d - 使用 Azure CLI 管理 Azure 資源
 # <a name="student-lab-manual"></a>學生實驗手冊
 
 ## <a name="lab-scenario"></a>實驗案例
 
 現在，您已探索與佈建資源相關聯的基本 Azure 管理功能，並使用 Azure 入口網站、Azure Resource Manager 範本和 Azure PowerShell 根據資源群組加以組織，您必須使用 Azure CLI 來執行對等的工作。 為了避免安裝 Azure CLI，您將利用 Azure Cloud Shell 中提供的 Bash 環境。
+
+**注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%207)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
 ## <a name="objectives"></a>目標
 
@@ -25,6 +22,10 @@ ms.locfileid: "145198092"
 + 工作 3：使用 Azure CLI 設定受控磁碟
 
 ## <a name="estimated-timing-20-minutes"></a>預估時間：20 分鐘
+
+## <a name="architecture-diagram"></a>架構圖
+
+![image](../media/lab03d.png)
 
 ## <a name="instructions"></a>指示
 
@@ -38,7 +39,7 @@ ms.locfileid: "145198092"
 
 1. 如果系統提示您選取 **Bash** 或 **PowerShell**，請選取 **Bash**。 
 
-    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現 **您未掛接任何儲存體** 訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。 
+    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。 
 
 1. 如果出現系統提示，請按一下 [建立儲存體]，並等候 Azure Cloud Shell 窗格顯示。 
 
