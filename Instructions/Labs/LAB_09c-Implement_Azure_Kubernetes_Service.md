@@ -1,20 +1,17 @@
 ---
 lab:
   title: 09c - 實作 Azure Kubernetes Service
-  module: Module 09 - Serverless Computing
-ms.openlocfilehash: 929e2dfa4aba9df613e8d5ac594d903ede2f9934
-ms.sourcegitcommit: 6df80c7697689bcee3616cdd665da0a38cdce6cb
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2022
-ms.locfileid: "146587472"
+  module: Administer Serverless Computing
 ---
+
 # <a name="lab-09c---implement-azure-kubernetes-service"></a>實驗 09c - 實作 Azure Kubernetes Service
 # <a name="student-lab-manual"></a>學員實驗手冊
 
 ## <a name="lab-scenario"></a>實驗案例
 
 Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個體來執行。 為了判斷這些應用程式是否可以容器化工作負載的形式執行，您想要使用 Kubernetes 作為容器協調器進行評估。 為了進一步將管理負擔降到最低，您想要測試 Azure Kubernetes Service，包括其簡化的部署體驗和調整功能。
+
+**注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2015)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
 ## <a name="objectives"></a>目標
 
@@ -45,7 +42,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
-    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現 **您未掛接任何儲存體** 訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
+    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令來註冊 Microsoft.Kubernetes 和 Microsoft.KubernetesConfiguration 資源提供者。
 
@@ -69,10 +66,12 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
     | ---- | ---- |
     | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | 新資源群組 **az104-09c-rg1** 的名稱 |
+    | 叢集預設設定 | **開發/測試 ($)** |
     | Kubernetes 叢集名稱 | **az104-9c-aks1** |
     | 區域 | 您可以佈建 Kubernetes 叢集的區功能變數名稱 |
     | 可用性區域 | **無** (取消核取所有方塊) |
     | Kubernetes 版本 | 接受預設 |
+    | API 伺服器可用性 | 接受預設 |
     | 節點大小 | 接受預設 |
     | 缩放方法 | **手動** |
     | 節點計數 | **1** |
@@ -83,19 +82,19 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
     | ---- | ---- |
     | 啟用虛擬節點 | [已停用] (預設值) |
 
-1. 按一下 [下一步：**存取] >** ，然後在 [建立 Kubernetes 叢集] 刀鋒視窗的 [存取] 索引標籤上，指定下列設定 (讓其他設定保留預設值)：
+1. 按一下 [Next: Access >] \(下一步：存取 >\)，然後在 [Create Kubernetes cluster] \(建立 Kubernetes 叢集\) 刀鋒視窗的 [存取] 索引標籤上，將其他設定保留為預設值：
 
     | 設定 | 值 |
     | ---- | ---- |
-    | 驗證方法 | **系統指派的受控識別** (預設值 - 沒有變更) | 
-    | 角色型存取控制 (RBAC) | **啟用** |
+    | 資源身分識別 | **系統指派的受控識別** |
+    | 驗證方法 | **具有 Kubernetes RBAC 的本機帳戶** |
 
 1. 按一下 [下一步：**網路] >** ，然後在 [建立 Kubernetes 叢集] 刀鋒視窗的 [網路] 索引標籤上，指定下列設定 (讓其他設定保留預設值)：
 
     | 設定 | 值 |
     | ---- | ---- |
     | 網路組態 | **kubenet** |
-    | DNS 名稱首碼 | 任何有效的全域唯一 DNS 主機名稱 |
+    | DNS 名稱首碼 | 任何有效且全域唯一的 DNS 首碼|
 
 1. 按一下 [下一步：**整合 >** ]，在 [建立 Kubernetes 叢集] 刀鋒視窗的 [整合] 索引標籤上，將[容器監視] 設定為 [已停用]，按一下 [檢閱 + 建立]，確定通過驗證，然後按一下 [建立]。
 
@@ -167,7 +166,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
     kubectl get service
     ```
 
-1. 重新執行命令，直到 **nginx 部署** 項目在 **EXTERNAL-IP** 資料行中的值從 **\<pending\>** 變更為公用 IP 位址為止。 請記下 **nginx-deployment** 的 **EXTERNAL-IP** 資料行中的公用 IP 位址。
+1. 重新執行命令，直到 **nginx 部署**項目在 **EXTERNAL-IP** 資料行中的值從 **\<pending\>** 變更為公用 IP 位址為止。 請記下 **nginx-deployment** 的 **EXTERNAL-IP**資料行中的公用 IP 位址。
 
 1. 開啟瀏覽器視窗，並瀏覽至您在上一個步驟中取得的 IP 位址。 確認瀏覽器頁面會顯示 **Welcome to nginx！** 回應。
 

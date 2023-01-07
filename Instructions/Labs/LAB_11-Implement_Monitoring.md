@@ -1,20 +1,17 @@
 ---
 lab:
   title: 11 - 實作監視
-  module: Module 11 - Monitoring
-ms.openlocfilehash: 10c3fe049aaf037892a34299c21dfd8213ce40b2
-ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "145198078"
+  module: Administer Monitoring
 ---
+
 # <a name="lab-11---implement-monitoring"></a>實驗 11 - 實作監視
 # <a name="student-lab-manual"></a>學生實驗手冊
 
 ## <a name="lab-scenario"></a>實驗案例
 
 針對所提供 Azure 資源的效能和設定深入解析，您必須加以評估 Azure 功能，特別是著重於 Azure 虛擬機器。 為了達成此目的，您應要檢查 Azure 監視器的功能，包含 Log Analytics。
+
+**注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
 ## <a name="objectives"></a>目標
 
@@ -30,6 +27,10 @@ ms.locfileid: "145198078"
 
 ## <a name="estimated-timing-45-minutes"></a>預估時間：45 分鐘
 
+## <a name="architecture-diagram"></a>架構圖
+
+![image](../media/lab11.png)
+
 ## <a name="instructions"></a>指示
 
 ### <a name="exercise-1"></a>練習 1
@@ -40,11 +41,11 @@ ms.locfileid: "145198078"
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
-    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現 **您未掛接任何儲存體** 訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
+    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
 
 1. 在 [Cloud Shell] 窗格的工具列中，按一下 [上傳/下載檔案] 圖示，在下拉式功能表中，按一下 [上傳]，並將檔案 **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** 和 **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** 上傳至 Cloud Shell 主目錄。
 
@@ -52,7 +53,7 @@ ms.locfileid: "145198078"
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令來建立裝載虛擬機器的資源群組 (將 `[Azure_region]` 預留位置取代為您想要部署 Azure 虛擬機器的 Azure 區域名稱)：
 
-    >**注意**：請務必選擇其中一個區域，其區域必須是列為 [工作區對應文件](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)中參考的 **Log Analytics 工作區區域**
+    >**注意**：請務必選擇其中一個區域，其區域必須是列為[工作區對應文件](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)中參考的 **Log Analytics 工作區區域**
 
    ```powershell
    $location = '[Azure_region]'
@@ -96,7 +97,7 @@ ms.locfileid: "145198078"
 
     | 設定 | 值 |
     | --- | --- |
-    | 訂用帳戶 | 您在此實驗中使用的 Azure 訂用帳戶名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | 新資源群組 **az104-11-rg1** 的名稱 |
     | Log Analytics 工作區 | 任何唯一的名稱 |
     | 區域 | 您在上一項工作中部署虛擬機器的 Azure 區域名稱 |
@@ -112,7 +113,7 @@ ms.locfileid: "145198078"
     | 設定 | 值 |
     | --- | --- |
     | 自動化帳戶名稱 | 任何唯一的名稱 |
-    | 訂用帳戶 | 您在此實驗中使用的 Azure 訂用帳戶名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | **az104-11-rg1** |
     | 區域 | 依據[工作區對應文件](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)決定的 Azure 區域名稱 |
 
@@ -128,7 +129,7 @@ ms.locfileid: "145198078"
 
     >**注意**：等候對應的 Log Analytics 解決方案安裝完成。 這大約需要 3 分鐘。
 
-    >**注意**：這也會自動安裝 **變更追蹤** 解決方案。
+    >**注意**：這也會自動安裝**變更追蹤**解決方案。
 
 1. 在 [自動化帳戶] 刀鋒視窗的 [更新管理] 區段中，按一下 [更新管理]，然後按一下 [啟用]。
 
@@ -170,7 +171,7 @@ ms.locfileid: "145198078"
 
     >**注意**：根據預設，記錄收集包含應用程式記錄檔和系統記錄檔中的嚴重、錯誤和警告項目，以及安全性記錄檔中的稽核失敗項目。 您也可以在此處切換至 [自訂] 檢視，以取得更詳細的組態設定。
 
-1. 在 [az104-11-vm0] 刀鋒視窗的 [監視] 區段中，按一下 [記錄]，然後按一下 [啟用]。
+1. 在 [az104-11-vm0] 刀鋒視窗的 [監視] 區段中，按一下 [Log Analytics Agent] \(Log Analytics 代理程式\)，然後按一下 [啟用]。
 
 1. 在 [az104-11-vm0 - 記錄] 刀鋒視窗中，確定您在 [選擇 Log Analytics 工作區] 下拉式清單中已選取稍早在此實驗中建立的 Log Analytics 工作區，然後按一下 [啟用]。
 
@@ -223,12 +224,12 @@ ms.locfileid: "145198078"
 
     | 設定 | 值 |
     | --- | --- |
-    | 訂用帳戶 | 您在此實驗中使用的 Azure 訂用帳戶名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
     | 資源群組 | **az104-11-rg1** |
     | 動作群組名稱 | **az104-11-ag1** |
     | 顯示名稱 | **az104-11-ag1** |
 
-1. 在 [建立動作群組] 刀鋒視窗的 [通知] 索引標籤上，於 [通知類型] 下拉式清單中選取 [電子郵件/手機簡訊/推播/語音]。 在 [名稱] 文字方塊中，輸入 **管理員電子郵件**。 按一下 [編輯詳細資料] (鉛筆) 圖示。
+1. 在 [建立動作群組] 刀鋒視窗的 [通知] 索引標籤上，於 [通知類型] 下拉式清單中選取 [電子郵件/手機簡訊/推播/語音]。 在 [名稱] 文字方塊中，輸入**管理員電子郵件**。 按一下 [編輯詳細資料] (鉛筆) 圖示。
 
 1. 在 [電子郵件/簡訊訊息/推播/語音] 刀鋒視窗上，選取 [電子郵件] 核取方塊，在 [電子郵件] 文字方塊中輸入您的電子郵件地址 (將其他設定保留預設值)，按一下 [確定]，接著返回至 [建立動作群組] 刀鋒視窗的 [通知] 索引標籤上，選取 [下一步：動作 >]。
 

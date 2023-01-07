@@ -1,20 +1,17 @@
 ---
 lab:
   title: 03c - 使用 Azure PowerShell 管理 Azure 資源
-  module: Module 03 - Azure Administration
-ms.openlocfilehash: 4210a06af5b873e1031e2224239dd8738e97f23d
-ms.sourcegitcommit: a8c7d995806dcf8eaad35b204e87bde178f28443
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "145198077"
+  module: Administer Azure Resources
 ---
+
 # <a name="lab-03c---manage-azure-resources-by-using-azure-powershell"></a>實驗室 03c - 使用 Azure PowerShell 管理 Azure 資源
 # <a name="student-lab-manual"></a>學生實驗室手冊
 
 ## <a name="lab-scenario"></a>實驗案例
 
 現在，您已探索與佈建資源相關聯的基本 Azure 管理功能，並使用 Azure 入口網站、Azure Resource Manager 範本根據資源群組加以組織，您必須使用 Azure PowerShell 來執行對等的工作。 若要避免安裝 Azure PowerShell 模組，您將有效率的調控 Azure Cloud Shell 中提供的 PowerShell 環境。
+
+**注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
 ## <a name="objectives"></a>目標
 
@@ -44,7 +41,7 @@ ms.locfileid: "145198077"
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell] 。 
 
-    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現 [您未掛接任何儲存體] 訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體] 。 
+    >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。 
 
 1. 如果出現系統提示，請按一下 [建立儲存體] ，並等候 Azure Cloud Shell 窗格顯示。 
 

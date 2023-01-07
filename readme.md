@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: a106aae9e7c3de7b5154ce5e889ee057a1b9dff3
-ms.sourcegitcommit: 69083589fed0a226499b3067222e444d3fe0bac8
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "146458129"
----
 # <a name="az-104-microsoft-azure-administrator"></a>AZ-104：Microsoft Azure 系統管理員
 
 ## <a name="welcome"></a>歡迎使用
@@ -13,7 +5,8 @@ ms.locfileid: "146458129"
 此存放庫適用於 Microsoft 課程教學的講師。 如果您是在班級中，請向講師尋求協助。 
 
 - **[實驗室連結 (HTML 格式)](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)**
-- **您是 MCT 嗎？** 請參閱我們專為 MCT 準備的 [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/) (適用於 MCT 的 GitHub 使用者指南)
+- **您是 MCT 嗎？** 請參閱我們專為 MCT 準備的[適用於 MCT 的 GitHub 使用者指南](https://microsoftlearning.github.io/MCT-User-Guide/) (英文)
+- 若要以自學型格式預覽此課程，請參閱我們的 **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator)** (英文)。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。
 
 ## <a name="security-issue---february-2022"></a>安全性問題 - 2022 年 2 月
 
