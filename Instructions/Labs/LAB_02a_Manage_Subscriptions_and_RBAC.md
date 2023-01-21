@@ -147,7 +147,7 @@ lab:
 
     >**注意**：若看不見您的自訂角色，則建立之後最多可能需要 10 分鐘的時間才會顯示自訂角色。
 
-1. 選取 [角色]，然後按一下 [下一步]。 在 [成員] 索引標籤上，按一下 [+ Select members] \(+ 選取成員\)，然後**選取**您的使用者帳戶 az104-***********************.**********.onmicrosoft.com。 依序按一下 [下一步] 與 [Review and assign] \(檢閱及指派\)。
+1. 選取 [角色]，然後按一下 [下一步]。 在 [成員] 索引標籤上，按一下 [+ 選取成員]，然後**選取**使用者帳戶 az104-***********************.**********.onmicrosoft.com。 依序按一下 [下一步] 與 [Review and assign] \(檢閱及指派\)。
 
 1. 開啟 **InPrivate** 瀏覽器視窗並使用新建立的使用者帳戶登入 [Azure 入口網站](https://portal.azure.com)。 當系統提示您更新密碼時，請變更使用者的密碼。
 
@@ -159,7 +159,7 @@ lab:
 
 1. 在 [InPrivate] 瀏覽器視窗的 [Azure 入口網站] 中，搜尋並選取 [說明 + 支援]，然後按一下 [+ 建立支援要求]。 
 
-1. 在 [InPrivate]瀏覽器視窗中，於 [說明+支援 - 新增支援要求] 刀鋒視窗的 [問題解說/摘要] 索引標籤上，在 [摘要] 欄位中輸入 [服務和訂用帳戶限制]，然後選取 [服務和訂用帳戶限制 (配額)] 問題類型。 請注意，您在此實驗中使用的訂用帳戶會列在 [訂用帳戶] 下拉式清單中。
+1. 在 [InPrivate]瀏覽器視窗中，於 [說明+支援 - 新增支援要求] 刀鋒視窗之 [問題描述/摘要] 索引標籤的 [摘要] 欄位中輸入 [服務和訂閱限制]，然後選取 [服務和訂閱帳戶限制 (配額)] 問題類型。 請注意，您在此實驗中使用的訂用帳戶會列在 [訂用帳戶] 下拉式清單中。
 
     >**注意**：您在 [訂用帳戶] 下拉式清單中使用此實驗中的訂用帳戶，表示您使用的帳戶具有建立訂用帳戶特定支援要求所需的權限。
 
@@ -185,9 +185,9 @@ lab:
 
    ```powershell
    
-   $scope = (Get-AzRoleDefinition -Name 'Support Request Contributor (Custom)').AssignableScopes[0]
-
-   Remove-AzRoleAssignment -ObjectId '[object_ID]' -RoleDefinitionName 'Support Request Contributor (Custom)' -Scope $scope
+    $scope = (Get-AzRoleDefinition -Name 'Support Request Contributor (Custom)').AssignableScopes | Where-Object {$_ -like '*managementgroup*'}
+    
+    Remove-AzRoleAssignment -ObjectId '[object_ID]' -RoleDefinitionName 'Support Request Contributor (Custom)' -Scope $scope
    ```
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令以移除自訂角色定義：
