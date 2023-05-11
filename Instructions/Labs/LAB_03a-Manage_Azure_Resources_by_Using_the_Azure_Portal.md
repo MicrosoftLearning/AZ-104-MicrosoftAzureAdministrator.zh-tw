@@ -4,16 +4,16 @@ lab:
   module: Administer Azure Resources
 ---
 
-# <a name="lab-03a---manage-azure-resources-by-using-the-azure-portal"></a>實驗 03a - 使用 Azure 入口網站管理 Azure 資源
-# <a name="student-lab-manual"></a>學員實驗手冊
+# 實驗 03a - 使用 Azure 入口網站管理 Azure 資源
+# 學員實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 您必須探索與佈建資源相關聯的基本 Azure 管理功能，並根據資源群組加以組織，包括在資源群組之間移動資源。 您也想要探索保護磁碟資源免於遭到意外刪除的選項，同時仍允許修改其效能特性和大小。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%204)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，我們將：
 
@@ -21,17 +21,17 @@ lab:
 + 工作 2：在資源群組之間移動資源
 + 工作 3：實作和測試資源鎖定
 
-## <a name="estimated-timing-20-minutes"></a>預估時間：20 分鐘
+## 預估時間：20 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab03a.png)
 
-## <a name="instructions"></a>指示
+## 指示
 
-### <a name="exercise-1"></a>練習 1
+### 練習 1
 
-#### <a name="task-1-create-resource-groups-and-deploy-resources-to-resource-groups"></a>工作 1：建立資源群組，並將資源部署至資源群組
+#### 工作 1：建立資源群組，並將資源部署至資源群組
 
 在此工作中，您將使用 Azure 入口網站來建立資源群組，並在資源群組中建立磁碟。
 
@@ -56,7 +56,7 @@ lab:
 
     >**注意**：等候磁碟建立。 此作業所需的時間應該不到一分鐘。
 
-#### <a name="task-2-move-resources-between-resource-groups"></a>工作 2：在資源群組之間移動資源 
+#### 工作 2：在資源群組之間移動資源 
 
 在此工作中，我們會將您在上一個工作中建立的磁碟資源移至新的資源群組。 
 
@@ -72,7 +72,7 @@ lab:
 
     >**注意**：請勿等候移動完成，而是繼續進行下一個工作。 這大約需要 10 分鐘。 您可以藉由監視來源或目標資源群組的活動記錄項目，來判斷作業已完成。 完成下一項工作後，請重新造訪此步驟。
 
-#### <a name="task-3-implement-resource-locks"></a>工作 3：實作資源鎖定
+#### 工作 3：實作資源鎖定
 
 在此工作中，您會將資源鎖定套用至包含磁碟資源的 Azure 資源群組。
 
@@ -118,13 +118,13 @@ lab:
 
     >**注意**：這是預期情況，因為資源群組層級鎖定僅適用於刪除作業。 
 
-#### <a name="clean-up-resources"></a>清除資源
+#### 清除資源
 
    >**注意**：請勿刪除您在此實驗中部署的資源。 您將在本課程模組的下一個實驗室中使用這些資源。 只移除您在此實驗中建立的資源鎖定。
 
 1. 瀏覽至 **az104-03a-rg3** 資源群組刀鋒視窗，顯示其 [鎖定] 刀鋒視窗，然後按一下 [刪除] 鎖定項目右側的 [刪除] 連結，以移除鎖定 **az104-03a-delete-lock**。
 
-#### <a name="review"></a>檢閱
+#### 檢閱
 
 在此實驗中，您有：
 

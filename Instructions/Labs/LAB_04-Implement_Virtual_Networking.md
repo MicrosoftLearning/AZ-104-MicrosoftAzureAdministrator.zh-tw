@@ -4,17 +4,17 @@ lab:
   module: Administer Virtual Networking
 ---
 
-# <a name="lab-04---implement-virtual-networking"></a>實驗 04 - 實作虛擬網路
+# 實驗 04 - 實作虛擬網路
 
-# <a name="student-lab-manual"></a>學生實驗手冊
+# 學生實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 您需要探索 Azure 虛擬網路功能。 首先，您規劃在 Azure 中建立將裝載數部 Azure 虛擬機器的虛擬網路。 由於您想要實作以網路為基礎的分割，因此需要會將分割部署到虛擬網路的不同子網路。 您也想要確保其私人和公用 IP 位址將不會隨著時間變更。 若要符合 Contoso 安全性需求，您必須保護可從網際網路存取的 Azure 虛擬機器公用端點。 最後，您必須在虛擬網路和網際網路內實作 Azure 虛擬機器的 DNS 名稱解析。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -25,17 +25,17 @@ lab:
 + 工作 5：設定 Azure DNS 以進行內部名稱解析
 + 工作 6：設定 Azure DNS 以進行外部名稱解析
 
-## <a name="estimated-timing-40-minutes"></a>預估時間：40 分鐘
+## 預估時間：40 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab04.png)
 
-## <a name="instructions"></a>指示
+## 指示
 
-### <a name="exercise-1"></a>練習 1
+### 練習 1
 
-#### <a name="task-1-create-and-configure-a-virtual-network"></a>工作 1：建立和設定虛擬網路
+#### 工作 1：建立和設定虛擬網路
 
 在這項工作中，您將使用 Azure 入口網站建立具有多個子網路的虛擬網路
 
@@ -52,14 +52,15 @@ lab:
     | 名稱 | **az104-04-vnet1** |
     | 區域 | 您將在此實驗室中使用的訂用帳戶中，可用的任何 Azure 區域名稱 |
 
-1. 按一下 [Next: IP Addresses] \(下一步：IP 位址\)，然後刪除現有的 **IPv4 位址空間**。 在 [IPv4 位址空間] 文字方塊中，鍵入 **10.40.0.0/20**。
+1. 按 [下一步：IP 位址]。 **起始位址**為 **10.40.0.0**。 **位址空間大小**是 **/20**。 請務必按一下 [新增]。 
 
 1. 按一下 [+ Add subnet] \(+ 新增子網路\) 並輸入下列值，然後按一下 [新增]。
 
     | 設定 | 值 |
     | --- | --- |
     | 子網路名稱 | **subnet0** |
-    | 子網路位址範圍 | **10.40.0.0/24** |
+    | 起始位址 | **10.40.0.0/24** |
+    | 起始位址 | **/24 (256 個位址)** |
 
 1. 接受預設值，然後按一下 [檢閱及建立]。 隨即出現驗證，接著再按一下 [建立] 提交您的部署。
 
@@ -80,7 +81,7 @@ lab:
 
 1. 按一下 [儲存] 
 
-#### <a name="task-2-deploy-virtual-machines-into-the-virtual-network"></a>工作 2：將虛擬機器部署至虛擬網路之中
+#### 工作 2：將虛擬機器部署至虛擬網路之中
 
 在這項工作中，您會使用 ARM 範本將 Azure 虛擬機器部署到虛擬網路的不同子網路中
 
@@ -94,10 +95,9 @@ lab:
 
     >**注意**：您必須個別上傳這兩個檔案。 上傳之後，使用 **dir** 確保已成功上傳這兩個檔案。
 
-1. 編輯參數檔案，並變更密碼。 如果您需要在 Shell 中編輯檔案的協助，請向講師尋求協助。 最佳做法便是秘密 (例如密碼)，這應會在 Key Vault 中儲存時提供更佳的安全性。 
-
 1. 從 Cloud Shell 窗格中，執行下列命令以使用範本和參數檔案來部署兩部虛擬機器：
-
+    >**注意**：系統將會提示您提供管理員密碼。
+    
    ```powershell
    $rgName = 'az104-04-rg1'
 
@@ -106,7 +106,7 @@ lab:
       -TemplateFile $HOME/az104-04-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
-
+   
     >**注意**：這個部署 ARM 範本的方法會使用 Azure PowerShell。 您可以執行相等的 Azure CLI 命令 **az deployment create** 來執行相同的工作，如需詳細資訊，請參閱[使用 Resource Manager 範本和 Azure CLI 部署資源](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli)。
 
     >**注意**：等候部署完成，再繼續進行下一個工作。 這應該大約需要 2 分鐘的時間。
@@ -120,7 +120,7 @@ lab:
 
 1. 關閉 [Cloud Shell] 窗格。
 
-#### <a name="task-3-configure-private-and-public-ip-addresses-of-azure-vms"></a>工作 3：為 Azure VM 設定私人和公用 IP 位址
+#### 工作 3：為 Azure VM 設定私人和公用 IP 位址
 
 在這項工作中，您將針對指派給 Azure 虛擬機器網路介面的公用和私人 IP 位址設定靜態指派。
 
@@ -174,7 +174,7 @@ lab:
 
     >**注意**：在此實驗室的最後一個工作中，您將需要這兩個 IP 位址。
 
-#### <a name="task-4-configure-network-security-groups"></a>工作 4：設定網路安全性群組
+#### 工作 4：設定網路安全性群組
 
 在此工作中，您將設定網路安全性群組，以允許對 Azure 虛擬機器進行限制的連線。
 
@@ -243,7 +243,7 @@ lab:
 
     >**注意**：請將遠端桌面工作階段保持開啟。 您將在下一個工作中需要它。
 
-#### <a name="task-5-configure-azure-dns-for-internal-name-resolution"></a>工作 5：設定 Azure DNS 以進行內部名稱解析
+#### 工作 5：設定 Azure DNS 以進行內部名稱解析
 
 在此工作中，您將使用 Azure 私人 DNS 區域在虛擬網路內設定 DNS 名稱解析。
 
@@ -295,7 +295,7 @@ lab:
 
 1. 確認命令的輸出包含 **az104-04-vm1** (**10.40.1.4**) 的私人 IP 位址。
 
-#### <a name="task-6-configure-azure-dns-for-external-name-resolution"></a>工作 6：設定 Azure DNS 以進行外部名稱解析
+#### 工作 6：設定 Azure DNS 以進行外部名稱解析
 
 在此工作中，您將使用 Azure 公用 DNS 區域來設定外部 DNS 名稱解析。
 
@@ -369,7 +369,7 @@ lab:
 
 1. 確認命令的輸出包含 **az104-04-vm1** 的公用 IP 位址。
 
-#### <a name="clean-up-resources"></a>清除資源
+#### 清除資源
 
  > **注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -391,7 +391,7 @@ lab:
 
     >**注意**：此命令以非同步方式執行 (由 --AsJob 參數決定)，所以您隨後能夠在相同 PowerShell 工作階段內立即執行另一個 PowerShell 命令，但需要經過幾分鐘後，才會實際移除資源群組。
 
-#### <a name="review"></a>檢閱
+#### 檢閱
 
 在此實驗中，您已：
 
