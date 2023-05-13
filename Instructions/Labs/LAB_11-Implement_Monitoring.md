@@ -4,16 +4,16 @@ lab:
   module: Administer Monitoring
 ---
 
-# <a name="lab-11---implement-monitoring"></a>實驗 11 - 實作監視
-# <a name="student-lab-manual"></a>學生實驗手冊
+# 實驗 11 - 實作監視
+# 學生實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 針對所提供 Azure 資源的效能和設定深入解析，您必須加以評估 Azure 功能，特別是著重於 Azure 虛擬機器。 為了達成此目的，您應要檢查 Azure 監視器的功能，包含 Log Analytics。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -25,31 +25,29 @@ lab:
 + 工作 6：檢閱 Azure 監視器功能
 + 工作 7：檢閱 Azure Log Analytics 功能
 
-## <a name="estimated-timing-45-minutes"></a>預估時間：45 分鐘
+## 預估時間：45 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab11.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-provision-the-lab-environment"></a>工作 1：佈建實驗室環境
+## 工作 1：佈建實驗室環境
 
 在此工作中，您將部署虛擬機器以用於測試監視案例。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
     >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
 
 1. 在 [Cloud Shell] 窗格的工具列中，按一下 [上傳/下載檔案] 圖示，在下拉式功能表中，按一下 [上傳]，並將檔案 **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** 和 **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** 上傳至 Cloud Shell 主目錄。
-
-1. 編輯您剛才上傳的參數檔案，並變更密碼。 如果您需要在 Shell 中編輯檔案的協助，請向講師尋求協助。 最佳做法便是秘密 (例如密碼)，這應會在 Key Vault 中儲存時提供更佳的安全性。 
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令來建立裝載虛擬機器的資源群組 (將 `[Azure_region]` 預留位置取代為您想要部署 Azure 虛擬機器的 Azure 區域名稱)：
 
@@ -65,6 +63,8 @@ lab:
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令以建立第一個虛擬網路，並使用您上傳的範本和參數檔案，將虛擬機器部署到其中：
 
+    >**注意**：系統將會提示您提供管理員密碼。
+    
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -75,7 +75,7 @@ lab:
 
     >**注意**：不須等待部署完成，請直接進行下一項工作。 此部署應需要大約 3 分鐘的時間。
 
-#### <a name="task-2-register-the-microsoftinsights-and-microsoftalertsmanagement-resource-providers"></a>工作 2：註冊 Microsoft.Insights 和 Microsoft.AlertsManagement 資源提供者。
+## 工作 2：註冊 Microsoft.Insights 和 Microsoft.AlertsManagement 資源提供者。
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令來註冊 Microsoft.Insights 和 Microsoft.AlertsManagement 資源提供者。
 
@@ -87,7 +87,7 @@ lab:
 
 1. 將 [Cloud Shell] 窗格最小化 (但不關閉)。
 
-#### <a name="task-3-create-and-configure-an-azure-log-analytics-workspace-and-azure-automation-based-solutions"></a>工作 3：建立和設定 Azure Log Analytics 工作區和 Azure 自動化的解決方案
+## 工作 3：建立和設定 Azure Log Analytics 工作區和 Azure 自動化的解決方案
 
 在此工作中，您將建立和設定 Azure Log Analytics 工作區和 Azure 自動化的解決方案
 
@@ -135,7 +135,7 @@ lab:
 
     >**注意**：等候安裝完成。 這大約需要 5 分鐘的時間。
 
-#### <a name="task-4-review-default-monitoring-settings-of-azure-virtual-machines"></a>工作 4：檢閱 Azure 虛擬機器的預設監視設定
+## 工作 4：檢閱 Azure 虛擬機器的預設監視設定
 
 在此工作中，您將檢閱 Azure 虛擬機器的預設監視設定
 
@@ -153,15 +153,15 @@ lab:
 
 1. 在 [計量] 下拉式清單中，選取 [百分比 CPU]，在 [彙總] 下拉式清單中，選取 [平均]，然後檢閱產生的圖表。
 
-#### <a name="task-5-configure-azure-virtual-machine-diagnostic-settings"></a>工作 5：設定 Azure 虛擬機器診斷設定
+## 工作 5：設定 Azure 虛擬機器診斷設定
 
 在此工作中，您將進行 Azure 虛擬機器診斷設定。
 
 1. 在 [az104-11-vm0] 刀鋒視窗的 [監視] 區段中，按一下 [診斷設定]。
 
-1. 在 [az104-11-vm0 \| 診斷設定] 刀鋒視窗的 [概觀] 索引標籤上，按一下 [啟用客體層級監視]。
+1. 在 [az104-11-vm0 \| 診斷設定] 刀鋒視窗的 [概觀] 索引標籤上，選取 [診斷儲存體帳戶]，然後按一下 [啟用客體層級監視]。
 
-    >**注意**：等候作業生效。 這大約需要 3 分鐘。
+    >**注意**：等候安裝診斷設定延伸模組。 這大約需要 3 分鐘。
 
 1. 切換至 [az104-11-vm0 \| 診斷設定] 刀鋒視窗的 [效能計數器] 索引標籤，並檢閱可用的計數器。
 
@@ -171,9 +171,9 @@ lab:
 
     >**注意**：根據預設，記錄收集包含應用程式記錄檔和系統記錄檔中的嚴重、錯誤和警告項目，以及安全性記錄檔中的稽核失敗項目。 您也可以在此處切換至 [自訂] 檢視，以取得更詳細的組態設定。
 
-1. 在 [az104-11-vm0] 刀鋒視窗的 [監視] 區段中，按一下 [Log Analytics Agent] \(Log Analytics 代理程式\)，然後按一下 [啟用]。
+1. 在 [az104-11-vm0] 刀鋒視窗的 [監視] 區段中，按一下 [記錄]，然後按一下 [啟用]。
 
-1. 在 [az104-11-vm0 - 記錄] 刀鋒視窗中，確定您在 [選擇 Log Analytics 工作區] 下拉式清單中已選取稍早在此實驗中建立的 Log Analytics 工作區，然後按一下 [啟用]。
+1. 在 az104-11-vm0 - Logs 刀鋒視窗上，確定已選取 Azure 監視器代理程式 (建議)，然後按一下 設定。  
 
     >**注意**：不須等候作業完成，請直接進行下一個步驟。 作業大約需要 5 分鐘。
 
@@ -191,7 +191,7 @@ lab:
 
 1. 在 [計量] 下拉式清單中，選取 [記憶體\\可用位元組]，在 [彙總] 下拉式清單中，選取 [最大]，然後檢閱產生的圖表。
 
-#### <a name="task-6-review-azure-monitor-functionality"></a>工作 6：檢閱 Azure 監視器功能
+## 工作 6：檢閱 Azure 監視器功能
 
 1. 在 Azure 入口網站中，搜尋並選取 [監視]，然後在 [監視 \| 概觀] 刀鋒視窗上，按一下 [計量]。
 
@@ -280,7 +280,7 @@ lab:
 
 1. 在 [所有警示] 刀鋒視窗上，檢閱產生的警示。
 
-#### <a name="task-7-review-azure-log-analytics-functionality"></a>工作 7：檢閱 Azure Log Analytics 功能
+## 工作 7：檢閱 Azure Log Analytics 功能
 
 1. 在 Azure 入口網站中，瀏覽回 [監視] 刀鋒視窗，按一下 [記錄]。
 
@@ -315,7 +315,7 @@ lab:
 
     >**注意**：您可能需要等候幾分鐘，更新資料才會可供使用。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -337,7 +337,7 @@ lab:
 
     >**注意**：此命令以非同步方式執行 (由 --AsJob 參數決定)，所以您隨後能夠在相同 PowerShell 工作階段內立即執行另一個 PowerShell 命令，但需要經過幾分鐘後，才會實際移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 
