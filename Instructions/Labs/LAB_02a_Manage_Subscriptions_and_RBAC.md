@@ -4,14 +4,14 @@ lab:
   module: Administer Governance and Compliance
 ---
 
-# <a name="lab-02a---manage-subscriptions-and-rbac"></a>實驗 02a - 管理訂用帳戶與 RBAC
-# <a name="student-lab-manual"></a>學員實驗手冊
+# 實驗 02a - 管理訂用帳戶與 RBAC
+# 學員實驗手冊
 
-## <a name="lab-requirements"></a>實驗需求
+## 實驗需求
 
 此實驗需要權限來建立 Azure Active Directory (Azure AD) 使用者、建立自訂 Azure 角色型存取控制 (RBAC) 角色，並將這些角色指派給 Azure AD 使用者。 並非所有實驗主控者都提供這項功能。 請要求講師提供此實驗的可用性。
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 為了改善 Contoso 中的 Azure 資源管理，您必須負責實作下列功能：
 
@@ -24,7 +24,7 @@ lab:
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -33,18 +33,18 @@ lab:
 + 工作 3：指派 RBAC 角色
 
 
-## <a name="estimated-timing-30-minutes"></a>預估時間：30 分鐘
+## 預估時間：30 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab02a.png)
 
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-implement-management-groups"></a>工作 1：實作管理群組
+## 工作 1：實作管理群組
 
 在此工作中，您將建立及設定管理群組。 
 
@@ -81,7 +81,7 @@ lab:
 
     >**注意**：在 [az104-02-mg1 \| 訂用帳戶] 刀鋒視窗上，將 Azure 訂用帳戶的識別碼複製到剪貼簿。 您將在下一個工作中需要它。
 
-#### <a name="task-2-create-custom-rbac-roles"></a>工作 2：建立自訂 RBAC 角色
+## 工作 2：建立自訂 RBAC 角色
 
 在此工作中，您將建立自訂 RBAC 角色的定義。
 
@@ -124,7 +124,7 @@ lab:
 
 1. 關閉 [Cloud Shell] 窗格。
 
-#### <a name="task-3-assign-rbac-roles"></a>工作 3：指派 RBAC 角色
+## 工作 3：指派 RBAC 角色
 
 在此工作中，您將建立 Azure Active Directory 使用者、將您在上一個工作中建立的 RBAC 角色指派給該使用者，並確認使用者可以執行 RBAC 角色定義中指定的工作。
 
@@ -167,7 +167,7 @@ lab:
 
 1. 請勿繼續建立支援要求。 請改為從 Azure 入口網站作為 az104-02-aaduser1 使用者登出，然後關閉 InPrivate 瀏覽器視窗。
 
-#### <a name="task-4-clean-up-resources"></a>工作 4：清理資源
+## 工作 4：清理資源
 
    >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用，不過，在此實驗中建立的資源不會產生額外費用。
 
@@ -209,7 +209,7 @@ lab:
 1. 瀏覽回 [管理群組] 刀鋒視窗，按一下 **az104-02-mg1** 管理群組右邊的**省略號**圖示，然後按一下 [刪除]。
   >**注意**：若您無法刪除**租用戶根管理群組**，則可能是因為 **Azure 訂閱**位於管理群組之下。 您必須將**租用戶根管理群組**的 **Azure 訂用**移出，然後刪除群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 
