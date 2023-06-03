@@ -4,17 +4,17 @@ lab:
   module: Administer Identity
 ---
 
-# <a name="lab-01---manage-azure-active-directory-identities"></a>實驗 01 - 管理 Azure Active Directory 身分識別
+# 實驗 01 - 管理 Azure Active Directory 身分識別
 
-# <a name="student-lab-manual"></a>學生實驗室手冊
+# 學生實驗室手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 為了允許 Contoso 使用者使用 Azure AD 進行驗證，您必須負責佈建使用者和群組帳戶。  群組的成員資格應該根據使用者職稱自動更新。  您也必須使用測試使用者帳戶建立測試 Azure AD 租用戶，並授與該帳戶針對 Contoso Azure 訂用帳戶中資源的有限權限。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -23,16 +23,16 @@ lab:
 + 工作 3：建立 Azure Active Directory (AD) 租用戶 (選擇性 - 實驗室環境問題)
 + 工作 4：管理 Azure AD 來賓使用者 (選擇性 - 實驗室環境問題)
 
-## <a name="estimated-timing-30-minutes"></a>預估時間：30 分鐘
+## 預估時間：30 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 ![image](../media/lab01.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-create-and-configure-azure-ad-users"></a>工作 1：建立和設定 Azure AD 使用者
+## 工作 1：建立和設定 Azure AD 使用者
 
 在此工作中，您將建立和設定 Azure AD 使用者。
 
@@ -46,7 +46,7 @@ lab:
 
 1. 在 [Azure Active Directory] 刀鋒視窗的 [管理] 區段中，按一下 [使用者]，然後按一下您的使用者帳戶以顯示其 **[設定檔]** 設定。 
 
-1. 按一下 [編輯]，在 [設定] 區段中，將 [使用位置] 設定為 [美國]，然後按一下 [儲存] 以套用變更。
+1. 按一下 [編輯屬性]，在 [設定] 索引標籤中，將 [使用量位置] 設定為 [美國]，然後按一下 [儲存] 以套用變更。
 
     >**注意**：這是必要操作，才能稍後在此實驗室中將 Azure AD Premium P2 授權指派給使用者帳戶。
 
@@ -100,7 +100,7 @@ lab:
 
 1. 請從 Azure 入口網站作為 az104-01a-aaduser1 使用者登出，然後關閉 InPrivate 瀏覽器視窗。
 
-#### <a name="task-2-create-azure-ad-groups-with-assigned-and-dynamic-membership"></a>工作 2：建立具有已指派和動態成員資格的 Azure AD 群組
+## 工作 2：建立具有已指派和動態成員資格的 Azure AD 群組
 
 在此工作中，您將建立具有指派且動態成員資格的 Azure Active Directory 群組。
 
@@ -183,13 +183,18 @@ lab:
 
 1. 瀏覽回 [群組 - 所有群組] 刀鋒視窗，按一下代表 [IT 系統管理員] 群組的項目，然後會顯示其 [成員] 刀鋒視窗。 確認 **az104-01a-aaduser2** 出現在群組成員清單中。
 
-#### <a name="task-3-create-an-azure-active-directory-ad-tenant-optional---lab-environment-issue"></a>工作 3：建立 Azure Active Directory (AD) 租用戶 (選擇性 - 實驗室環境問題)
+## 工作 3：建立 Azure Active Directory (AD) 租用戶 (選擇性 - 實驗室環境問題)
 
 在此工作中，您必須建立新的 Azure AD 租用戶。
-
-   >**注意**：實驗室環境中的 Captcha 驗證有已知問題。 如果您遇到此問題，請跳過這項工作和下一個工作。 我們正在著手擬定解決辦法。
-
+    
 1. 在 Azure 入口網站中，搜尋並選取 [Azure Active Directory]。
+
+    >**注意**：實驗室環境中的 Captcha 驗證有已知問題。 如果您收到 **錯誤建立失敗。請稍後嘗試太多要求**，請執行下列動作：<br>
+    - 請嘗試建立數次。<br>
+    - 請檢查 [管理租用戶] 區段，以確保未在背景中建立租用戶。 <br>
+    - 開啟新的 [InPrivate] 視窗，並使用 Azure 入口網站嘗試從該處建立租用戶。<br>
+     向定型人員提出問題，然後使用 **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** 來檢視這些步驟。 <br>
+    - 您稍後可以嘗試這項工作，但在其他實驗室中不需要建立租用戶。 
 
 1. 按一下 [管理租用戶]，接著在下一個畫面上按一下 [+ 建立]，然後指定下列設定：
 
@@ -211,7 +216,7 @@ lab:
 
 1. 顯示新建立 Azure AD 租用戶的刀鋒視窗，方法為使用 [按一下此處以瀏覽至您的新租用戶：Contoso Lab] 連結，或使用 Azure 入口網站工具列中的 [目錄 + 訂用帳戶] 按鈕 (位於 Cloud Shell 按鈕的右側)。
 
-#### <a name="task-4-manage-azure-ad-guest-users"></a>工作 4：管理 Azure AD 客體使用者。
+## 工作 4：管理 Azure AD 客體使用者。
 
 在此工作中，您將建立 Azure AD 客體使用者，並授與 Azure 訂用帳戶中資源的存取權。
 
@@ -255,7 +260,7 @@ lab:
 1. 按一下 [+ 新增成員資格]，並將客體使用者帳戶新增至 [IT 實驗室系統管理員] 群組。
 
 
-#### <a name="task-5-clean-up-resources"></a>工作 5：清除資源
+## 工作 5：清除資源
 
 > **注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可避免產生非預期的費用。 在此情況下，不會產生與 Azure Active Directory 租用戶和其物件相關聯的額外費用，您可以考慮移除使用者帳戶、群組帳戶，以及您在此實驗室中建立的 Azure Active Directory 租用戶。
 
@@ -279,7 +284,7 @@ lab:
 
 > **注意**：如果租用戶有試用版授權，則您必須先等候試用版授權到期，才能刪除租用戶。 這不會產生任何額外費用。
 
-#### <a name="review"></a>檢閱
+#### 檢閱
 
 在此實驗中，您已：
 

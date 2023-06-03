@@ -4,16 +4,16 @@ lab:
   module: Administer Serverless Computing
 ---
 
-# <a name="lab-09c---implement-azure-kubernetes-service"></a>實驗 09c - 實作 Azure Kubernetes Service
-# <a name="student-lab-manual"></a>學員實驗手冊
+# 實驗 09c - 實作 Azure Kubernetes Service
+# 學員實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個體來執行。 為了判斷這些應用程式是否可以容器化工作負載的形式執行，您想要使用 Kubernetes 作為容器協調器進行評估。 為了進一步將管理負擔降到最低，您想要測試 Azure Kubernetes Service，包括其簡化的部署體驗和調整功能。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2015)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -22,17 +22,17 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 + 工作 3：將 Pod 部署至 Azure Kubernetes Service 叢集
 + 工作 4：調整 Azure Kubernetes 服務叢集中的容器化工作負載
 
-## <a name="estimated-timing-40-minutes"></a>預估時間：40 分鐘
+## 預估時間：40 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab09c.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-register-the-microsoftkubernetes-and-microsoftkubernetesconfiguration-resource-providers"></a>工作 1：註冊 Microsoft.Kubernetes 和 Microsoft.KubernetesConfiguration 資源提供者。
+## 工作 1：註冊 Microsoft.Kubernetes 和 Microsoft.KubernetesConfiguration 資源提供者。
 
 在此工作中，您將註冊部署 Azure Kubernetes Services 叢集所需的資源提供者。
 
@@ -54,7 +54,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
 1. 關閉 [Cloud Shell] 窗格。
 
-#### <a name="task-2-deploy-an-azure-kubernetes-service-cluster"></a>工作 2：部署 Azure Kubernetes Service 叢集
+## 工作 2：部署 Azure Kubernetes Service 叢集
 
 在這項工作中，您將使用 Azure 入口網站來部署 Azure Kubernetes Services 叢集。
 
@@ -94,15 +94,22 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
     | 設定 | 值 |
     | ---- | ---- |
     | 網路組態 | **kubenet** |
-    | DNS 名稱首碼 | 任何有效且全域唯一的 DNS 首碼|
+    | DNS 名稱首碼 | **任何有效且全域唯一的 DNS 首碼** |
 
-1. 按一下 [下一步：**整合 >** ]，在 [建立 Kubernetes 叢集] 刀鋒視窗的 [整合] 索引標籤上，將[容器監視] 設定為 [已停用]，按一下 [檢閱 + 建立]，確定通過驗證，然後按一下 [建立]。
+1. 按一下 [下一步：整合 >]，然後在 [建立 Kubernetes 叢集] 刀鋒視窗的 [整合] 索引標籤上，指定下列設定 (讓其他設定保留預設值)：
+
+    | 設定 | 值 |
+    | ---- | ---- |
+    | 容器監視 | **停用** |
+    | 啟用建議的警示規則 | **取消選取** |
+    
+1.  按一下 [檢閱 + 建立]，確定通過驗證，然後按一下 [建立]。
 
     >**注意**：在生產案例中，您會想要啟用監視。 在此情況下會停用監視，因為實驗室中未涵蓋監視。
 
     >**注意**：等待部署完成。 該操作需要約 10 分鐘。
 
-#### <a name="task-3-deploy-pods-into-the-azure-kubernetes-service-cluster"></a>工作 3：將 Pod 部署至 Azure Kubernetes Service 叢集
+## 工作 3：將 Pod 部署至 Azure Kubernetes Service 叢集
 
 在這項工作中，您會將 Pod 部署到Azure Kubernetes Service 叢集。
 
@@ -170,7 +177,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
 1. 開啟瀏覽器視窗，並瀏覽至您在上一個步驟中取得的 IP 位址。 確認瀏覽器頁面會顯示 **Welcome to nginx！** 回應。
 
-#### <a name="task-4-scale-containerized-workloads-in-the-azure-kubernetes-service-cluster"></a>工作 4：調整 Azure Kubernetes 服務叢集中的容器化工作負載
+## 工作 4：調整 Azure Kubernetes 服務叢集中的容器化工作負載
 
 在此工作中，您會水平調整 Pod 數目，然後調整叢集節點數目。
 
@@ -238,7 +245,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
 1. 關閉 [Cloud Shell] 窗格。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -260,7 +267,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
     >**注意**：此命令會以非同步方式執行 (由 --nowait 參數決定)，所以您將可以在相同的 Bash 工作階段中，立即執行另一個 Azure CLI 命令，但這需要幾分鐘才會移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 

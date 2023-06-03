@@ -4,16 +4,16 @@ lab:
   module: Administer Data Protection
 ---
 
-# <a name="lab-10---backup-virtual-machines"></a>實驗室 10 – 備份虛擬機器
-# <a name="student-lab-manual"></a>學生實驗室手冊
+# 實驗室 10 – 備份虛擬機器
+# 學生實驗室手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 您負責評估使用 Azure 復原服務來備份和還原裝載於 Azure 虛擬機器和內部部署電腦上的檔案。 此外，您想要找到保護復原服務保存庫中所儲存資料免於意外或惡意資料外洩的方法。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -25,31 +25,29 @@ lab:
 + 工作 6：使用 Azure 虛擬機器快照集來執行檔案復原 (選用)
 + 工作 7：檢閱 Azure 復原服務虛刪除功能 (選用)
 
-## <a name="estimated-timing-50-minutes"></a>預估時間：50 分鐘
+## 預估時間：50 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab10.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-provision-the-lab-environment"></a>工作 1：佈建實驗環境
+## 工作 1：佈建實驗室環境
 
 在此工作中，您將部署兩部虛擬機器，用來測試不同的備份案例。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
     >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
 
 1. 在 [Cloud Shell] 窗格的工具列中，按一下 [上傳/下載檔案] 圖示，在下拉式功能表中，按一下 [上傳]，並將檔案 **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** 和 **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** 上傳至 Cloud Shell 主目錄。
-
-1. 編輯您剛才上傳的參數檔案，並變更密碼。 如果您需要在 Shell 中編輯檔案的協助，請向講師尋求協助。 最佳做法便是秘密 (例如密碼)，這應會在 Key Vault 中儲存時提供更佳的安全性。 
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令來建立裝載虛擬機器的資源群組 (將 `[Azure_region]` 預留位置取代為您想要部署 Azure 虛擬機器的 Azure 區域名稱)。 分別輸入每個命令列，並個別執行：
 
@@ -66,7 +64,8 @@ lab:
    ```
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令以建立第一個虛擬網路，並使用您上傳的範本和參數檔案，將虛擬機器部署到其中：
-
+    >**注意**：系統將會提示您提供管理員密碼。
+    
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -79,7 +78,7 @@ lab:
 
     >**注意**：不須等待部署完成，請直接進行下一項工作。 此部署應需要大約 5 分鐘的時間。
 
-#### <a name="task-2-create-a-recovery-services-vault"></a>工作 2：建立恢復服務保存庫
+## 工作 2：建立恢復服務保存庫
 
 在此工作中，您將建立復原服務保存庫。
 
@@ -116,7 +115,7 @@ lab:
 
 1. 關閉 [安全性設定] 刀鋒視窗，然後回到 [az104-10-rsv1] 復原服務保存庫刀鋒視窗，按一下 [概觀]。
 
-#### <a name="task-3-implement-azure-virtual-machine-level-backup"></a>工作 3：實作 Azure 虛擬機器層級備份
+## 工作 3：實作 Azure 虛擬機器層級備份
 
 在此工作中，您將實作 Azure 虛擬機器層級備份。
 
@@ -159,7 +158,7 @@ lab:
 
     >**注意**：不必等待備份完成，直接繼續進行下一個工作。
 
-#### <a name="task-4-implement-file-and-folder-backup"></a>工作 4：實作檔案和資料夾備份
+## 工作 4：實作檔案和資料夾備份
 
 在此工作中，您將使用 Azure 復原服務來實作檔案和資料夾備份。
 
@@ -258,7 +257,7 @@ lab:
 
 1. 在 [備份項目 (Azure 備份代理程式)] 刀鋒視窗中，確認有項目參考 [az104-10-vm1.] 的 **C:\\** 磁碟機。
 
-#### <a name="task-5-perform-file-recovery-by-using-azure-recovery-services-agent-optional"></a>工作 5：使用 Azure 復原服務代理程式來執行檔案復原 (選用)
+## 工作 5：使用 Azure 復原服務代理程式來執行檔案復原 (選用)
 
 在這項工作中，您將使用 Azure 復原服務代理程式執行檔案還原。
 
@@ -288,7 +287,7 @@ lab:
 
 1. 終止遠端桌面工作階段。
 
-#### <a name="task-6-perform-file-recovery-by-using-azure-virtual-machine-snapshots-optional"></a>工作 6：使用 Azure 虛擬機器快照集來執行檔案復原 (選用)
+## 工作 6：使用 Azure 虛擬機器快照集來執行檔案復原 (選用)
 
 在此工作中，您將從 Azure 虛擬機器層級快照集備份還原檔案。
 
@@ -360,7 +359,7 @@ lab:
 
 1. 終止遠端桌面工作階段。
 
-#### <a name="task-7-review-the-azure-recovery-services-soft-delete-functionality"></a>工作 7：檢閱 Azure 復原服務虛刪除功能
+## 工作 7：檢閱 Azure 復原服務虛刪除功能
 
 1. 在實驗室電腦上，從 Azure 入口網站中搜尋並選取 [復原服務保存庫]，然後在 [復原服務保存庫] 上按一下 [az104-10-rsv1]。
 
@@ -442,7 +441,7 @@ lab:
 
 1. 重複這項工作開頭的步驟，以刪除 **az104-10-vm1** 的備份項目。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -466,7 +465,7 @@ lab:
 
     >**注意**：此命令以非同步方式執行 (由 --AsJob 參數決定)，所以您隨後能夠在相同 PowerShell 工作階段內立即執行另一個 PowerShell 命令，但需要經過幾分鐘後，才會實際移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 

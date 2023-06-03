@@ -4,16 +4,16 @@ lab:
   module: Administer Azure Storage
 ---
 
-# <a name="lab-07---manage-azure-storage"></a>實驗室 07 - 管理 Azure 儲存體
-# <a name="student-lab-manual"></a>學生實驗手冊
+# 實驗室 07 - 管理 Azure 儲存體
+# 學生實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 您必須評估使用 Azure 儲存體來儲存目前位於內部部署資料存放區中的檔案。 雖然其中大多數檔案並不會經常存取，但有一些例外狀況。 您想要將較不常存取的檔案放在較低價格的儲存層中，以將儲存成本降到最低。 您也計畫探索 Azure 儲存體提供的不同保護機制，包括網路存取、驗證、授權和複寫。 最後，您想要判斷將 Azure 檔案儲存體服務用來裝載內部部署檔案共用可能的限度。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -24,32 +24,30 @@ lab:
 + 工作 5：建立和設定 Azure 檔案儲存體共用
 + 工作 6：管理 Azure 儲存體的網路存取
 
-## <a name="estimated-timing-40-minutes"></a>預估時間：40 分鐘
+## 預估時間：40 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab07.png)
 
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-provision-the-lab-environment"></a>工作 1：佈建實驗環境
+## 工作 1：佈建實驗環境
 
 在此工作中，您將部署本實驗稍後要使用的 Azure 虛擬機器。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
     >**注意**：如果這是您第一次啟動 **Cloud Shell**，而且出現**您未掛接任何儲存體**訊息，請選取您在此實驗中使用的訂用帳戶，並按一下 [建立儲存體]。
 
 1. 在 [Cloud Shell] 窗格的工具列中，按一下 [上傳/下載檔案] 圖示，在下拉式功能表中，按一下 [上傳]，並將檔案 **\\Allfiles\\Labs\\07\\az104-07-vm-template.json** 和 **\\Allfiles\\Labs\\07\\az104-07-vm-parameters.json** 上傳至 Cloud Shell 主目錄。
-
-1. 編輯您剛才上傳的**參數**檔案，並變更密碼。 如果您需要在 Shell 中編輯檔案的協助，請向講師尋求協助。 最佳做法便是秘密 (例如密碼)，這應會在 Key Vault 中儲存時提供更佳的安全性。 
 
 1. 從 [Cloud Shell] 窗格中，執行下列命令來建立裝載虛擬機器的資源群組 (將 '[Azure_region]' 預留位置取代為您想要部署 Azure 虛擬機器的 Azure 區域名稱)
 
@@ -70,6 +68,8 @@ lab:
     
 1. 從 Cloud Shell 窗格中，執行下列命令以使用上傳的範本和參數檔案來部署虛擬機器：
 
+    >**注意**：系統將會提示您提供管理員密碼。
+
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -89,7 +89,7 @@ lab:
 
 1. 關閉 [Cloud Shell] 窗格。
 
-#### <a name="task-2-create-and-configure-azure-storage-accounts"></a>工作 2：建立並設定 Azure 儲存體帳戶
+## 工作 2：建立並設定 Azure 儲存體帳戶
 
 在這項工作中，您將建立及設定 Azure 儲存體帳戶。
 
@@ -124,7 +124,7 @@ lab:
 
     > **注意**：非經常性存取層適合不常存取的資料。
 
-#### <a name="task-3-manage-blob-storage"></a>工作 3：管理 Blob 儲存體
+## 工作 3：管理 Blob 儲存體
 
 在這個工作中，您將建立一個 Blob 容器，並將 Blob 檔案上傳至其中。
 
@@ -145,7 +145,6 @@ lab:
 
     | 設定 | 值 |
     | --- | --- |
-    | 驗證類型 | **帳戶金鑰**  |
     | Blob 類型 | **區塊 Blob** |
     | 區塊大小 | **4 MB** |
     | 存取層 | **經常性** |
@@ -163,7 +162,7 @@ lab:
 
     > **注意**：您可以選擇下載 Blob、變更其存取層 (目前設定為 [經常性])、取得租用，這會將其租用狀態變更為 [鎖定] (目前設定為 [已解除鎖定])，並保護 Blob 不受修改或刪除，以及藉由指定任意索引鍵和值組來指派自訂中繼資料。 您也可以直接在 Azure 入口網站介面內**編輯**檔案，而無需先下載。 您也可以建立快照集，以及產生 SAS 權杖 (下一個工作將會探索此方法)。
 
-#### <a name="task-4-manage-authentication-and-authorization-for-azure-storage"></a>工作 4：管理 Azure 儲存體的驗證和授權
+## 工作 4：管理 Azure 儲存體的驗證和授權
 
 在此工作中，您將設定 Azure 儲存體的驗證和授權。
 
@@ -226,7 +225,7 @@ lab:
 
     > **注意**：變更可能需要大約 5 分鐘才會生效。
 
-#### <a name="task-5-create-and-configure-an-azure-files-shares"></a>工作 5：建立和設定 Azure 檔案儲存體共用
+## 工作 5：建立和設定 Azure 檔案儲存體共用
 
 在此工作中，您將建立和設定 Azure 檔案儲存體共用。
 
@@ -268,7 +267,7 @@ lab:
 
 1. 按一下 [az104-07-folder]，並確認 **az104-07-file.txt** 出現在檔案清單中。
 
-#### <a name="task-6-manage-network-access-for-azure-storage"></a>工作 6：管理 Azure 儲存體的網路存取
+## 工作 6：管理 Azure 儲存體的網路存取
 
 在此工作中，您將設定 Azure 儲存體的網路存取。
 
@@ -305,7 +304,7 @@ lab:
 
 1. 關閉 [Cloud Shell] 窗格。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -327,7 +326,7 @@ lab:
 
     >**注意**：此命令以非同步方式執行 (由 --AsJob 參數決定)，所以您隨後能夠在相同 PowerShell 工作階段內立即執行另一個 PowerShell 命令，但需要經過幾分鐘後，才會實際移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 

@@ -4,15 +4,15 @@ lab:
   module: Administer Azure Resources
 ---
 
-# <a name="lab-03b---manage-azure-resources-by-using-arm-templates"></a>實驗 03b - 使用 ARM 範本管理 Azure 資源
-# <a name="student-lab-manual"></a>學生實驗室手冊
+# 實驗 03b - 使用 ARM 範本管理 Azure 資源
+# 學生實驗室手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 現在您已探索與佈建資源相關聯的基本 Azure 管理功能，並使用 Azure 入口網站根據資源群組加以組織，接著您需要使用 Azure Resource Manager 範本來執行對等的工作。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -20,17 +20,17 @@ lab:
 + 工作 2：使用 ARM 範本建立 Azure 受控磁碟
 + 工作 3：檢閱受控磁碟的 ARM 範本型部署
 
-## <a name="estimated-timing-20-minutes"></a>預計時間：20 分鐘
+## 預計時間：20 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab03b.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-review-an-arm-template-for-deployment-of-an-azure-managed-disk"></a>工作 1：檢閱用於部署 Azure 受控磁碟的 ARM 範本
+## 工作 1：檢閱用於部署 Azure 受控磁碟的 ARM 範本
 
 1. 登入 [**Azure 入口網站**](http://portal.azure.com)。
 
@@ -58,7 +58,7 @@ lab:
     
 1. 關閉所有 [檔案總管] 視窗。
 
-#### <a name="task-2-create-an-azure-managed-disk-by-using-an-arm-template"></a>工作 2：使用 ARM 範本建立 Azure 受控磁碟
+## 工作 2：使用 ARM 範本建立 Azure 受控磁碟
 
 1. 在 Azure 入口網站中，搜尋並選取 [部署自訂範本]。
 
@@ -108,7 +108,7 @@ lab:
 
 1. 確認部署已成功完成。
 
-#### <a name="task-3-review-the-arm-template-based-deployment-of-the-managed-disk"></a>工作 3：檢閱受控磁碟的 ARM 範本型部署
+## 工作 3：檢閱受控磁碟的 ARM 範本型部署
 
 1. 在 Azure 入口網站中，搜尋並選取 [資源群組]。 
 
@@ -118,11 +118,11 @@ lab:
 
 1. 從 [az104-03b-rg1 - 部署] 刀鋒視窗中，按一下部署清單中的第一個項目，並檢閱 [輸入] 和 [範本] 刀鋒視窗的內容。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
    >**注意**：請勿刪除您在此實驗中部署的資源。 您將在本課程模組的下一個實驗中引用這些資源。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 

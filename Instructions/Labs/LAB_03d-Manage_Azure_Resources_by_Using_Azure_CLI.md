@@ -4,16 +4,16 @@ lab:
   module: Administer Azure Resources
 ---
 
-# <a name="lab-03d---manage-azure-resources-by-using-azure-cli"></a>實驗室 03d - 使用 Azure CLI 管理 Azure 資源
-# <a name="student-lab-manual"></a>學生實驗手冊
+# 實驗室 03d - 使用 Azure CLI 管理 Azure 資源
+# 學生實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 現在，您已探索與佈建資源相關聯的基本 Azure 管理功能，並使用 Azure 入口網站、Azure Resource Manager 範本和 Azure PowerShell 根據資源群組加以組織，您必須使用 Azure CLI 來執行對等的工作。 為了避免安裝 Azure CLI，您將利用 Azure Cloud Shell 中提供的 Bash 環境。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%207)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -21,17 +21,17 @@ lab:
 + 工作 2：使用 Azure CLI 建立資源群組和 Azure 受控磁碟
 + 工作 3：使用 Azure CLI 設定受控磁碟
 
-## <a name="estimated-timing-20-minutes"></a>預估時間：20 分鐘
+## 預估時間：20 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab03d.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-start-a-bash-session-in-azure-cloud-shell"></a>工作 1：在 Azure Cloud Shell 中啟動 Bash 工作階段
+## 工作 1：在 Azure Cloud Shell 中啟動 Bash 工作階段
 
 在這項工作中，您將在 Cloud Shell中開啟 Bash 工作階段。 
 
@@ -45,7 +45,7 @@ lab:
 
 1. 確認在 [Cloud Shell] 窗格左上角的下拉式功能表中有顯示 [Bash]。
 
-#### <a name="task-2-create-a-resource-group-and-an-azure-managed-disk-by-using-azure-cli"></a>工作 2：使用 Azure CLI 建立資源群組和 Azure 受控磁碟
+## 工作 2：使用 Azure CLI 建立資源群組和 Azure 受控磁碟
 
 在此工作中，您將使用 Azure CLI 工作階段在 Cloud Shell 內建立資源群組和 Azure 受控磁碟。
 
@@ -82,7 +82,7 @@ lab:
    az disk show --resource-group $RGNAME --name $DISKNAME
    ```
 
-#### <a name="task-3-configure-the-managed-disk-by-using-azure-cli"></a>工作 3：使用 Azure CLI 設定受控磁碟
+## 工作 3：使用 Azure CLI 設定受控磁碟
 
 在這項工作中，您將使用 Azure CLI 工作階段在 Cloud Shell 內管理 Azure 受控磁碟的設定。 
 
@@ -110,7 +110,7 @@ lab:
    az disk show --resource-group $RGNAME --name $DISKNAME --query sku
    ```
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
  > **注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -132,7 +132,7 @@ lab:
 
     >**注意**：此命令會以非同步方式執行 (由 --nowait 參數決定)，所以您將可以在相同的 Bash 工作階段中，立即執行另一個 Azure CLI 命令，但這需要幾分鐘才會移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 

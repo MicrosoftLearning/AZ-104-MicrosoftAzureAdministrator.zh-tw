@@ -4,33 +4,33 @@ lab:
   module: Administer Serverless Computing
 ---
 
-# <a name="lab-09b---implement-azure-container-instances"></a>實驗 09b - 實作 Azure 容器執行個體
-# <a name="student-lab-manual"></a>學員實驗手冊
+# 實驗 09b - 實作 Azure 容器執行個體
+# 學員實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出一些容器映像，可用來達成此目標。 由於您想要將容器管理降到最低，因此您計畫評估使用 Azure 容器執行個體部署 Docker 映像。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
 - 工作 1：使用 Azure 容器執行個體部署 Docker 映像
 - 工作 2：檢閱 Azure 容器執行個體功能
 
-## <a name="estimated-timing-20-minutes"></a>預估時間：20 分鐘
+## 預估時間：20 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab09b.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-deploy-a-docker-image-by-using-the-azure-container-instance"></a>工作 1：使用 Azure 容器執行個體部署 Docker 映像
+## 工作 1：使用 Azure 容器執行個體部署 Docker 映像
 
 在這個工作中，您將為 Web 應用程式建立一個新的容器執行個體。
 
@@ -63,7 +63,7 @@ Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出�
 
     >**注意**：在您等待的時候，可能會有興趣查看[範例應用程式背後的程式碼](https://github.com/Azure-Samples/aci-helloworld)。 若要檢視該程式碼，請瀏覽\\應用程式資料夾。
 
-#### <a name="task-2-review-the-functionality-of-the-azure-container-instance"></a>工作 2：檢閱 Azure 容器執行個體功能
+## 工作 2：檢閱 Azure 容器執行個體功能
 
 在此工作中，您將檢閱容器執行個體的部署。
 
@@ -79,13 +79,15 @@ Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出�
 
 1. 在瀏覽器中顯示應用程式，確認您看到所產生代表 HTTP GET 要求的記錄項目。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
 >**注意**：如果無法立即移除實驗資源，請不要擔心。 有時候資源具有相依性，需要經過很長的時間才能刪除。 這是監視資源使用量的常見系統管理員工作，因此只需定期檢閱入口網站中的資源，查看清除的運作情況便可。 
 
 1. 在 Azure 入口網站中，在 [Cloud Shell] 窗格內開啟 [PowerShell] 工作階段。
+
+    >**注意**：必須建立 Cloud Shell 儲存體，這些命令才能運作。 
 
 1. 執行下列命令，列出在本課程模組的任何實驗中建立的所有資源群組：
 
@@ -101,7 +103,7 @@ Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出�
 
     >**注意**：此命令以非同步方式執行 (由 --AsJob 參數決定)，所以您隨後能夠在相同 PowerShell 工作階段內立即執行另一個 PowerShell 命令，但需要經過幾分鐘後，才會實際移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 

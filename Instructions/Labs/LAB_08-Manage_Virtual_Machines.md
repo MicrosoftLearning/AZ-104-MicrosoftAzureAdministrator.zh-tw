@@ -4,16 +4,16 @@ lab:
   module: Administer Virtual Machines
 ---
 
-# <a name="lab-08---manage-virtual-machines"></a>實驗室 08 – 管理虛擬機器
-# <a name="student-lab-manual"></a>學生實驗室手冊
+# 實驗室 08 – 管理虛擬機器
+# 學生實驗室手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 您負責識別部署和設定 Azure 虛擬機器的不同選項。 首先，您必須判斷使用 Azure 虛擬機器時可以實作的不同計算和儲存體復原與延展性選項。 接下來，您需要調查使用 Azure 虛擬機器擴展集時可用的計算和儲存體復原和延展性選項。 您也想要針對使用 Azure 虛擬機器自訂指令碼擴充功能，探索自動設定虛擬機器和虛擬機器擴展集的能力。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2012)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -25,18 +25,18 @@ lab:
 + 工作 6：使用虛擬機器擴充功能設定 Azure 虛擬機器擴展集
 + 工作 7：調整 Azure 虛擬機器擴展集的計算和儲存體 (選用)
 
-## <a name="estimated-timing-50-minutes"></a>預估時間：50 分鐘
+## 預估時間：50 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab08.png)
 
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-deploy-zone-resilient-azure-virtual-machines-by-using-the-azure-portal-and-an-azure-resource-manager-template"></a>工作 1：使用 Azure 入口網站和 Azure Resource Manager 範本部署區域復原的 Azure 虛擬機器
+## 工作 1：使用 Azure 入口網站和 Azure Resource Manager 範本部署區域復原的 Azure 虛擬機器
 
 在這項工作中，您將使用 Azure 入口網站和 Azure Resource Manager 範本，將 Azure 虛擬機器部署到不同的可用性區域。
 
@@ -48,7 +48,7 @@ lab:
 
     | 設定 | 值 |
     | --- | --- |
-    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂用帳戶名稱 |
+    | 訂用帳戶 | 您要在此實驗室中使用的 Azure 訂閱名稱 |
     | 資源群組 | 新資源群組 **az104-08-rg01** 的名稱 |
     | 虛擬機器名稱 | **az104-08-vm0** |
     | 區域 | 選取其中一個支援可用性區域的區域，以及您可以在其中佈建 Azure 虛擬機器的區域 |
@@ -59,7 +59,7 @@ lab:
     | 大小 | **標準 D2s v3** |
     | 使用者名稱 | **Student** |
     | 密碼 | **提供安全的密碼** |
-    | 公用輸入連接埠 | **None** |
+    | 公用輸入連接埠 | **無** |
     | 您要使用現有的 Windows Server 授權嗎？ | **未選取** |
 
 1. 按一下 [下一步：**磁碟 >]** ，在 [建立虛擬機器] 刀鋒視窗的 [磁碟] 索引標籤上，指定下列設定 (其他設定請保留預設值)：
@@ -87,7 +87,7 @@ lab:
     | 子網路 | **subnet0** |
     | 公用 IP | **預設值** |
     | NIC 網路安全性群組 | **basic** |
-    | 公用輸入連接埠 | **None** |
+    | 公用輸入連接埠 | **無** |
     | 加速網路 | **關閉**
     | 要將此虛擬機器放在現有負載平衡解決方案後面嗎? | **未選取** |
 
@@ -136,7 +136,7 @@ lab:
 
     >**注意**：等候這兩個部署完成，再繼續進行下一項工作。 這大約需要 5 分鐘的時間。
 
-#### <a name="task-2-configure-azure-virtual-machines-by-using-virtual-machine-extensions"></a>工作 2：使用虛擬機器擴充功能設定 Azure 虛擬機器
+## 工作 2：使用虛擬機器擴充功能設定 Azure 虛擬機器
 
 在這項工作中，您將使用自訂指令碼虛擬機器擴充功能，在您於上一個工作中部署的兩部 Azure 虛擬機器上安裝 Windows Server Web Server 角色。
 
@@ -223,7 +223,7 @@ lab:
 
     >**注意**：您也可以連線到 **az104-08-vm0** 並執行 `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` 以存取裝載於 **az104-08-vm1** 的網站。
 
-#### <a name="task-3-scale-compute-and-storage-for-azure-virtual-machines"></a>工作 3：調整 Azure 虛擬機器的計算和儲存體
+## 工作 3：調整 Azure 虛擬機器的計算和儲存體
 
 在此工作中，您將藉由變更其大小並設定其資料磁碟來調整 Azure 虛擬機器的計算，並調整其儲存體。
 
@@ -262,7 +262,7 @@ lab:
    ```powershell
    New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true)
 
-   New-VirtualDisk -StoragePoolFriendlyName storagepool1 -FriendlyName virtualdisk1 -Size 2046GB -ResiliencySettingName Simple -ProvisioningType Fixed
+   New-VirtualDisk -StoragePoolFriendlyName storagepool1 -FriendlyName virtualdisk1 -Size 64GB -ResiliencySettingName Simple -ProvisioningType Fixed
 
    Initialize-Disk -VirtualDisk (Get-VirtualDisk -FriendlyName virtualdisk1)
 
@@ -336,7 +336,7 @@ lab:
 
     > **注意**：等候確認命令已成功完成。
 
-#### <a name="task-4-register-the-microsoftinsights-and-microsoftalertsmanagement-resource-providers"></a>工作 4：註冊 Microsoft.Insights 和 Microsoft.AlertsManagement 資源提供者
+## 工作 4：註冊 Microsoft.Insights 和 Microsoft.AlertsManagement 資源提供者
 
 1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
 
@@ -352,7 +352,7 @@ lab:
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
-#### <a name="task-5-deploy-zone-resilient-azure-virtual-machine-scale-sets-by-using-the-azure-portal"></a>工作 5：使用 Azure 入口網站部署區域復原 Azure 虛擬機器擴展集
+## 工作 5：使用 Azure 入口網站部署區域復原 Azure 虛擬機器擴展集
 
 在此工作中，您將使用 Azure 入口網站，跨可用性區域部署 Azure 虛擬機器擴展集。
 
@@ -367,8 +367,9 @@ lab:
     | 虛擬機器擴展集名稱 | **az10408vmss0** |
     | 區域 | 選取其中一個支援可用性區域的區域，您可以在其中佈建不同於您稍早在此實驗室中用來部署虛擬機器的 Azure 虛擬機器 |
     | 可用性區域 | **區域 1、2、3** |
+    | 協調流程模式 | **Uniform** |
     | 映像 | **Windows Server 2019 Datacenter - Gen 2** |
-    | Azure Spot 執行個體 | **否** |
+    | 使用 Azure 現成 VM 折扣執行 | **否** |
     | 大小 | **標準 D2s_v3** |
     | 使用者名稱 | **Student** |
     | 密碼 | **提供安全的密碼**  |
@@ -378,7 +379,7 @@ lab:
 
 1. 在 [建立虛擬機器擴展集] 刀鋒視窗的 [磁碟] 索引標籤上，接受預設值，然後按 **[下一步：網路 >]** 。
 
-1. 在 [建立虛擬機器擴展集] 刀鋒視窗的 [網路] 索引標籤上，按一下 [虛擬網路] 文字方塊下方的 [建立虛擬網路] 連結，並使用下列設定建立新的虛擬網路 (其他設定請保留預設值)：
+1. 在 [建立虛擬機器擴展集] 刀鋒視窗的 [網路] 索引標籤上，按一下 [虛擬網路] 文字方塊下方的 [建立虛擬網路] 連結，並使用下列設定建立新的虛擬網路 (其他設定請保留預設值)。 
 
     | 設定 | 值 |
     | --- | --- |
@@ -416,13 +417,18 @@ lab:
 
 1. 回到 [編輯網路介面] 刀鋒視窗的 [公用 IP 位址] 區段中，按一下 [已啟用]，然後按一下 [確定]。
 
-1. 回到 [建立虛擬機器擴展集] 刀鋒視窗的 [網路] 索引標籤上，在 [負載平衡] 區段底下，確定已選取 [使用負載平衡器] 專案，並指定下列 [負載平衡設定] (將其他設定保留為預設值)，然後按一下 [**下一步：調整 >]** ：
+1. 回到 [建立虛擬機器擴展集] 刀鋒視窗的 [網路] 索引標籤，在 [負載平衡] 下指定以下項目 (其他項目保留預設值)。
 
     | 設定 | 值 |
     | --- | --- |
     | 負載平衡選項 | **Azure Load Balancer** |
-    | 選取負載平衡器 | **(新) az10408vmss0-lb** |
-    | 選取後端集區 | **(新) bepool** |
+    | 選取負載平衡器 | **建立負載平衡器** |
+    
+1.  在 [建立負載平衡器] 頁面上，指定負載平衡器名稱並採用預設設定。 完成時按一下 [建立]，然後前往**下一步：縮放 >** 。
+    
+    | 設定 | 值 |
+    | --- | --- |
+    | 負載平衡器名稱 | **az10408vmss0-lb** |
 
 1. 在 [建立虛擬機器擴展集] 刀鋒視窗的 [調整] 索引標籤上指定下列設定 (其他設定請保留預設值)，然後按一下 [下一步：**管理 >]** ：
 
@@ -456,7 +462,7 @@ lab:
 
     >**注意**：等候虛擬機器擴展集部署完成。 這應該大約需要 5 分鐘的時間。
 
-#### <a name="task-6-configure-azure-virtual-machine-scale-sets-by-using-virtual-machine-extensions"></a>工作 6：使用虛擬機器擴充功能設定 Azure 虛擬機器擴展集
+## 工作 6：使用虛擬機器擴充功能設定 Azure 虛擬機器擴展集
 
 在這項工作中，您將使用自訂指令碼虛擬機器擴充功能，在您於上一個工作中部署的 Azure 虛擬機器擴展集上安裝 Windows Server Web Server 角色。
 
@@ -497,7 +503,7 @@ lab:
 
     >**注意**：確認瀏覽器頁面會顯示其中一個 Azure 虛擬機器擴展集 **az10408vmss0** 執行個體的名稱。
 
-#### <a name="task-7-scale-compute-and-storage-for-azure-virtual-machine-scale-sets"></a>工作 7：調整 Azure 虛擬機器擴展集的計算和儲存體
+## 工作 7：調整 Azure 虛擬機器擴展集的計算和儲存體
 
 在此工作中，您將變更虛擬機器擴展集執行個體的大小、設定其自動調整設定，以及將磁碟連結至這些執行個體。
 
@@ -619,7 +625,7 @@ lab:
 
 1. 在 **az10408vmss0** 刀鋒視窗的 [設定] 區段中，按一下 [執行個體]，選取虛擬機器擴展集執行個體旁的核取方塊，按一下 [升級]，然後在系統提示您確認時，按一下 [是]。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -646,7 +652,7 @@ lab:
 
     >**注意**：此命令以非同步方式執行 (由 --AsJob 參數決定)，所以您隨後能夠在相同 PowerShell 工作階段內立即執行另一個 PowerShell 命令，但需要經過幾分鐘後，才會實際移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 
