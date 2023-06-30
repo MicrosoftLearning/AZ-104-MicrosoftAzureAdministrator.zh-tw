@@ -1,19 +1,19 @@
 ---
 lab:
-  title: 09a - 實作 Web 應用程式
+  title: 實驗室 09a：實作Web Apps
   module: Administer Serverless Computing
 ---
 
-# <a name="lab-09a---implement-web-apps"></a>實驗 09a - 實作 Web 應用程式
-# <a name="student-lab-manual"></a>學員實驗手冊
+# 實驗 09a - 實作 Web 應用程式
+# 學員實驗手冊
 
-## <a name="lab-scenario"></a>實驗案例
+## 實驗案例
 
 您必須評估 Azure Web 應用程式的使用方式，以裝載 Contoso 的網站，此網站目前裝載於公司內部部署資料中心。 網站會使用 PHP 執行階段堆疊在 Windows 伺服器上執行。 您也需要利用 Azure Web 應用程式部署位置來判斷如何實作 DevOps 做法。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 在此實驗中，您將會：
 
@@ -24,17 +24,17 @@ lab:
 + 工作 5：交換預備位置
 + 工作 6：設定並測試 Azure Web 應用程式的自動調整
 
-## <a name="estimated-timing-30-minutes"></a>預估時間：30 分鐘
+## 預估時間：30 分鐘
 
-## <a name="architecture-diagram"></a>架構圖
+## 架構圖
 
 ![image](../media/lab09a.png)
 
-## <a name="instructions"></a>指示
+### 指示
 
-### <a name="exercise-1"></a>練習 1
+## 練習 1
 
-#### <a name="task-1-create-an-azure-web-app"></a>工作 1：建立 Azure Web 應用程式
+## 工作 1：建立 Azure Web 應用程式
 
 在這個工作中，您將建立一個 Azure Web 應用程式。
 
@@ -61,7 +61,7 @@ lab:
 
 1. 在 [部署] 刀鋒視窗上，按一下 [移至資源]。
 
-#### <a name="task-2-create-a-staging-deployment-slot"></a>工作 2：建立預備部署位置
+## 工作 2：建立預備部署位置
 
 在此工作中，您將建立預備部署位置。
 
@@ -84,7 +84,7 @@ lab:
 
 1. 檢閱預備位置刀鋒視窗，並注意其 URL 與指派給生產位置的 URL 不同。
 
-#### <a name="task-3-configure-web-app-deployment-settings"></a>工作 3：設定 Web 應用程式部署設定
+## 工作 3：設定 Web 應用程式部署設定
 
 在這項工作中，您將設定 Web 應用程式部署設定。
 
@@ -102,12 +102,12 @@ lab:
 
     | 設定 | 值 |
     | --- | ---|
-    | [使用者名稱] | 任何全域唯一名稱 (不得包含 `@` 字元) |
+    | 使用者名稱 | 任何全域唯一名稱 (不得包含 `@` 字元) |
     | 密碼 | 符合複雜度需求的任何密碼|
 
     >**注意：** 在本實驗的下一個工作中，您將需要這些認證。
 
-#### <a name="task-4-deploy-code-to-the-staging-deployment-slot"></a>工作 4：將程式碼部署至預備部署位置
+## 工作 4：將程式碼部署至預備部署位置
 
 在這項工作中，您會將程式碼部署至預備部署位置。
 
@@ -151,7 +151,7 @@ lab:
 
 1. 確認瀏覽器頁面會顯示 **Hello World！** 訊息並關閉新的索引標籤。
 
-#### <a name="task-5-swap-the-staging-slots"></a>工作 5：交換預備位置
+## 工作 5：交換預備位置
 
 在這項工作中，您會將預備位置與生產位置交換
 
@@ -165,11 +165,13 @@ lab:
 
 1. 確認預設網頁已取代為 **Hello World！** 頁面。
 
-#### <a name="task-6-configure-and-test-autoscaling-of-the-azure-web-app"></a>工作 6：設定並測試 Azure Web 應用程式的自動調整
+## 工作 6：設定並測試 Azure Web 應用程式的自動調整
 
 在此工作中，您將設定及測試 Azure Web 應用程式的自動調整。
 
 1. 在顯示 Web 應用程式生產位置的刀鋒視窗中，按一下 [設定] 區段中的 [向外延展 (App Service方案)]。
+
+1. 從 [ **調整] 區段** 選取 [ **規則型]** 選項，然後按一下 [ **管理規則型調整** ] 連結。
 
 1. 按一下 [自訂自動調整]。
 
@@ -237,7 +239,7 @@ lab:
 
 1. 關閉 [Cloud Shell] 窗格。
 
-#### <a name="clean-up-resources"></a>清除資源
+## 清除資源
 
 >**注意**：請記得移除您不再使用的任何新建立的 Azure 資源。 移除未使用的資源可確保您不會看到非預期的費用。
 
@@ -259,7 +261,7 @@ lab:
 
     >**注意**：此命令以非同步方式執行 (由 --AsJob 參數決定)，所以您隨後能夠在相同 PowerShell 工作階段內立即執行另一個 PowerShell 命令，但需要經過幾分鐘後，才會實際移除資源群組。
 
-#### <a name="review"></a>檢閱
+## 檢閱
 
 在此實驗中，您已：
 

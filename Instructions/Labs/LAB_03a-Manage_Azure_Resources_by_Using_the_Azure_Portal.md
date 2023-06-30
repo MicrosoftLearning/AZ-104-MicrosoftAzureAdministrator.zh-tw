@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 03a - 使用 Azure 入口網站管理 Azure 資源
+  title: 實驗室 03a：使用 Azure 入口網站管理 Azure 資源
   module: Administer Azure Resources
 ---
 

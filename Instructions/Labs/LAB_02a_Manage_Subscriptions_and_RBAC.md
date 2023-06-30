@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 02a - 管理訂用帳戶與 RBAC
+  title: 實驗室 02a：管理訂用帳戶和 RBAC
   module: Administer Governance and Compliance
 ---
 
