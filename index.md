@@ -4,13 +4,11 @@ permalink: index.html
 layout: home
 ---
 
-# <a name="content-directory"></a>內容目錄
+# 內容目錄
 
 您可以[在此下載](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/archive/master.zip)必要的實驗室檔案
 
-下方列出可連至各實驗室活動的超連結。
-
-## <a name="labs"></a>實驗室
+## 實驗室
 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | 模組 | 實驗室 |
@@ -18,4 +16,10 @@ layout: home
 {% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
 
+## 示範
 
+{% assign demos = site.pages | where_exp:"page", "page.url contains '/Instructions/Demos'" %}
+| 模組 | 示範 |
+| --- | --- | 
+{% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
+{% endfor %}

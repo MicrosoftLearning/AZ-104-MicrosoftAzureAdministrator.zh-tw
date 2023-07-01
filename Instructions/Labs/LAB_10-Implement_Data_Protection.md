@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 10 - 實作資料保護
+  title: 實驗室 10：實作資料保護
   module: Administer Data Protection
 ---
 
@@ -41,7 +41,7 @@ lab:
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
