@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 03b - 使用 ARM 範本管理 Azure 資源
+  title: 實驗室 03b：使用 ARM 範本管理 Azure 資源
   module: Administer Azure Resources
 ---
 
@@ -102,7 +102,9 @@ lab:
     | 磁碟大小 (GB) | **32** |
     | 建立選項 | **empty** |
     | 磁碟加密集類型 | **EncryptionAtRestWithPlatformKey** |
+    | 資料存取驗證模式 | 無 |
     | 網路存取原則 | **AllowAll** |
+    | 公用網路存取 | 已停用 |
 
 1. 選取 [檢閱 + 建立]，然後選取 [建立]。
 

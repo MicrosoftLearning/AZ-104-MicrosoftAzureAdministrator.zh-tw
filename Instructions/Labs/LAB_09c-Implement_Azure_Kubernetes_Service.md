@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 09c - 實作 Azure Kubernetes Service
+  title: 實驗室 09c：實作Azure Kubernetes Service
   module: Administer Serverless Computing
 ---
 
