@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 09b - 實作 Azure 容器執行個體
+  title: 實驗室 09b：實作Azure 容器執行個體
   module: Administer Serverless Computing
 ---
 
@@ -17,7 +17,7 @@ Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出�
 
 在此實驗中，您將會：
 
-- 工作 1：使用 Azure 容器執行個體部署 Docker 映像
+- 工作 1：使用 Docker 映射部署 Azure 容器實例
 - 工作 2：檢閱 Azure 容器執行個體功能
 
 ## 預估時間：20 分鐘
@@ -30,7 +30,7 @@ Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出�
 
 ## 練習 1
 
-## 工作 1：使用 Azure 容器執行個體部署 Docker 映像
+## 工作 1：使用 Docker 映射部署 Azure 容器實例
 
 在這個工作中，您將為 Web 應用程式建立一個新的容器執行個體。
 
@@ -87,7 +87,7 @@ Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出�
 
 1. 在 Azure 入口網站中，在 [Cloud Shell] 窗格內開啟 [PowerShell] 工作階段。
 
-    >**注意**：必須建立 Cloud Shell 儲存體，這些命令才能運作。 
+    >**注意**：必須建立Cloud Shell儲存體，這些命令才能運作。 
 
 1. 執行下列命令，列出在本課程模組的任何實驗中建立的所有資源群組：
 
