@@ -54,12 +54,13 @@ demo:
 
 1. 選取 **URL** ，並確定預設預留位置頁面會載入。
 
-1. 當您有時間時，請探索 **[部署位置]** 選項。 
+1. 當您有時間時，請探索 **[部署位置]** 選項。
+   
 ## 設定 Azure 容器執行個體
 
 在此示範中，我們會從 Azure 入口網站使用 Azure 容器執行個體 (ACI) 來建立、設定及部署容器。 ACI 應用程式會顯示具有公用 Microsoft Hello World 影像的靜態 HTML 頁面。 
 
-[快速入門 - 將 Docker 容器部署至容器實例](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
+**參考**： [快速入門 - 將 Docker 容器部署至容器實例](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
 
 1. 使用 Azure 入口網站。
 
@@ -84,3 +85,25 @@ demo:
 1. 流覽至容器實例的 **FQDN** ，並確定歡迎頁面隨即顯示。 
 
 **注意**：若要避免額外的成本，請刪除資源。 
+
+## 設定 Azure Container Apps
+
+在此示範中，我們將建立及使用 Azure Container Apps。 
+
+**參考**：[快速入門：使用 Azure 入口網站 部署您的第一個容器應用程式](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
+
+1. 搜尋並選取 **[容器應用程式**]。
+
+1. 完成 **[專案詳細資料** ] 並建立容器應用程式 **環境**。
+
+1. **檢閱並建立** 容器應用程式。
+
+1. 使用 **[應用程式 URL]** 連結來檢視您的應用程式。
+
+1. 確認瀏覽器會顯示 **歡迎使用 Azure Container Apps** 訊息。 
+
+
+
+
+
+
