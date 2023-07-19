@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 09a：實作Web Apps
+  title: 實驗室 09a：實作 Web Apps
   module: Administer Serverless Computing
 ---
 
@@ -229,7 +229,7 @@ lab:
 
 1. 將 [Cloud Shell] 窗格最小化 (但不關閉)，然後在 [Web 應用程式] 刀鋒視窗的 [設定] 區段中，按一下 [相應放大 (App Service 方案)]。
 
-1. 選取 [執行歷程記錄] 索引標籤，並檢查 [Observed resource instance count] \(觀察到的資源執行個體計數\)。
+1. 選取 **[自動調整設定**]、選取 [ **執行歷程記錄** ] 索引標籤，然後檢查 **[觀察到的資源實例計數**]。
 
 1. 監視使用率和執行個體數目幾分鐘。 
 
