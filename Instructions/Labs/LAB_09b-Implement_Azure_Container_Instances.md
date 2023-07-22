@@ -1,7 +1,7 @@
 ---
 lab:
   title: 實驗室 09b：實作Azure 容器執行個體
-  module: Administer Serverless Computing
+  module: Administer PaaS Compute Options
 ---
 
 # 實驗 09b - 實作 Azure 容器執行個體

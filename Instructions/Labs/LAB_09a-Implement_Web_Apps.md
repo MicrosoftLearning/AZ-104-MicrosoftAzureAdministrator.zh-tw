@@ -1,7 +1,7 @@
 ---
 lab:
   title: 實驗室 09a：實作 Web Apps
-  module: Administer Serverless Computing
+  module: Administer PaaS Compute Options
 ---
 
 # 實驗 09a - 實作 Web 應用程式
