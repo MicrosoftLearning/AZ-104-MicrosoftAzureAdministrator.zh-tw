@@ -17,13 +17,19 @@ demo:
 
 1. 存取 Azure 入口網站。
 
-1. 選取頂端橫幅上的 **[支援&疑難排解** ] 圖示。 檢閱 **支援資源** 連結。 
+1. 選取頂端橫幅上的 **[支援 & 疑難排解** ] 圖示。 檢閱 **支援資源** 連結。 
 
 1. 選取頂端橫幅上的 [設定]**** 圖示。  檢 **閱外觀 + 啟動檢視** 設定。 
 
-1. 使用左側功能表，然後選取 [ **儀表板**]。 使用**圖格庫****編輯**儀表板。 討論自訂選項。 
+1. 使用左側功能表，然後選取 [ **儀表板**]。 使用**圖格庫****編輯**儀表板。 討論自訂選項。
 
-1. 詢問學生是否有關于如何使用Azure 入口網站的任何問題。 
+1. 示範如何搜尋和尋找資源。
+
+1. 使用左上方功能表來尋找 **[所有服務**]。 
+
+1. 當您有時間檢閱其他功能時。
+   
+1. 詢問學生是否有任何問題。
 
 ## 示範 -- Cloud Shell
 
@@ -69,7 +75,7 @@ demo:
 
 在此示範中，我們將探索快速入門範本。
 
-**參考**：[教學課程 - 建立&部署範本 - Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell)
+**參考**：[教學課程 - 建立 & 部署範本 - Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell)
 
 1. 從流覽至 [Azure 快速入門範本資源庫](https://learn.microsoft.com/en-us/samples/browse/?expanded=azure&products=azure-resource-manager)開始。 請注意，有 JSON 和 Bicep 範例。 
 
