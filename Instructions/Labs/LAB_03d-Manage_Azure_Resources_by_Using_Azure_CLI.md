@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 03d：使用 Azure CLI 管理 Azure 資源
+  title: '實驗室 03d：使用 Azure CLI 管理 Azure 資源 (選擇性) '
   module: Administer Azure Resources
 ---
 
