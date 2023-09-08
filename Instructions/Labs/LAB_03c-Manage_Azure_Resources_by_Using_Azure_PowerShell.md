@@ -13,6 +13,8 @@ lab:
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
+>**注意：** 此實驗室需要完成實驗室 03b。 
+
 ## 目標
 
 在此實驗中，您將會：
@@ -72,7 +74,7 @@ lab:
     -Location $location `
     -CreateOption Empty `
     -DiskSizeGB 32 `
-    -Sku Standard_LRS
+    -SkuName Standard_LRS
 
    $diskName = 'az104-03c-disk1'
 
@@ -113,7 +115,7 @@ lab:
 1. 若要將磁碟效能 SKU 變更為 **Premium_LRS**，請從 Cloud Shell 內的 PowerShell 工作階段執行下列程式碼：
 
    ```powershell
-   New-AzDiskUpdateConfig -Sku Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
+   New-AzDiskUpdateConfig -SkuName Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
    ```
 
 1. 若要驗證變更是否生效，請執行下列程式碼：
