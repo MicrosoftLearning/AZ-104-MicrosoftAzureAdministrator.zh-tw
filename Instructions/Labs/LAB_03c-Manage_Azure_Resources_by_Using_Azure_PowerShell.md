@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 03c：使用 Azure PowerShell 管理 Azure 資源
+  title: 實驗室 03c：使用 Azure PowerShell (選擇性) 管理 Azure 資源
   module: Administer Azure Resources
 ---
 
@@ -12,6 +12,8 @@ lab:
 現在，您已探索與佈建資源相關聯的基本 Azure 管理功能，並使用 Azure 入口網站、Azure Resource Manager 範本根據資源群組加以組織，您必須使用 Azure PowerShell 來執行對等的工作。 若要避免安裝 Azure PowerShell 模組，您將有效率的調控 Azure Cloud Shell 中提供的 PowerShell 環境。
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
+
+>**注意：** 此實驗室需要完成實驗室 03b。 
 
 ## 目標
 
@@ -72,7 +74,7 @@ lab:
     -Location $location `
     -CreateOption Empty `
     -DiskSizeGB 32 `
-    -Sku Standard_LRS
+    -SkuName Standard_LRS
 
    $diskName = 'az104-03c-disk1'
 
@@ -113,7 +115,7 @@ lab:
 1. 若要將磁碟效能 SKU 變更為 **Premium_LRS**，請從 Cloud Shell 內的 PowerShell 工作階段執行下列程式碼：
 
    ```powershell
-   New-AzDiskUpdateConfig -Sku Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
+   New-AzDiskUpdateConfig -SkuName Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
    ```
 
 1. 若要驗證變更是否生效，請執行下列程式碼：
