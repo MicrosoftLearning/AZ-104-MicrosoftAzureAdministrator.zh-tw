@@ -13,8 +13,6 @@ lab:
 
 **注意：** **[互動式實驗室模擬](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%207)** (英文) 可供您以自己的步調完成此實驗室。 您可能會發現互動式模擬與託管實驗室之間稍有差異，但所示範的核心概念與想法均相同。 
 
->**注意：** 此實驗室需要完成實驗室 03b。
-
 ## 目標
 
 在此實驗中，您將會：
