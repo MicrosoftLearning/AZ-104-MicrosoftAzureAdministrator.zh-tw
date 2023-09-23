@@ -50,10 +50,10 @@ lab:
     | 資源群組 | 新資源群組 **az104-09a-rg1** 的名稱 |
     | Web 應用程式名稱 | 任何全域唯一名稱 |
     | 發佈 | **程式碼** |
-    | 執行階段堆疊 | **PHP 8.0** |
+    | 執行階段堆疊 | **PHP 8.2** |
     | 作業系統 | **Linux** |
     | 區域 | 您可以在其中佈建 Azure Web 應用程式 Azure 區域的名稱 |
-    | App Service 方案 | 接受預設設定 |
+    | 定價方案 | 接受預設設定 |
 
 1. 按一下 [檢閱 + 建立]  。 在 [建立 Web 應用程式] 刀鋒視窗的 [檢閱 + 建立] 索引標籤上，確定通過驗證，然後按一下 [建立]。
 
@@ -94,9 +94,9 @@ lab:
     
 1. 在 [設定] 索引標籤的 [來源] 下拉式清單中，選取 [本機 Git]，然後按一下 [儲存] 按鈕
 
-1. 在 [部署中心] 刀鋒視窗上，將 [Git 複製 URL] 項目複製到記事本。
+1. 在 [ **部署中心]** 刀鋒視窗上，將 **[Git 複製 URI** ] 專案複製到 [記事本]。
 
-    >**注意：** 您將在本實驗室的下一個工作中需要 Git 複製 URL 值。
+    >**注意：** 您將在本實驗室的下一個工作中需要 Git 複製 URI 值。
 
 1. 在 [部署中心] 刀鋒視窗上，選取 [本機 Git/FTPS 認證] 索引標籤，在 [使用者範圍] 區段中指定下列設定，然後按一下 [儲存]。
 
@@ -131,15 +131,15 @@ lab:
    Set-Location -Path $HOME/php-docs-hello-world/
    ```
 
-1. 從 [Cloud Shell] 窗格中，執行下列命令以新增遠端 git (請務必將 `[deployment_user_name]` 和 `[git_clone_url]` 預留位置分別取代為您在先前工作中識別的**部署認證**使用者名稱和 **Git 複製 URL** 值)：
+1. 從 [Cloud Shell] 窗格中，執行下列命令以新增遠端 git (請務必將 和 `[git_clone_uri]` 預留位置分別取代 `[deployment_user_name]` 為**部署**認證使用者名稱和**Git 複製 URI**的值，而您在上一個工作中識別) ：
 
    ```powershell
-   git remote add [deployment_user_name] [git_clone_url]
+   git remote add [deployment_user_name] [git_clone_uri]
    ```
 
     >**注意**：下列 `git remote add` 值不需要符合**部署認證**使用者名稱，但必須是唯一的
 
-1. 從 [Cloud Shell] 窗格中，執行下列命令，將範例 Web 應用程式程式碼從本機存放庫推送至 Azure Web 應用程式預備部署位置 (請務必將 `[deployment_user_name]` 預留位置取代為您在先前工作中識別的**部署認證**使用者名稱值)：
+1. 從 [Cloud Shell] 窗格中，執行下列命令，將範例 Web 應用程式程式碼從本機存放庫推送至 Azure Web 應用程式預備部署位置， (請務必將預留位置值取代為**部署**認證使用者名稱和密碼的值，以及您在上一個工作中所識別的應用程式名稱) ：
 
    ```powershell
     git push https://<deployment-username>:<deployment-password>@<app-name>.scm.azurewebsites.net/<app-name>.git master
