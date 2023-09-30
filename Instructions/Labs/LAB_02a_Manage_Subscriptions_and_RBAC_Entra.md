@@ -1,6 +1,6 @@
 ---
 lab:
-  title: '實驗室 02a：管理訂用帳戶和 RBAC (重新命名測試) '
+  title: 實驗室 02a：管理訂用帳戶和 RBAC
   module: Administer Governance and Compliance
 ---
 
