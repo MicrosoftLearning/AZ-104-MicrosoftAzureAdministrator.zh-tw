@@ -6,7 +6,7 @@ demo:
 
 # 01 - 管理身分識別
 
-## 設定 Azure Active Directory
+## 設定專案識別碼識別
 
 此領域沒有正式的示範。  請考慮逐步解說學生實驗室 01 的互動式實驗室模擬。 
 
@@ -14,23 +14,23 @@ demo:
 
 或者，您可以使用下列其中一個快速入門。 
 
-**參考**： [快速入門 - 存取&建立新的租使用者 - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+**參考**：[快速入門 - 存取 & 在Microsoft Entra識別碼中建立新的租使用者](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
-**參考**： [快速入門 - 檢視群組&成員 - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
+**參考**： [快速入門 - 建立具有成員的群組，並檢視所有群組和成員](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
 ## 設定使用者和群組帳戶
 
-在此示範中，我們將探索 Azure Active Directory。
+在此示範中，我們將探索 Entra ID 身分識別。
 
-**參考**： [新增或刪除使用者 - Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+**參考**： [新增或刪除使用者](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
-**參考**： [建立基本群組並新增成員 - Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+**參考**： [建立基本群組並新增成員](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
-**注意：**  視您的訂用帳戶而定，Azure Active Directory 刀鋒視窗的所有區域將無法使用。 
+**注意：**  視您的訂用帳戶而定，不會提供 [Microsoft Entra識別碼] 刀鋒視窗的所有區域。 
 
 **檢閱授權和網域資訊**
 
-1.  存取Azure 入口網站並流覽至 **[Azure Active Directory**   ] 刀鋒視窗。
+1.  存取Azure 入口網站並流覽至 **[Microsoft Entra識別碼**   ] 刀鋒視窗。
 
 2.  在 [概觀] 刀鋒視窗上，檢閱 **租使用者資訊**   ，包括授權和主要網域。
 
@@ -48,7 +48,7 @@ demo:
 
 **探索群組帳戶**
 
-1.  返回 **[Azure Active Directory**   ] 頁面，然後選取 [ **群組]**   刀鋒視窗。
+1.  返回 **[Microsoft Entra識別碼**   ] 頁面，然後選取 [ **群組**   ] 刀鋒視窗。
 
 2.  建立 **新的群組**   ，或選取要檢閱的現有群組。
 
