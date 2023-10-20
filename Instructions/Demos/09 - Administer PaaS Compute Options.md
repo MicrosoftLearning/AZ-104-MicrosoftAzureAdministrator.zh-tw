@@ -20,13 +20,13 @@ demo:
 
 1. 搜尋並選取 **App Service方案**。
 
-1. 建立簡單的App Service計畫。 討論選取 Windows 或 Linux 的需求。 立即或後續步驟討論定價方案。 
+1. 建立簡單的App Service方案。 討論選取 Windows 或 Linux 的需求。 立即或在後續步驟中討論定價方案。 
 
 1. 部署新的 App Service 方案。 
 
-1. 檢閱 [**相應增加 (App Service 方案) **] 刀鋒視窗。 討論**開發/測試與****生產**方案之間的差異。 檢閱功能清單。 
+1. 檢閱 [**相應增加 (App Service 方案) **] 刀鋒視窗。 討論 **開發/測試** 與 **生產** 計畫之間的差異。 檢閱功能清單。 
 
-1. 檢閱 [**相應放大 (App Service 方案) **] 刀鋒視窗。 檢閱 **以手動** 和 **規則為基礎的**差異。 
+1. 檢閱 [**相應放大 (App Service 方案) **] 刀鋒視窗。 檢閱 **手動** 與 **規則型**之間的差異。 
 
 ## 設定 Azure 應用程式服務
 
@@ -50,15 +50,15 @@ demo:
 
 1. **檢閱 + 建立** Web 應用程式。 等候資源部署。
 
-1. 在 [ **概觀]** 頁面上，確定 **[狀態** ] 為 [ **正在執行**]。
+1. 在 [ **概觀]** 頁面上，確定 **[狀態** ] 為 **[正在執行**]。
 
 1. 選取 **URL** ，並確定預設預留位置頁面會載入。
 
-1. 當您有時間時，請探索 **[部署位置]** 選項。
+1. 當您有時間時，請流覽 **[部署位置]** 選項。
    
 ## 設定 Azure 容器執行個體
 
-在此示範中，我們會從 Azure 入口網站使用 Azure 容器執行個體 (ACI) 來建立、設定及部署容器。 ACI 應用程式會顯示具有公用 Microsoft Hello World 影像的靜態 HTML 頁面。 
+在此示範中，我們會從 Azure 入口網站使用Azure 容器執行個體 (ACI) 來建立、設定及部署容器。 ACI 應用程式會顯示具有公用 Microsoft Hello World影像的靜態 HTML 頁面。 
 
 **參考**： [快速入門 - 將 Docker 容器部署至容器實例](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
 
@@ -80,7 +80,7 @@ demo:
 
 1. 等候資源部署。
 
-1. 在重新執行的 [ **概** 觀] 頁面上，確定 **[狀態** ] 為 **[正在執行**]。
+1. 在資源的 [ **概觀** ] 頁面上，確定 **[狀態** ] 為 **[正在執行**]。
 
 1. 流覽至容器實例的 **FQDN** ，並確定歡迎頁面隨即顯示。 
 
@@ -90,17 +90,17 @@ demo:
 
 在此示範中，我們將建立及使用 Azure Container Apps。 
 
-**參考**：[快速入門：使用 Azure 入口網站 部署您的第一個容器應用程式](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
+**參考**[：快速入門：使用 Azure 入口網站 部署您的第一個容器應用程式](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
 
 1. 搜尋並選取 **[容器應用程式**]。
 
-1. 完成 **[專案詳細資料** ] 並建立容器應用程式 **環境**。
+1. 完成 **專案詳細資料** 並建立容器應用程式 **環境**。
 
 1. **檢閱並建立** 容器應用程式。
 
 1. 使用 **[應用程式 URL]** 連結來檢視您的應用程式。
 
-1. 確認瀏覽器會顯示 **歡迎使用 Azure Container Apps** 訊息。 
+1. 確認瀏覽器會顯示 **[歡迎使用 Azure Container Apps** ] 訊息。 
 
 
 
