@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 03c：使用 Azure PowerShell (選擇性) 管理 Azure 資源
+  title: 實驗室 03c：使用 Azure PowerShell 管理 Azure 資源（選擇性）
   module: Administer Azure Resources
 ---
 

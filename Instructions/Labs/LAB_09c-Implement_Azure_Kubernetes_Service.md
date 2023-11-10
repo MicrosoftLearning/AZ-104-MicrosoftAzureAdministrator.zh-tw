@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 09c：實作Azure Kubernetes Service
+  title: 實驗室 09c：實作 Azure Kubernetes Service
   module: Administer PaaS Compute Options
 ---
 
@@ -38,7 +38,7 @@ Contoso 有許多多層式應用程式，不適合使用 Azure 容器執行個�
 
 1. 登入 [Azure 入口網站](https://portal.azure.com)。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示，開啟 **Azure Cloud Shell**。
 
 1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
 
