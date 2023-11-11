@@ -1,20 +1,20 @@
 ---
 demo:
-  title: 示範 01：管理身分識別
+  title: 示範 01：管理員 ister Identity
   module: Administer Identity
 ---
 
-# 01 - 管理身分識別
+# 01 - 管理員 ister Identity
 
-## 設定專案識別碼身分識別
+## 設定 Entra ID 身分識別
 
-此領域沒有正式的示範。  請考慮逐步執行學生實驗室 01 的互動式實驗室模擬。 
+此領域沒有正式的示範。 請考慮逐步執行學生實驗室 01 的互動式實驗室模擬。 
 
 [互動式實驗室模擬實驗室 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
 
 或者，您可以使用下列其中一個快速入門。 
 
-**參考**：[快速入門 - 存取 & 在Microsoft Entra識別碼中建立新的租](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)使用者
+**參考**： [快速入門 - Access & 在 Microsoft Entra ID 中建立新租使用者](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
 **參考**： [快速入門 - 建立具有成員的群組，並檢視所有群組和成員](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
@@ -26,30 +26,30 @@ demo:
 
 **參考**： [建立基本群組並新增成員](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
-**注意：**  視您的訂用帳戶而定，Microsoft Entra識別碼刀鋒視窗的所有區域都無法使用。 
+**注意：** 根據您的訂用帳戶，Microsoft Entra ID 刀鋒視窗的所有區域都無法使用。 
 
 **檢閱授權和網域資訊**
 
-1.  存取Azure 入口網站並流覽至 **Microsoft Entra識別碼**   刀鋒視窗。
+1.  存取 Azure 入口網站 並流覽至 **[Microsoft Entra ID** ] 刀鋒視窗。
 
-2.  在 [概觀] 刀鋒視窗上，檢閱 **租使用者資訊**   ，包括授權和主域。
+2.  在 [概觀] 刀鋒視窗中，檢閱 **租用戶資訊** ，包括授權和主要網域。
 
-**探索使用者帳戶**
+**探索用戶帳戶**
 
-1.  選取 [ **使用者**   ] 刀鋒視窗。
+1.  選取 [ **使用者]** 刀鋒視窗。
 
-2.  說明 **[新增使用者**   ] 和 [ **新增來賓使用者] 的選項**。
+2.  說明 [新增使用者  **] 和 **[新增來賓使用者] 的選項****。
 
-3.  選取 **[新增使用者**   ]，並討論 **[建立使用者**   ] 和 [ **邀請使用者**] 之間的差異。
+3.  選取 [ **新增使用者** ]，並討論 [建立使用者 ** ] 和 **[邀請使用者**] 之間的差異**。
 
-4.  建立檢閱 **身分識別**、 **群組和角色**、 **設定**和 **作業資訊**   參數 **的新使用者**   。
+4.  建立檢 **閱身分 **識別、 **群組和角色**、 **設定** 和 **作業資訊 **參數的新使用者**。** 
 
-5.  建立使用者之後，請檢閱 **重設密碼**、 **刪除使用者**和 **登入**。
+5.  建立用戶之後，請檢閱 **重設密碼**、 **刪除使用者**和 **登入**。
 
-**探索群組帳戶**
+**探索組帳戶**
 
-1.  返回 **Microsoft Entra識別碼**   頁面，然後選取 [ **群組**   ] 刀鋒視窗。
+1.  返回 **[Microsoft Entra 標識符** ] 頁面，然後選取 [ **群組** ] 刀鋒視窗。
 
-2.  建立 **新的群組**   ，或選取要檢閱的現有群組。
+2.  建立新的 **群組** ，或選取要檢閱的現有群組。
 
-3.  檢閱群組的相關資訊，包括 **成員資格類型和類型**   。 ** **
+3.  檢閱群組的相關信息，包括 **成員資格類型和類型 **** **。
