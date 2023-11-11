@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 09b：實作Azure 容器執行個體
+  title: 實驗室 09b：實作 Azure 容器執行個體
   module: Administer PaaS Compute Options
 ---
 
@@ -87,7 +87,7 @@ Contoso 想要為其虛擬化工作負載尋找新的平台。 您已識別出�
 
 1. 在 Azure 入口網站中，在 [Cloud Shell] 窗格內開啟 [PowerShell] 工作階段。
 
-    >**注意**：必須建立Cloud Shell儲存體，這些命令才能運作。 
+    >**注意**：必須建立 Cloud Shell 儲存體，這些命令才能運作。 
 
 1. 執行下列命令，列出在本課程模組的任何實驗中建立的所有資源群組：
 
