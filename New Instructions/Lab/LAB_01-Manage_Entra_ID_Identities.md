@@ -94,7 +94,7 @@ lab:
 
 在此工作中，您會建立群組。 群組會用於用戶帳戶或裝置。 某些群組具有靜態指派的成員。 某些群組具有動態指派的成員。 動態群組會根據用戶帳戶或裝置的屬性自動更新。 靜態群組需要更多的系統管理額外負荷（系統管理員必須手動新增和移除成員）。
 
-1. 在 Azure 入口網站 中，搜尋並選取 [**群組**]。
+1. 在 Azure 入口網站 中，搜尋並選取 `Groups`。
 
 1. 請注意成員資格類型 **、**來源**和**類型**等**群組資訊。 另請注意，群組中的成員數目。 
 
@@ -113,7 +113,7 @@ lab:
 
 1. 按一下 [未選取任何成員]。
 
-1. 從 [ **新增成員]** 刀鋒視窗中，搜尋您的用戶帳戶。 **選取** 要新增至群組的用戶帳戶。 
+1. 從 [ **新增成員]** 刀鋒視窗中，搜尋您的用戶帳戶。 ****選取** az104-user1**，並將其新增至群組。 
 
 1. 按兩下 **[建立** ] 以完成群組的建立。 
 
@@ -152,7 +152,7 @@ lab:
    ```powershell
    Get-Help New-AzResourceGroup -detailed
    ```
-1. 若要從 Cloud Shell 內的 PowerShell 會話建立資源群組，請執行下列命令。 請注意，以貨幣符號 （$） 開頭的命令會建立可在後續命令中使用的變數。 請確定您收到成功訊息。 
+1. 若要從 Cloud Shell 內的 PowerShell 工作階段建立資源群組，請執行下列命令。 請注意，以美元符號 （$） 開頭的命令會建立可在後續命令中使用的變數。 請確定您收到成功訊息。 
 
    ```powershell
    $location = 'eastus'
@@ -183,19 +183,19 @@ lab:
 
 ## 工作 7：使用 Bash 殼層練習
 
-在這項工作中，您會使用 Cloud Shell 內的 Azure CLI 會話來建立資源群組和 Azure 群組。
+在這項工作中，您會使用 Cloud Shell 內的 Azure CLI 工作階段來建立資源群組和 Azure 群組。
 
-1. 在 Cloud Shell 中繼續。 使用下拉式清單切換至 ** Bash ** 。
+1. 在 Cloud Shell 中繼續。 使用下拉式清單切換至 **Bash**。
 
-    >**注意： ** 使用方向鍵來移動命令歷程記錄。 使用索引標籤索引鍵來自動完成命令和參數。 
+    >**注意：** 使用箭頭鍵來移動命令歷程記錄。 使用索引標籤索引鍵來自動完成命令和參數。 
 
-1. Azure CLI 使用容易閱讀的語法。 例如，若要與資源群組互動，命令是 ** az group ** 。  
+1. Azure CLI 使用容易閱讀的語法。 例如，若要與資源群組互動，命令是 **az group**。  
 
    ```sh
    az group --help
    ```
 
-1. 建立 ** ** 選項看起來很有希望。 請注意，大寫名稱會建立您可以在後續命令中參考的變數。 
+1. 建立**** 選項看起來很有希望。 請注意，大寫名稱會建立您可以在後續命令中參考的變數。 
 
    ```sh
    RGNAME='az104-rg1-cli'
@@ -203,7 +203,7 @@ lab:
    az group create --name $RGNAME --location $LOCATION
    ```
    
-1. 若要確認並擷取新建立之資源群組的屬性，請嘗試 ** show ** 命令。 
+1. 若要確認並擷取新建立之資源群組的屬性，請嘗試 **show** 命令。 
 
    ```sh
    az group show --name $RGNAME
@@ -214,7 +214,7 @@ lab:
     az ad group --help
     ```
 
-1. **建立 ** 群組並 ** 列出 ** 要驗證的群組。
+1. **建立** 群組並 **列出** 要驗證的群組。
 
    ```sh
    az ad group create --display-name MyCLIgroup --mail-nickname MyCLIgroup
@@ -227,10 +227,10 @@ lab:
 
 恭喜您完成實驗室。 以下是此實驗室的一些主要方法：
 
-+ Azure 入口網站是開始建立和管理 Azure 資源的好方法。 管理員istrators 可以自訂入口網站並共用儀表板。
++ Azure 入口網站 是開始建立和管理 Azure 資源的好方法。 管理員 istrators 可以自定義入口網站並共用儀錶板。
 + 資源群組是將相關資源分組的方式。 您可以針對專案、部門或應用程式使用資源群組。 這可讓您輕鬆地管理及監視一組相關資源。 
-+ Microsoft Entra ID 中有不同類型的使用者帳戶。 每個使用者帳戶類型都有預期工作範圍特有的存取層級。 
-+ 將帳戶群組在一起的相關使用者或裝置。 群組成員資格可以靜態或動態指派。 
++ Microsoft Entra ID 中有不同類型的使用者帳戶。 每個用戶帳戶類型都有預期工作範圍特有的存取層級。 
++ 將帳戶群組在一起的相關用戶或裝置。 群組成員資格可以靜態或動態指派。 
 + Cloud Shell 是一個互動式且已驗證的終端機，可用來管理 Azure 資源。 Cloud Shell 提供 Bash 或 Azure PowerShell 的存取權。
 + Azure PowerShell 和 Bash 提供腳本方式來建立資源。 
 
@@ -238,9 +238,9 @@ lab:
 
 如果您使用自己的訂用帳戶，需要一分鐘的時間才能刪除實驗室資源。 這可確保資源可以釋出，並將成本降到最低。 刪除實驗室資源最簡單的方式是刪除實驗室資源群組。 
 
-+ 在Azure 入口網站中，選取資源群組、選取 ** [刪除資源群組 ** ]、 ** 輸入資源組名 ** ，然後按一下 [ ** 刪除 ** ]。
++ 在 Azure 入口網站 中，選取資源群組、選取 **[刪除資源群組**]、**輸入資源組名**，然後按兩下 [**刪除**]。
 
-+ 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName` 。
++ 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 
-+ 使用 CLI， `az group delete --name resourceGroupName` 。
++ 使用 CLI， `az group delete --name resourceGroupName`。
 
