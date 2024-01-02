@@ -22,7 +22,7 @@ lab:
 
 您可能會發現互動式實驗室模擬對本主題很有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬和此實驗室之間有差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。 
 
-+ [管理 Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)*。 建立和設定使用者並指派給群組。 建立 Azure 租使用者並管理來賓帳戶。 
++ [管理 Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)。 建立和設定使用者並指派給群組。 建立 Azure 租使用者並管理來賓帳戶。 
 
 ## 架構圖
 ![實驗室 01 架構的圖表。](../media/az104-lab01-user-and-groups2.png)
@@ -44,7 +44,7 @@ lab:
 
 1. 登入 **Azure 入口網站** - `https://portal.azure.com`。
 
-    >**注意：** 所有實驗室都會使用 Azure 入口網站。 如果您不熟悉 Azure，請在頂端搜尋方塊中輸入 `Quickstart Center` 。 然後幾分鐘的時間，即可在 Azure 入口網站** 影片中觀看**用戶入門。 即使您之前曾使用過入口網站，您也會找到流覽和自定義介面的一些秘訣和訣竅。 
+    >**注意：** 所有實驗室都會使用 Azure 入口網站。 如果您不熟悉 Azure，請在頂端搜尋方塊中輸入 `Quickstart Center` 。 然後幾分鐘，觀看 **Azure 入口網站** 影片中的開始使用。 即使您之前曾使用過入口網站，您也會找到流覽和自定義介面的一些秘訣和訣竅。 
    
 1. 在 Azure 入口網站 中，搜尋並選取 `Resource groups`。
    
@@ -113,7 +113,7 @@ lab:
 
 1. 按一下 [未選取任何成員]。
 
-1. 從 [ **新增成員]** 刀鋒視窗中，搜尋您的用戶帳戶。 ****選取** az104-user1**，並將其新增至群組。 
+1. 從 [ **新增成員]** 刀鋒視窗中，搜尋並選取 **az104-user1** ，並將其新增至群組。 
 
 1. 按兩下 **[建立** ] 以完成群組的建立。 
 
