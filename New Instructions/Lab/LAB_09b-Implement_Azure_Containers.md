@@ -134,7 +134,7 @@ Azure Container Apps 會進一步採用受控 Kubernetes 叢集的概念，並�
 
 1. 確認您收到 ** Azure Container Apps 應用程式的即時 ** 訊息。
 
-## 檢閱實驗室的要點
+## 重要心得
 
 恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
 

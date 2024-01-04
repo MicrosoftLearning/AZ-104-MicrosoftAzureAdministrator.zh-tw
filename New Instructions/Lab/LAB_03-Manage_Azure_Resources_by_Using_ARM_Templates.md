@@ -197,61 +197,61 @@ lab:
 
 1. 在 Cloud Shell 中 ** ，選取編輯器 ** 圖示並流覽至參數 JSON 檔案。
 
-1. 進行變更。 例如，將磁碟名稱變更為 **az104-disk2**。 
+1. 進行變更。 例如，將磁片名稱變更為 ** az104-disk2 ** 。 
 
-    >**注意**：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
+    >**注意 ** ：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
 
 1. 若要部署至資源群組，請使用 **New-AzResourceGroupDeployment**。
 
     ```powershell
     New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
     ```
-1. 請確定命令完成，且 ProvisioningState 為 **Succeeded**。
+1. 請確定命令完成，且 ProvisioningState 為 ** Succeeded ** 。
    
-## 工作 6：使用 CLI 部署樣本 （選項 2）
+## 工作 6：使用 CLI 部署範本 （選項 2）
 
-1. 開啟 Cloud Shell，然後選取 **[Bash**]。
+1. 開啟 Cloud Shell，然後選取 ** [Bash ** ]。
 
-1. 如有必要，請使用進 **階** 設定來建立 Cloud Shell 的磁碟記憶體。
+1. 如有必要，請使用進 ** 階 ** 設定來建立 Cloud Shell 的磁片儲存體。
 
-1. 在 Cloud Shell 中，使用 **上傳** 圖示來上傳範本和參數檔案。 您必須個別上傳每個檔案。
+1. 在 Cloud Shell 中，使用 ** 上傳 ** 圖示來上傳範本和參數檔案。 您必須個別上傳每個檔案。
 
-1. 確認您的檔案可在 Cloud Shell 記憶體中使用。
+1. 確認您的檔案可在 Cloud Shell 儲存體中使用。
 
     ```sh
     dir
     ```
 
-1. 在 Cloud Shell 中 **，選取編輯器** 圖示並瀏覽至參數 JSON 檔案。
+1. 在 Cloud Shell 中 ** ，選取編輯器 ** 圖示並流覽至參數 JSON 檔案。
 
-1. 進行變更。 例如，將磁碟名稱變更為 **az104-disk2**。 
+1. 進行變更。 例如，將磁片名稱變更為 ** az104-disk2 ** 。 
 
-    >**注意**：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
+    >**注意 ** ：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
 
 1. 若要部署至資源群組，請使用 **az deployment group create**。
 
     ```sh
     az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
     ```
-1. 請確定命令完成，且 ProvisioningState 為 **Succeeded**。
+1. 請確定命令完成，且 ProvisioningState 為 ** Succeeded ** 。
 
 
 
-## 檢閱實驗室的要點
+## 重要心得
 
 恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
 
 + Azure Resource Manager 範本可讓您將解決方案的所有資源部署、管理及監視為群組，而不是個別處理這些資源。
-+ Azure Resource Manager 範本是 JavaScript 物件表示法 （JSON） 檔案，可讓您以宣告方式而非使用腳本來管理基礎結構。
++ Azure Resource Manager 範本是 JavaScript 物件標記法 （JSON） 檔案，可讓您以宣告方式而非使用腳本來管理基礎結構。
 + 您可以使用包含參數值的個別 JSON 檔案，而不是在範本中傳遞參數作為內嵌值。
-+ Azure Resource Manager 範本可以透過各種方式部署，包括 Azure 入口網站、Azure PowerShell 和 CLI。
++ Azure Resource Manager 範本可以透過各種方式部署，包括Azure 入口網站、Azure PowerShell 和 CLI。
 
 ## 清除您的資源
 
 如果您使用自己的訂用帳戶，需要一分鐘的時間才能刪除實驗室資源。 這可確保資源可以釋出，並將成本降到最低。 刪除實驗室資源最簡單的方式是刪除實驗室資源群組。 
 
-+ 在 Azure 入口網站 中，選取資源群組、選取 **[刪除資源群組**]、**輸入資源組名**，然後按兩下 [**刪除**]。
++ 在Azure 入口網站中，選取資源群組、選取 ** [刪除資源群組 ** ]、 ** 輸入資源組名 ** ，然後按一下 [ ** 刪除 ** ]。
 
-+ 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
++ 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName` 。
 
-+ 使用 CLI， `az group delete --name resourceGroupName`。
++ 使用 CLI， `az group delete --name resourceGroupName` 。
