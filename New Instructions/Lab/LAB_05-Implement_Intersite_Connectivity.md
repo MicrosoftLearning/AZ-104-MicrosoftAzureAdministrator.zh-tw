@@ -8,7 +8,7 @@ lab:
 
 ## 實驗室簡介
 
-在此實驗室中，您將探索虛擬網路之間的通訊。 您將實作虛擬網路對等互連，並執行遠端命令來測試連線。 您也將瞭解 網路監看員 工具。  
+在此實驗室中，您將探索虛擬網路之間的通訊。 您將實作虛擬網路對等互連，並執行遠端命令來測試連線。   
 
 此實驗室需要 Azure 訂用帳戶。 您的訂用帳戶類型可能會影響此實驗室中功能的可用性。 您可以變更區域，但步驟是使用 **美國**東部撰寫。 
 
@@ -22,7 +22,7 @@ lab:
 
 您可能會發現數個互動式實驗室模擬適合本主題。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬和此實驗室之間有差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。 
 
-+ [連線 兩個使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)的 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
++ [使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering) 連線 兩個 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
 + [實作月臺間連線](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%209)。 執行範本以建立具有數部虛擬機的虛擬網路基礎結構。 設定虛擬網路對等互連並測試連線。 
 
 ## 架構圖
@@ -225,8 +225,6 @@ lab:
 如果您使用自己的訂用帳戶，需要一分鐘的時間才能刪除實驗室資源。 這可確保資源可以釋出，並將成本降到最低。 刪除實驗室資源最簡單的方式是刪除實驗室資源群組。 
 
 + 在 Azure 入口網站 中，選取資源群組、選取 **[刪除資源群組**]、**輸入資源組名**，然後按兩下 [**刪除**]。
-
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
-
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
