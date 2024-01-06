@@ -35,9 +35,10 @@ lab:
 + 工作 1：建立 Azure Resource Manager 範本以部署 Azure 受控磁碟。
 + 工作 2：編輯 Azure Resource Manager 範本，然後使用範本建立 Azure 受控磁碟。
 + 工作 3：檢閱受控磁碟的 Azure Resource Manager 範本型部署。
-+ 工作 4：使用 Azure Bicep 部署受控磁碟。
-+ 工作 5：使用 Azure PowerShell 部署範本（選項 1）。
++ 工作 4：使用 Azure PowerShell 部署範本（選項 1）。
 + 工作 5：使用 CLI 部署範本（選項 2）。 
++ 工作 6：使用 Azure Bicep 部署受控磁碟。
+
 
 
 ## 工作 1：建立 Azure Resource Manager 範本以部署 Azure 受控磁碟
@@ -60,8 +61,9 @@ lab:
     | 區域 | **美國東部** |
     | 可用性區域 | **不需要基礎結構備援** | 
     | 來源類型 | **None** |
-    | 大小 | **32 Gb** | 
     | 效能 | **標準 HDD** |
+    | 大小 | **32 Gib** | 
+
 
 1. 按兩下 [**檢閱 + 建立***] 一次*。 請勿**** 部署資源。
 
@@ -69,7 +71,7 @@ lab:
 
 1. 檢閱範本中顯示的資訊。 檢閱 [範本 **] 和 **[** 參數**] 索引標籤。
 
-1. 按兩下 [ **下載** ]，並將範本儲存至您的電腦。
+1. 按兩下 [ **下載** ]，並將範本儲存到本機磁碟驅動器。 這會建立壓縮的壓縮檔案。 
 
 1. 將下載檔案的內容解壓縮到 **您電腦上的 [下載** ] 資料夾中。 請注意，有兩個 JSON 檔案（範本和參數）。 
 
@@ -77,13 +79,15 @@ lab:
 
 1. 在 Azure 入口網站 中，取消受控磁碟的部署。
 
+   >**注意：**  您可以匯出整個資源群組，或只匯出該資源群組內的特定資源。
+
 ## 工作 2：編輯 Azure Resource Manager 範本，然後使用範本建立 Azure 受控磁碟
 
 在這項工作中，您會使用您建立的範本來部署新的受控磁碟。 此工作概述具有範本型部署的一般程式，讓您能夠快速且輕鬆地重複部署。 如果您需要變更參數或兩個參數，您未來可以輕鬆地修改範本。
 
 1. 在 Azure 入口網站 中，搜尋並選取 `Deploy a custom template`。
 
-1. 在 [ **自定義部署]** 刀鋒視窗上，請注意可以使用 **快速入門範本**。 有許多內建範本。 選取任何範本將提供簡短的描述。
+1. 在 [ **自定義部署]** 刀鋒視窗上，請注意可以使用 **快速入門範本**。 有許多內建範本，如下拉功能表所示。 
 
 1. 不要使用快速入門，而是在編輯器**中選取 **[建置您自己的範本]。
 
@@ -149,15 +153,72 @@ lab:
 
 1. 請注意，您的受控磁碟已建立。
 
-    >**注意：** 您也可以從命令行部署範本。 工作 4，選項 1，示範如何使用 PowerShell。 工作 5，選項 2，示範如何使用 CLI。
+    >**注意：** 您也可以從命令行部署範本。 工作 4 示範如何使用 PowerShell 進行部署。 工作 5 示範如何使用 CLI 進行部署。
 
-## 工作 4：使用 Azure Bicep 部署資源
+
+## 工作 4. 使用 Azure PowerShell 部署範本（選項 1）。
+
+1. 開啟 Cloud Shell，然後選取 **[PowerShell**]。
+
+1. 如有必要，請使用進 **階** 設定來建立 Cloud Shell 的磁碟記憶體。
+
+1. 在 Cloud Shell 中，使用 **上傳** 圖示來上傳範本和參數檔案。 您必須個別上傳每個檔案。
+
+1. 確認您的檔案可在 Cloud Shell 記憶體中使用。
+
+    ```powershell
+    dir
+    ```
+
+1. 在 Cloud Shell 中，選取 **[編輯器** ] （大括弧） 圖示，然後瀏覽至參數 JSON 檔案。
+
+1. 進行變更。 例如，將磁碟名稱變更為 **az104-disk2**。 使用 **Ctrl +S** 或右 **上方的 [更多** ] 功能表來儲存變更。 
+
+    >**注意**：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
+
+1. 若要部署至資源群組，請使用 **New-AzResourceGroupDeployment**。
+
+    ```powershell
+    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
+    ```
+1. 請確定命令完成，且 ProvisioningState 為 **Succeeded**。
+
+1. 您可以檢查入口網站或使用 **Get-AzDisk** 命令來確認磁碟已建立。 
+   
+## 工作 5：使用 CLI 部署樣本 （選項 2）
+
+1. 開啟 Cloud Shell，然後選取 **[Bash**]。
+
+1. 如有必要，請使用進 **階** 設定來建立 Cloud Shell 的磁碟記憶體。
+
+1. 在 Cloud Shell 中，使用 **上傳** 圖示來上傳範本和參數檔案。 您必須個別上傳每個檔案。
+
+1. 確認您的檔案可在 Cloud Shell 記憶體中使用。
+
+    ```sh
+    ls
+    ```
+
+1. 在 Cloud Shell 中，選取 **[編輯器** ] （大括弧） 圖示，然後瀏覽至參數 JSON 檔案。
+
+1. 進行變更。 例如，將磁碟名稱變更為 **az104-disk3**。 使用 **Ctrl +S** 或右 **上方的 [更多** ] 功能表來儲存變更。 
+
+    >**注意**：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
+
+1. 若要部署至資源群組，請使用 **az deployment group create**。
+
+    ```sh
+    az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
+    ```
+1. 請確定命令完成，且 ProvisioningState 為 **Succeeded**。
+
+1. 您可以藉由檢查入口網站或使用 **az disk list** 命令來確認磁碟已建立。
+   
+## 工作 6：使用 Azure Bicep 部署資源
 
 在這項工作中，您將使用 Bicep 檔案，將記憶體帳戶部署至您的資源群組。 Bicep 是一種宣告式自動化工具，建置在 ARM 範本上，但更容易閱讀和使用。
 
-1. 開啟 Cloud Shell **Bash** 工作階段。 如有必要，請使用 [ **進階** ] 鏈接來設定記憶體。 
-
-1. 選取 Cloud Shell 選單列中的 **[上傳/下載檔案** ] 圖示。 這是由具有向上和向下箭號的文件圖示表示。
+1. 開啟 Cloud Shell **Bash** 工作階段。 
 
 1. 選取**上傳**。 找出 \Allfiles\Lab03 目錄，然後選取 Bicep 範本檔案 **azuredeploy.bicep**。
 
@@ -180,62 +241,6 @@ lab:
 1. 關閉 Cloud Shell 並返回完整的 Azure 入口網站。 
 
 1. 搜尋並選取 **[儲存體 帳戶**]。 確認已在 az104-rg3** 資源群組中**建立名為 **az104** 的記憶體帳戶。
-
-## 工作 5. 使用 Azure PowerShell 部署範本（選項 1）。
-
-1. 開啟 Cloud Shell，然後選取 **[PowerShell**]。
-
-1. 如有必要，請使用進 **階** 設定來建立 Cloud Shell 的磁碟記憶體。
-
-1. 在 Cloud Shell 中，使用 **上傳** 圖示來上傳範本和參數檔案。 您必須個別上傳每個檔案。
-
-1. 確認您的檔案可在 Cloud Shell 記憶體中使用。
-
-    ```powershell
-    dir
-    ```
-
-1. 在 Cloud Shell 中 **，選取編輯器** 圖示並瀏覽至參數 JSON 檔案。
-
-1. 進行變更。 例如，將磁碟名稱變更為 **az104-disk2**。 
-
-    >**注意**：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
-
-1. 若要部署至資源群組，請使用 **New-AzResourceGroupDeployment**。
-
-    ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
-    ```
-1. 請確定命令完成，且 ProvisioningState 為 **Succeeded**。
-   
-## 工作 6：使用 CLI 部署樣本 （選項 2）
-
-1. 開啟 Cloud Shell，然後選取 **[Bash**]。
-
-1. 如有必要，請使用進 **階** 設定來建立 Cloud Shell 的磁碟記憶體。
-
-1. 在 Cloud Shell 中，使用 **上傳** 圖示來上傳範本和參數檔案。 您必須個別上傳每個檔案。
-
-1. 確認您的檔案可在 Cloud Shell 記憶體中使用。
-
-    ```sh
-    dir
-    ```
-
-1. 在 Cloud Shell 中 **，選取編輯器** 圖示並瀏覽至參數 JSON 檔案。
-
-1. 進行變更。 例如，將磁碟名稱變更為 **az104-disk2**。 
-
-    >**注意**：您可以將範本部署的目標設為資源群組、訂用帳戶、管理群組或租使用者。 根據部署的範圍，您可以使用不同的命令。
-
-1. 若要部署至資源群組，請使用 **az deployment group create**。
-
-    ```sh
-    az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
-    ```
-1. 請確定命令完成，且 ProvisioningState 為 **Succeeded**。
-
-
 
 ## 重要心得
 
