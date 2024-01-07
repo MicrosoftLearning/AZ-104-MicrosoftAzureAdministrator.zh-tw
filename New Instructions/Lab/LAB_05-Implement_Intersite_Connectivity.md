@@ -12,7 +12,7 @@ lab:
 
 此實驗室需要 Azure 訂用帳戶。 您的訂用帳戶類型可能會影響此實驗室中功能的可用性。 您可以變更區域，但步驟是使用 **美國**東部撰寫。 
 
-## 估計時間：30 分鐘
+## 估計時間：40 分鐘
 
 ## 實驗案例 
 
@@ -22,7 +22,7 @@ lab:
 
 您可能會發現數個互動式實驗室模擬適合本主題。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬和此實驗室之間有差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。 
 
-+ [使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering) 連線 兩個 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
++ [連線 兩個使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)的 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
 + [實作月臺間連線](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%209)。 執行範本以建立具有數部虛擬機的虛擬網路基礎結構。 設定虛擬網路對等互連並測試連線。 
 
 ## 架構圖
@@ -126,7 +126,7 @@ lab:
 
 ## 工作 3：測試虛擬機之間的連線
 
-在這項工作中，您會測試不同虛擬網路中虛擬機之間的連線。
+在這項工作中，您會測試不同虛擬網路中虛擬機之間的連線。 在繼續之前，請確定已部署並執行這兩部虛擬機。 
 
 ### 確認 CoreServicesVM 的私人 IP 位址
 
@@ -136,7 +136,7 @@ lab:
    
 ### 從 ManufacturingVM 測試 CoreServicesVM** 的**連線。
 
-1. 在入口網站中，選取 並選取 `ManufacturingVM` 虛擬機。
+1. 切換至 `ManufacturingVM` 虛擬機。
 
 1. 在 [作業]** 區**段中，選取 [**執行命令**] 刀鋒視窗。
 
@@ -171,6 +171,7 @@ lab:
     |                                      | 對等互連連結名稱                             | `CoreServicesVnet-to-ManufacturingVnet` |
     |                                      | 允許 CoreServicesVNet 存取對等互連的虛擬網路            | selected （default）                       |
     |                                      | 允許 CoreServicesVNet 接收來自對等互連虛擬網路的轉送流量 | 已選取                       |
+    |                                      | 允許 CoreServicesVNet 中的閘道將流量轉送至對等互連虛擬網路 | 未選擇 （預設值） |
     |                                      | 啟用 CoreServicesVNet 以使用對等互連虛擬網路的遠端閘道       | 未選擇 （預設值）                        |
     | 遠端虛擬網路               |                                               |                                       |
     |                                      | 對等互連連結名稱                             | `ManufacturingVnet-to-CoreServicesVnet` |
@@ -180,6 +181,7 @@ lab:
     |                                      | 虛擬網路                               | **ManufacturingVnet**                     |
     |                                      | 允許 ManufacturingVNet 存取 CoreServicesVNet  | selected （default）                       |
     |                                      | 允許 ManufacturingVNet 從 CoreServicesVNet 接收轉送流量 | 已選取                        |
+   |                                      | 允許 CoreServicesVNet 中的閘道將流量轉送至對等互連虛擬網路 | 未選擇 （預設值） |
     |                                      | 啟用 ManufacturingVNet 以使用 CoreServicesVNet 的遠端網關       | 未選擇 （預設值）                        |
 
 1. 檢閱您的設定，然後選取 [ **新增**]。
@@ -188,7 +190,7 @@ lab:
  
 1. 在 [CoreServicesVnet | 對等互連] 上，確認已列出 [CoreServicesVnet-to-ManufacturingVnet]**** 對等互連。 重新整理頁面，以確保**已 連線** 對等互連狀態****。
 
-1. 切換至 **ManufacturingVnet** ，並確認 **已列出 ManufacturingVnet 對 CoreServicesVnet** 對等互連。 確定已 **連線 對等互連狀態****。**
+1. 切換至 **ManufacturingVnet** ，並確認 **已列出 ManufacturingVnet 對 CoreServicesVnet** 對等互連。 確定已 **連線 對等互連狀態****。** 您可能需要**重新整理**頁面。 
 
  
 ## 工作 5：測試 VM 之間的連線
