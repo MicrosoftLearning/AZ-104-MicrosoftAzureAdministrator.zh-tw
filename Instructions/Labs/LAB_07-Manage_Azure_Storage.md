@@ -195,7 +195,7 @@ lab:
 
 1. 使用 InPrivate 模式開啟另一個瀏覽器視窗，並瀏覽至您在上一個步驟中複製的 URL。
 
-    > **注意**：您應該能夠藉由下載檔案並以 記事本 開啟它來檢視檔案的內容。
+    > **注意**：您應該能夠藉由下載檔案，並使用 記事本 開啟它來檢視檔案的內容。
 
     > **注意**：這是預期的結果，因為現在您的存取權會根據新產生的 SAS 權杖獲得授權。
 
@@ -285,17 +285,17 @@ lab:
 
     > **注意**：如果您沒有記錄工作 4 的 SAS URL，您應該產生具有相同組態的新 URL。 請使用工作 4 步驟 4-6 作為產生新 Blob SAS URL 的指南。 
 
-1. 您應該會看到 [MIT 授權 (MIT)] 頁面的內容。
+1. 您應該能夠下載LICENSE.txt檔案。
 
     > **注意**：這是預期的結果，因為您是從用戶端 IP 位址進行連線。
 
 1. 關閉 InPrivate 模式瀏覽器視窗，返回顯示 Azure 儲存體帳戶 [網路] 刀鋒視窗的瀏覽器視窗。
 
-1. 在 Azure 入口網站中，按一下 Azure 入口網站右上角的圖示以開啟 **Azure Cloud Shell**。
+1. 在 Azure 入口網站中，搜尋並選取 [虛擬機器]，然後在虛擬機器清單中，按一下 [az104-07-vm0]。
 
-1. 當系統提示您選取 [Bash] 或 [PowerShell] 時，請選取 [PowerShell]。
+1. 在 [az104-07-vm0] 刀鋒視窗上的 [作業] 區段中，按一下 [執行命令]。
 
-1. 從 [Cloud Shell] 窗格中執行下列命令，以嘗試從儲存體帳戶的 [az104-07-container] 容器下載 LICENSE Blob (將 `[blob SAS URL]` 預留位置取代為您在上一個工作中產生的 Blob SAS URL)：
+1. 在 [**執行命令腳本] 刀鋒視窗中，在 **[PowerShell 腳本****] 窗格中執行下列命令，以嘗試從**記憶體帳戶的 az104-07-container 容器**下載 LICENSE Blob（將佔位符取代`[blob SAS URL]`為您在上一個工作中產生的 Blob SAS URL）：
 
    ```powershell
    Invoke-WebRequest -URI '[blob SAS URL]'
@@ -303,8 +303,6 @@ lab:
 1. 確認下載嘗試失敗。
 
     > **注意**：您應該會收到訊息表示 **AuthorizationFailure：此要求未獲授權執行此作業**。 這是預期的結果，因為您進行連線的 IP 位址指派給裝載 Cloud Shell 執行個體的 Azure VM。
-
-1. 關閉 [Cloud Shell] 窗格。
 
 ## 清除資源
 
