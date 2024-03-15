@@ -170,7 +170,7 @@ lab:
 
 在這項工作中，您將跨可用性區域部署 Azure 虛擬機擴展集。 VM 擴展集可讓您設定可讓擴展集水準調整、相應縮小或相應放大的計量或條件，以減少自動化的系統管理額外負荷。
 
-1. 在 [Azure 入口網站] 中，搜尋並選取 `Virtual machine scale sets` ，然後在 [**虛擬機擴展集**] 刀鋒視窗上，按兩下 **[+ 建立**]。
+1. 在 Azure 入口網站 中，搜尋並選取 `Virtual machine scale sets` [虛擬機擴展集 **] 刀鋒視窗上的 **[**+ 建立**]。
 
 1. 在 [**建立虛擬機擴展集 **] 刀鋒視窗的 **[基本]** 索引卷標上，指定下列設定（讓其他人保留預設值），然後按 **[下一步：Spot >**：
 
@@ -354,8 +354,8 @@ lab:
     -Location 'East US' `
     -Image 'Win2019Datacenter' `
     -Zone '1' `
-    -Size 'Standard_D2s_v3' 
-    -Credential '(Get-Credential)' 
+    -Size 'Standard_D2s_v3' ` 
+    -Credential (Get-Credential)
     ```
 
 1. 命令完成後，請使用 **Get-AzVM** 列出資源群組中的虛擬機。
@@ -373,7 +373,7 @@ lab:
     ```powershell
     Stop-AzVM `
     -ResourceGroupName 'az104-rg8' `
-    -Name 'myPSVM' `
+    -Name 'myPSVM' 
     ```
 
 1. 使用 **Get-AzVM** 搭配 **-Status** 參數來確認機器已 **解除分配**。
