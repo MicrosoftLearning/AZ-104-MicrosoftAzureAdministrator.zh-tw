@@ -22,14 +22,14 @@ lab:
 
 本主題沒有互動式實驗室模擬。 
 
+## 架構圖
+
+![工作的圖表。](../media/az104-lab09b-aca-architecture.png)
+
 ## 作業技能
 
 - 工作 1：建立及設定 Azure 容器應用程式和環境。
 - 工作 2：測試及驗證 Azure 容器應用程式的部署。
-
-## 架構圖
-
-![工作的圖表。](../media/az104-lab09b-aca-architecture.png)
 
 ## 工作 1：建立及設定 Azure 容器應用程式和環境
 

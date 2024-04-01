@@ -23,17 +23,16 @@ lab:
 
 + [部署 Azure 容器執行個體](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203)。 使用 Azure 容器執行個體 建立、設定及部署 Docker 容器。
   
-+ [實作](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014) Azure 容器執行個體。  使用 Azure 容器執行個體 部署 Docker 映射。 
++ [實作 Azure 容器執行個體](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)。  使用 Azure 容器執行個體 部署 Docker 映射。 
+
+## 架構圖
+
+![工作的圖表。](../media/az104-lab09b-aci-architecture.png)
 
 ## 作業技能
 
 - 工作 1：使用 Docker 映射部署 Azure 容器實例。
 - 工作 2：測試及驗證 Azure 容器實例的部署。
-
-
-## 架構圖
-
-![工作的圖表。](../media/az104-lab09b-aci-architecture.png)
 
 ## 工作 1：使用 Docker 映射部署 Azure 容器實例
 
@@ -84,7 +83,7 @@ lab:
 
 1. 確認 [歡迎使用 Azure 容器執行個體] 頁面顯示。 重新整理頁面數次，以建立一些記錄專案，然後關閉瀏覽器索引標籤。  
 
-1. 在**容器實例刀鋒視窗的 [設定**] 區段中，按兩下 **[容器**]，然後按兩下 [**記錄**]。
+1. **在容器實例刀鋒視窗的 [設定]** 區段中，按兩下 **[容器**]，然後按兩下 [**記錄**]。
 
 1. 在瀏覽器中顯示應用程式，確認您看到所產生代表 HTTP GET 要求的記錄項目。
    
