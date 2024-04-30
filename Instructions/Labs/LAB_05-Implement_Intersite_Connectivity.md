@@ -22,7 +22,7 @@ lab:
 
 您可能會發現數個互動式實驗室模擬適合本主題。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬和此實驗室之間有差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。 
 
-+ [連線 兩個使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)的 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
++ [使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering) 連線 兩個 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
 
 + [設定對虛擬網路的監視](https://learn.microsoft.com/training/modules/configure-monitoring-virtual-networks/)。 了解如何使用 Azure 網路監看員連線監視器、流量記錄、NSG 診斷和封包擷取來監視 Azure IaaS 網路資源的連線。
 
@@ -77,7 +77,7 @@ lab:
 
     | 設定 | 值 | 
     | --- | --- |
-    | 名稱 | `CoreServicesVNet` （新增） |
+    | 名稱 | `CoreServicesVnet` （新增） |
     | 位址範圍 | `10.0.0.0/16`  |
     | 子網路名稱 | `Core` | 
     | 子網路位址範圍 | `10.0.0.0/24` |
@@ -94,7 +94,7 @@ lab:
 
 在這項工作中，您會使用虛擬機建立製造服務虛擬網路。 
 
-1. 從 Azure 入口網站 搜尋並流覽至 **[虛擬機器**]。
+1. 從 Azure 入口網站 搜尋並流覽至 **虛擬機器**。
 
 1. 從 [虛擬機] 頁面中，選取 [ **建立** ]，然後選取 **[Azure 虛擬機**]。
 
@@ -122,7 +122,7 @@ lab:
 
     | 設定 | 值 | 
     | --- | --- |
-    | 名稱 | `ManufacturingVNet` |
+    | 名稱 | `ManufacturingVnet` |
     | 位址範圍 | `172.16.0.0/16`  |
     | 子網路名稱 | `Manufacturing` |
     | 子網路位址範圍 | `172.16.0.0/24` |
@@ -138,9 +138,9 @@ lab:
 
 1. 從 Azure 入口網站 搜尋並選取 `Network Watcher`。
 
-1. 從 [網路監看員] 的 [網络診斷工具] 功能表中，選取 **[連線 疑難解答**]。
+1. 從 [網路監看員]，在 [網络診斷工具] 功能表中，選取 **[連線 ion 疑難解答**]。
 
-1. 使用下列資訊來完成 [連線 ion 疑難解答 **] 頁面上的**字段。
+1. 使用下列資訊來完成 連線 疑難解答**頁面上的**欄位。
 
     | 欄位 | 值 | 
     | --- | --- |
@@ -177,20 +177,20 @@ lab:
 | --------------------------------------------- | ------------------------------------- |
 | **此虛擬網路**                                       |                                       |
 | 對等互連連結名稱                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| 允許 CoreServicesVNet 存取對等互連的虛擬網路            | selected （default）                       |
-| 允許 CoreServicesVNet 接收來自對等互連虛擬網路的轉送流量 | 已選取                       |
-| 允許 CoreServicesVNet 中的閘道將流量轉送至對等互連虛擬網路 | 未選擇 （預設值） |
-| 啟用 CoreServicesVNet 以使用對等互連虛擬網路的遠端閘道       | 未選擇 （預設值）                        |
+| 允許 CoreServicesVnet 存取對等互連的虛擬網路            | selected （default）                       |
+| 允許 CoreServicesVnet 接收來自對等互連虛擬網路的轉送流量 | 已選取                       |
+| 允許 CoreServicesVnet 中的閘道將流量轉送至對等互連的虛擬網路 | 未選擇 （預設值） |
+| 啟用 CoreServicesVnt 以使用對等互連虛擬網路的遠端閘道       | 未選擇 （預設值）                        |
 | **遠端虛擬網路**                                   |                                       |
 | 對等互連連結名稱                             | `ManufacturingVnet-to-CoreServicesVnet` |
 | 虛擬網路部署模型              | **資源管理員**                      |
 | 我知道我的資源識別碼                         | 未選取                          |
 | 訂用帳戶                                  | *訂用帳戶*    |
 | 虛擬網路                               | **ManufacturingVnet**                     |
-| 允許 ManufacturingVNet 存取 CoreServicesVNet  | selected （default）                       |
-| 允許 ManufacturingVNet 從 CoreServicesVNet 接收轉送流量 | 已選取                        |
-| 允許 CoreServicesVNet 中的閘道將流量轉送至對等互連虛擬網路 | 未選擇 （預設值） |
-| 啟用 ManufacturingVNet 以使用 CoreServicesVNet 的遠端網關       | 未選擇 （預設值）                        |
+| 允許 ManufacturingVnet 存取 CoreServicesVnet  | selected （default）                       |
+| 允許 ManufacturingVnet 接收來自 CoreServicesVnet 的轉送流量 | 已選取                        |
+| 允許 CoreServicesVnet 中的閘道將流量轉送至對等互連的虛擬網路 | 未選擇 （預設值） |
+| 啟用 ManufacturingVnet 以使用 CoreServicesVnet 的遠端閘道       | 未選擇 （預設值）                        |
 
 1. 檢閱您的設定，然後選取 [ **新增**]。
 
@@ -208,7 +208,7 @@ lab:
 
 ### 確認 CoreServicesVM 的私人 IP 位址
 
-1. 從 Azure 入口網站，搜尋並選取`CoreServicesVM`虛擬機。
+1. 從 Azure 入口網站 搜尋並選取`CoreServicesVM`虛擬機。
 
 1. 在 [概觀]** 刀鋒視窗的 **[** 網络**] 區段中，記錄**機器的私人IP位址**。 您需要此資訊來測試連線。
    
@@ -230,7 +230,7 @@ lab:
    
 1. 測試連線應該會成功，因為已設定對等互連。 此圖形中的電腦名稱和遠端位址可能不同。 
    
-   ![Test-Net 連線 ion 的 PowerShell 視窗成功。](../media/az104-lab05-success.png)
+   ![具有 Test-Net 連線 ion 的 PowerShell 視窗成功。](../media/az104-lab05-success.png)
 
 ## 工作 6：建立自定義路由 
 
@@ -246,7 +246,7 @@ lab:
     | 子網路位址範圍 | `10.0.1.0/24`  |
 
    
-1. 在 Azure 入口網站 中，搜尋並選取 ，然後選取 `Route tables`[**建立**]。 
+1. 在 Azure 入口網站 中，搜尋並選取 `Route tables`，然後選取 [**建立**]。 
 
     | 設定 | 值 | 
     | --- | --- |
