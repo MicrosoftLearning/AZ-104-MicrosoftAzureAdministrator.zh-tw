@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 10：實作數據保護
+  title: 實驗室 10：實作資料保護
   module: Administer Data Protection
 ---
 
@@ -82,7 +82,7 @@ lab:
 
 在這項工作中，您將建立復原服務保存庫。 復原服務保存庫提供虛擬機數據的記憶體。 
 
-1. 在 Azure 入口網站 中，搜尋並選取 `Recovery Services vaults` ，然後在 [復原服務保存庫 **] 刀鋒視窗上**，按兩下 **[+ 建立**]。
+1. 在 Azure 入口網站 中，搜尋並選取 `Recovery Services vaults` ，然後在 [復原服務保存庫]** 刀鋒視窗上**，按兩下 **[+ 建立**]。
 
 1. 在 [建立復原服務保存庫] 刀鋒視窗上，指定下列設定：
 
@@ -111,9 +111,9 @@ lab:
 
     >**注意**：此設定只有在無現有備份項目時才能設定。
     
-    >**你知道嗎？** [ [跨區域還原](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore) ] 選項可讓您還原次要 Azure 配對區域中的數據。 
+    >**你知道嗎？** 跨區域還原選項讓您能夠在次要區域的 [Azure 配對區域](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore)中還原資料。 
 
-1. 返回 [復原服務保存庫] 刀鋒視窗，按兩下 **[安全性 設定 > 虛刪除和安全性設定**卷標下的 **[更新**] 連結。
+1. 返回 [復原服務保存庫] 刀鋒視窗，按兩下 **[安全性 設定 > 虛刪除和安全性設定**卷標底下的 **[更新**] 連結。
 
 1. 請注意，在 [安全性設定] 刀鋒視窗上，針對在 Azure 中執行的工作負載，[虛刪除] 為 [啟用]。 請注意， **虛刪除保留期限** 為 **14** 天。 
 
@@ -136,7 +136,7 @@ lab:
     | 您的工作負載在哪裡執行？ | **Azure** （請注意您的其他選項） |
     | 您要備份什麼內容？ | **虛擬機** （請注意您的其他選項 |
 
-1. 選取 [ **備份**]。
+1. 選取 [備份]****。
 
 1. 請注意，有兩 **種原則子類型**： **增強** 和 **標準**。 檢閱選項，然後選取 [ **標準**]。 
 
@@ -195,11 +195,11 @@ lab:
 
 1. 選取 [診斷 設定 **]，然後選取 [**新增診斷設定**]。**
 
-1. 將設定 `Logs and Metrics to storage`命名為 。
+1. 將設定命名為 `Logs and Metrics to storage`。
 
 1. 將複選標記放在下列記錄和計量類別旁：
 
-    - **Azure 備份 報告數據**
+    - **Azure 備份 報表數據**
     - **附加元件 Azure 備份 作業數據**
     - **附加元件 Azure 備份 警示數據**
     - **Azure Site Recovery 作業**
@@ -208,7 +208,7 @@ lab:
 
 1. 在 [目的地詳細數據] 中，將複選標記放在記憶體帳戶**的封存旁邊**。
 
-1. 在 [儲存體 帳戶] 下拉式欄位中，選取您稍早在此工作中部署的記憶體帳戶。
+1. 在 [儲存體 帳戶] 下拉式欄位中，選取您稍早在這項工作中部署的記憶體帳戶。
 
 1. 選取 [儲存]。
 
@@ -241,7 +241,7 @@ lab:
 
 1. 在 [ **備份 + 災害復原** ] 刀鋒視窗中，選取 [ **災害復原**]。 
 
-1. 選取 [ **啟用複寫**]。
+1. 選取 [啟用複寫]****。
 
 1. 在 [ **基本] 索引** 標籤上 **，注意目標區域**。
 
@@ -284,19 +284,26 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
 
-## 重要心得
-
-恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
-
-+ Azure 備份 服務提供簡單、安全且符合成本效益的解決方案，以備份和復原您的數據。
-+ Azure 備份 可以保護內部部署和雲端資源，包括虛擬機和檔案共用。
-+ Azure 備份 原則會設定備份的頻率和恢復點的保留期間。 
-+ Azure Site Recovery 是災害復原解決方案，可為虛擬機和應用程式提供保護。
-+ Azure Site Recovery 會將工作負載復寫至次要月臺，並在發生中斷或災害時，故障轉移至次要月臺，並盡可能縮短停機時間繼續作業。
-+ 復原服務保存庫會儲存備份數據，並將管理額外負荷降至最低。
++ Azure 備份 支援哪些產品？
++ 摘要說明使用 Azure 備份 備份和還原 Azure 虛擬機的步驟。
++ 如何使用 Azure PowerShell 或 CLI 來檢查 Azure 備份 作業的狀態。
++ 提供至少五個設定 Azure 虛擬機備份的最佳作法。  
 
 ## 透過自學型訓練深入了解
 
 + [使用 Azure 備份](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/) 保護您的虛擬機。 使用 Azure 備份來協助保護內部部署伺服器、虛擬機器、SQL Server、Azure 檔案共用和其他工作負載。
 + [使用 Azure Site Recovery 來保護您的 Azure 基礎結構](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/)。 使用 Azure Site Recovery 自訂 Azure 虛擬機器的複寫、容錯移轉及容錯回復，藉以執行 Azure 基礎結構的災害復原。
+
+## 重要心得
+
+恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
+
++ Azure 備份 服務提供簡單、安全且符合成本效益的解決方案來備份和復原您的數據。
++ Azure 備份 可以保護內部部署和雲端資源，包括虛擬機和檔案共用。
++ Azure 備份 原則會設定備份的頻率和恢復點的保留期間。 
++ Azure Site Recovery 是災害復原解決方案，可為虛擬機和應用程式提供保護。
++ Azure Site Recovery 會將工作負載復寫至次要月臺，並在發生中斷或災害時，故障轉移至次要月臺，並盡可能縮短停機時間繼續作業。
++ 復原服務保存庫會儲存備份數據，並將管理額外負荷降至最低。

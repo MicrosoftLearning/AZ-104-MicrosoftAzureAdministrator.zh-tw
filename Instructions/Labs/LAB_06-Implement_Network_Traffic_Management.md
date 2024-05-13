@@ -80,7 +80,7 @@ lab:
 
 ![實驗室工作的圖表。](../media/az104-lab06-lb-architecture.png)
 
-1. 在 Azure 入口網站 中，搜尋並選取 `Load balancers` ，然後在 [負載平衡器 **] 刀鋒視窗上**，按兩下 **[+ 建立**]。
+1. 在 Azure 入口網站 中，搜尋並選取 `Load balancers` [負載平衡器 **] 刀鋒視窗上的 **[**+ 建立**]。
 
 1. 使用下列設定建立負載平衡器（讓其他人保留預設值），然後按兩下 **列 [下一步：前端IP組態**]：
 
@@ -134,7 +134,7 @@ lab:
 
 **新增規則以判斷傳入流量的散發方式**
 
-1. 在 [**設定]** 刀鋒視窗中，選取 **[負載平衡規則**]。
+1. 在 **[設定]** 刀鋒視窗中，選取 **[負載平衡規則**]。
 
 1. 選取 **+ 新增**。 使用下列設定新增負載平衡規則 (將其他設定保留為預設值)。  當您設定規則時，請使用參考圖示來瞭解每個設定。 完成時，按兩下 [ **儲存**]。
 
@@ -171,7 +171,7 @@ lab:
 
 在這項工作中，您會在兩部 Azure 虛擬機前面實作 Azure 應用程式閘道。 應用程式閘道 會將第 7 層負載平衡、Web 應用程式防火牆 （WAF）、SSL 終止和端對端加密提供給後端集區中定義的資源。 應用程式閘道 會將映射路由傳送至一部虛擬機，並將影片路由傳送至另一部虛擬機。
 
-## 架構圖 - 應用程式閘道
+## 架構圖表 - 應用程式閘道
 
 >**注意**：此 應用程式閘道 在與Load Balancer 相同的虛擬網路中運作。 這在生產環境中可能並不常見。
 
@@ -322,7 +322,21 @@ lab:
 + 在 Azure 入口網站 中，選取資源群組、選取 **[刪除資源群組**]、**輸入資源組名**，然後按兩下 [**刪除**]。
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
-  
+
+## 使用 Copilot 擴充學習
+
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
+
++ 比較和對比 Azure Load Balancer 與 Azure 應用程式閘道。
++ 如何針對 Azure Load Balancer 的輸入連線進行疑難解答？
++ 設定 Azure 應用程式閘道 的基本步驟為何？
++ 建立醒目提示 Azure 負載平衡解決方案的數據表。 包含這些數據行：支持的通訊協定、私人負載平衡、全域負載平衡、路由原則、支援的環境、連線 清空、會話親和性、主機和路徑型負載平衡、TLS 卸除、網站加速、安全性、快取和壓縮。
+
+## 透過自學型訓練深入了解
+
++ [使用 Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/) 改善應用程式延展性和復原能力。 討論 Azure 中的不同負載平衡器，以及如何選擇符合您需求的適當 Azure Load Balancer 解決方案。
++ [使用 應用程式閘道](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/) 來平衡 Web 服務流量的負載。 將負載分散到多部伺服器，並使用路徑型路由傳送來引導 Web 流量，以改善應用程式恢復能力。
+
 ## 重要心得
 
 恭喜您完成實驗室。 以下是此實驗室的主要外賣。
@@ -332,9 +346,4 @@ lab:
 + 基本負載平衡器適用於不需要高可用性或備援的小型應用程式。 標準負載平衡器適用於高效能和超低延遲。
 + Azure 應用程式閘道是網路流量 (OSI 第 7 層) 負載平衡器，可讓您管理 Web 應用程式的流量。
 + 應用程式閘道 標準層提供所有 L7 功能，包括負載平衡，WAF 層會新增防火牆來檢查是否有惡意流量。
-+ 應用程式閘道 可以根據 HTTP 要求的其他屬性做出路由決策，例如 URI 路徑或主機標頭。
-
-## 透過自學型訓練深入了解
-
-+ [使用 Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/) 改善應用程式延展性和復原能力。 討論 Azure 中的不同負載平衡器，以及如何選擇符合您需求的適當 Azure Load Balancer 解決方案。
-+ [使用 應用程式閘道](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/) 平衡 Web 服務流量的負載。 將負載分散到多部伺服器，並使用路徑型路由傳送來引導 Web 流量，以改善應用程式恢復能力。
++ 應用程式閘道 可以根據 HTTP 要求的其他屬性來進行路由決策，例如 URI 路徑或主機標頭。

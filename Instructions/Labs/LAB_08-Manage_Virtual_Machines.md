@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 08：管理 虛擬機器
+  title: 實驗室 08：管理虛擬機器
   module: Administer Virtual Machines
 ---
 
@@ -32,7 +32,7 @@ lab:
 
 ## 作業技能
 
-+ 工作 1：使用 Azure 入口網站 部署具有區域彈性的 Azure 虛擬機。
++ 工作 1：使用 Azure 入口網站 部署區域復原的 Azure 虛擬機。
 + 工作 2：管理虛擬機的計算和記憶體調整。
 + 工作 3：建立及設定 Azure 虛擬機器擴展集。
 + 工作 4：調整 Azure 虛擬機器擴展集。
@@ -43,7 +43,7 @@ lab:
 
 ![VM 架構工作的圖表。](../media/az104-lab08-vm-architecture.png)
 
-## 工作 1：使用 Azure 入口網站 部署區域復原的 Azure 虛擬機
+## 工作 1：使用 Azure 入口網站 部署具有區域彈性的 Azure 虛擬機
 
 在這項工作中，您將使用 Azure 入口網站，將兩部 Azure 虛擬機部署到不同的可用性區域。 可用性區域為虛擬機提供最高層級的運行時間 SLA，且為 99.99%。 若要達成此 SLA，您必須在不同的可用性區域中部署至少兩部虛擬機。
 
@@ -61,7 +61,7 @@ lab:
     | --- | --- |
     | 訂用帳戶 | Azure 訂用帳戶的名稱 |
     | 資源群組 |  **az104-rg8** （如有必要，請按兩下 [ **新建**] |
-    | 虛擬機名稱 | `az104-vm1` 和 `az104-vm2` （選取這兩個可用性區域之後，請選取 **[VM 名稱] 字段下的 [編輯名稱** ]。 |
+    | 虛擬機器名稱 | `az104-vm1` 和 `az104-vm2` （選取這兩個可用性區域之後，請選取 **[VM 名稱] 字段下的 [編輯名稱** ]。 |
     | 區域 | **美國東部** |
     | 可用性選項 | **可用性區域** |
     | 可用性區域 | **區域 1， 2** （閱讀有關使用虛擬機擴展集的注意事項） |
@@ -166,7 +166,7 @@ lab:
 
 ![vmss 架構工作的圖表。](../media/az104-lab08-vmss-architecture.png)
 
-## 工作 3：建立及設定 Azure 虛擬機器擴展集
+## 工作 3：建立和設定 Azure 虛擬機器擴展集
 
 在這項工作中，您將跨可用性區域部署 Azure 虛擬機擴展集。 VM 擴展集可讓您設定可讓擴展集水準調整、相應縮小或相應放大的計量或條件，以減少自動化的系統管理額外負荷。
 
@@ -315,7 +315,7 @@ lab:
     | 設定 | 值 |
     | --- | --- |
     | 運算子 | **小於** |
-    | 閾值 | **30** |
+    | 臨界值 | **30** |
     | 作業 | **減少百分比依據** （檢閱您的其他選擇） |
     | 百分比 | **20** |
 
@@ -418,6 +418,18 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
+
++ 提供建立Linux虛擬機的步驟和 Azure CLI 命令。 
++ 檢閱您可以調整虛擬機並改善效能的方式。
++ 描述 Azure 記憶體生命週期管理原則，以及如何將成本優化。
+
+## 透過自學型訓練深入了解
+
++ [在 Azure](https://learn.microsoft.com/training/modules/create-windows-virtual-machine-in-azure/) 中建立 Windows 虛擬機。 使用 Azure 入口網站建立 Windows 虛擬機器。 使用遠端桌面連線到執行中的 Windows 虛擬機器
++ [使用 虛擬機器擴展集 建置可調整](https://learn.microsoft.com/training/modules/build-app-with-scale-sets/)的應用程式。 讓您的應用程式能夠自動調整規模來因應負載的變更，同時將虛擬機器擴展集的成本降到最低。
++ [使用 Azure Bastion 透過 Azure 入口網站連線到虛擬機器](https://learn.microsoft.com/en-us/training/modules/connect-vm-with-azure-bastion/)。 部署 Azure Bastion 以安全地連線到 Azure 入口網站 內的 Azure 虛擬機，以有效取代現有的 Jumpbox 解決方案、使用診斷記錄監視遠端會話，以及中斷使用者會話連線來管理遠端會話。
 
 ## 重要心得
 
@@ -429,10 +441,3 @@ lab:
 + Azure 虛擬機器擴展集可讓您建立和管理一組負載平衡的 VM。
 + 虛擬機擴展集中的虛擬機會從相同的映像和組態建立。
 + 在虛擬機擴展集中，VM 實例數目可以自動增加或減少，以回應需求或定義的排程。
-
-## 透過自學型訓練深入了解
-
-+ [在 Azure](https://learn.microsoft.com/training/modules/create-windows-virtual-machine-in-azure/) 中建立 Windows 虛擬機。 使用 Azure 入口網站建立 Windows 虛擬機器。 使用遠端桌面連線到執行中的 Windows 虛擬機器
-+ [使用 虛擬機器擴展集 建置可調整](https://learn.microsoft.com/training/modules/build-app-with-scale-sets/)的應用程式。 讓您的應用程式能夠自動調整規模來因應負載的變更，同時將虛擬機器擴展集的成本降到最低。
-+ [使用 Azure Bastion 透過 Azure 入口網站連線到虛擬機器](https://learn.microsoft.com/en-us/training/modules/connect-vm-with-azure-bastion/)。 部署 Azure Bastion 以安全地連線到 Azure 入口網站 內的 Azure 虛擬機，以有效取代現有的 Jumpbox 解決方案、使用診斷記錄監視遠端會話，以及中斷使用者會話連線來管理遠端會話。
-  

@@ -112,7 +112,7 @@ lab:
     | --- |--- |
     | 訂用帳戶 | *訂用帳戶* |
     | 資源群組 | `az104-rg3` |
-    | 區域 | **（美國）美國東部）** |
+    | 區域 | **(美國) 美國東部** |
     | Disk_name | `az104-disk2` |
 
 1. 選取 [檢閱 + 建立]，然後選取 [建立]。
@@ -252,18 +252,15 @@ lab:
 + 在 Azure 入口網站 中，選取資源群組、選取 **[刪除資源群組**]、**輸入資源組名**，然後按兩下 [**刪除**]。
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
-  
-## 重要心得
 
-恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
+## 使用 Copilot 擴充學習
 
-+ Azure Resource Manager 範本可讓您將解決方案的所有資源部署、管理及監視為群組，而不是個別處理這些資源。
-+ Azure Resource Manager 範本是 JavaScript 物件表示法 （JSON） 檔案，可讓您以宣告方式而非使用腳本來管理基礎結構。
-+ 您可以使用包含參數值的個別 JSON 檔案，而不是在範本中傳遞參數作為內嵌值。
-+ Azure Resource Manager 範本可以透過各種方式部署，包括 Azure 入口網站、Azure PowerShell 和 CLI。
-+ Bicep 是 Azure Resource Manager 範本的替代方案。 Bicep 會使用宣告式語法來部署 Azure 資源。 
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
 
-Bicep 提供簡潔的語法、可靠的類型安全，並支援程式碼重複使用。 Bicep 能夠為您在 Azure 中的基礎結構即程式碼解決方案，提供最佳的製作體驗。
++ Azure Resource Manager 範本檔案的格式為何？ 使用範例說明每個元件。 
++ 如何? 使用現有的 Azure Resource Manager 範本嗎？
++ 比較和對比 Azure Resource Manager 範本和 Azure Bicep 範本。 
+
 
 ## 透過自學型訓練深入了解
 
@@ -272,5 +269,16 @@ Bicep 提供簡潔的語法、可靠的類型安全，並支援程式碼重複�
 + [使用 Windows PowerShell](https://learn.microsoft.com/training/modules/manage-azure-resources-windows-powershell/) 管理 Azure 資源。 本課程模組說明如何安裝雲端服務管理所需的模組，並使用 PowerShell 命令對 Azure 虛擬機器、Azure 訂用帳戶和 Azure 儲存體帳戶等雲端資源執行簡單的管理工作。
 + [Bash](https://learn.microsoft.com/training/modules/bash-introduction/) 簡介。 使用 Bash 來管理 IT 基礎結構。
 + [建置您的第一個 Bicep 範本](https://learn.microsoft.com/training/modules/build-first-bicep-template/)。 請在 Bicep 範本中定義 Azure 資源。 改善部署的一致性和可靠性、減少所需的手動工作，並將部署縮放到整個環境。 您的範本將可透過使用參數、變數、運算式和模組，而變得有彈性且可重複使用。
+
+## 重要心得
+
+恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
+
++ Azure Resource Manager 範本可讓您將解決方案的所有資源部署、管理及監視為群組，而不是個別處理這些資源。
++ Azure Resource Manager 範本是 JavaScript 物件表示法 （JSON） 檔案，可讓您以宣告方式而非使用腳本來管理基礎結構。
++ 您可以使用包含參數值的個別 JSON 檔案，而不是在範本中傳遞參數作為內嵌值。
++ Azure Resource Manager 範本可以透過各種方式部署，包括 Azure 入口網站、Azure PowerShell 和 CLI。
++ Bicep 是 Azure Resource Manager 範本的替代方案。 Bicep 會使用宣告式語法來部署 Azure 資源。
++ Bicep 提供簡潔的語法、可靠的類型安全，並支援程式碼重複使用。 Bicep 能夠為您在 Azure 中的基礎結構即程式碼解決方案，提供最佳的製作體驗。
 
 

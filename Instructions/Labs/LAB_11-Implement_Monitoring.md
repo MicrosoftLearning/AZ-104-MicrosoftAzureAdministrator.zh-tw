@@ -211,7 +211,7 @@ lab:
 
 在這項工作中，您將使用 Azure 監視器來查詢從虛擬機擷取的數據。
 
-1. 在 Azure 入口網站 中，搜尋並選取`Monitor`刀鋒視窗，按兩下 [**記錄**]。
+1. 在 [Azure 入口網站] 中，搜尋並選取`Monitor`刀鋒視窗，按兩下 [**記錄**]。
 
 1. 如有必要，請關閉啟動顯示畫面。 
 
@@ -249,17 +249,24 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
+
++ 當虛擬機關閉時，Azure 中要警示的基本設定步驟為何？
++ 如何在觸發 Azure 警示時收到通知？
++ 建構 Azure 監視器查詢以提供虛擬機 CPU 效能資訊。
+
+## 透過自學型訓練深入了解
+
++ [使用 Azure](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/) 上的警示來改善事件回應。 透過 Azure 監視器中的警示功能，回應基礎結構中的事件和活動。
++ [使用 Azure 監視器](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/)監視您的 Azure 虛擬機。 使用 Azure 監視器來收集和分析 VM 主機和用戶端計量和記錄，以監視您的 Azure VM。
+
 ## 重要心得
 
 恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
 
 + 警示可協助您在使用者注意到基礎結構或應用程式發生問題之前偵測並解決問題。
 + 您可以針對在 Azure 監視器資料平台中的任何計量或記錄資料來源發出警示。
-+ 警示規則會監視您的資料，並擷取指出指定資源發生狀況的訊號。
++ 警示規則會監視您的資料，並擷取訊號，訊號指出在指定資源上有情況發生。
 + 如果符合警示規則的條件，就會觸發警示。 可以觸發數個動作（電子郵件、簡訊、推播、語音）。
 + 動作群組包含應收到警示通知的個人。
-
-## 透過自學型訓練深入了解
-
-+ [使用 Azure](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/) 上的警示來改善事件回應。 透過 Azure 監視器中的警示功能，回應基礎結構中的事件和活動。
-+ [使用 Azure 監視器](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/)監視您的 Azure 虛擬機。 使用 Azure 監視器來收集和分析 VM 主機和用戶端計量和記錄，以監視您的 Azure VM。

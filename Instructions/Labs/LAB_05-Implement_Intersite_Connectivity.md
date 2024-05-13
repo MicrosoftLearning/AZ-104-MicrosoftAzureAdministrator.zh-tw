@@ -22,7 +22,7 @@ lab:
 
 您可能會發現數個互動式實驗室模擬適合本主題。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬和此實驗室之間有差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。 
 
-+ [使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering) 連線 兩個 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
++ [連線 兩個使用全域虛擬網路對等互連](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)的 Azure 虛擬網路。 測試不同虛擬網路中兩部虛擬機之間的連線。 建立虛擬網路對等互連並重新測試。
 
 + [設定對虛擬網路的監視](https://learn.microsoft.com/training/modules/configure-monitoring-virtual-networks/)。 了解如何使用 Azure 網路監看員連線監視器、流量記錄、NSG 診斷和封包擷取來監視 Azure IaaS 網路資源的連線。
 
@@ -138,7 +138,7 @@ lab:
 
 1. 從 Azure 入口網站 搜尋並選取 `Network Watcher`。
 
-1. 從 [網路監看員]，在 [網络診斷工具] 功能表中，選取 **[連線 ion 疑難解答**]。
+1. 從 [網路監看員] 的 [網络診斷工具] 功能表中，選取 **[連線 疑難解答**]。
 
 1. 使用下列資訊來完成 連線 疑難解答**頁面上的**欄位。
 
@@ -246,7 +246,7 @@ lab:
     | 子網路位址範圍 | `10.0.1.0/24`  |
 
    
-1. 在 Azure 入口網站 中，搜尋並選取 `Route tables`，然後選取 [**建立**]。 
+1. 在 Azure 入口網站 中，搜尋並選取 ，然後選取 `Route tables`[**建立**]。 
 
     | 設定 | 值 | 
     | --- | --- |
@@ -287,6 +287,18 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
+
++ 如何使用 Azure PowerShell 或 Azure CLI 命令，在 vnet1 與 vnet2 之間新增虛擬網路對等互連？
++ 建立數據表，其中醒目提示 Azure 上支援的各種 Azure 和第三方監視工具。 醒目提示使用每個工具的時機。 
++ 何時會在 Azure 中建立自定義網路路由？
+
+## 透過自學型訓練深入了解
+
++ [將您的服務分散到 Azure 虛擬網路，並使用虛擬網路對等互連](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/)加以整合。 使用虛擬網路對等互連，以安全且最不複雜的方式在虛擬網路之間進行通訊。
++ [使用路由](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/)來管理和控制 Azure 部署中的流量流程。 了解如何藉由執行自訂路由來控制 Azure 虛擬網路流量。
+
 
 ## 重要心得
 
@@ -298,8 +310,3 @@ lab:
 + 對等互連虛擬網路中虛擬機器之間的流量會使用 Microsoft 骨幹基礎結構。
 + 系統定義的路由會自動針對虛擬網路中的每個子網建立。 用戶定義的路由會覆寫或新增至默認系統路由。 
 + Azure 網路監看員 提供一套工具來監視、診斷及檢視 Azure IaaS 資源的計量和記錄。
-
-## 透過自學型訓練深入了解
-
-+ [將您的服務分散到 Azure 虛擬網路，並使用虛擬網路對等互連](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/)加以整合。 使用虛擬網路對等互連，以安全且最不複雜的方式在虛擬網路之間進行通訊。
-+ [使用路由](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/)來管理和控制 Azure 部署中的流量流程。 了解如何藉由執行自訂路由來控制 Azure 虛擬網路流量。

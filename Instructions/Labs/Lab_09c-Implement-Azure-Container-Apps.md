@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 09c：實作 Azure Container Apps
+  title: 實驗室 09c：實作 Azure 容器應用程式
   module: Administer PaaS Compute Options
 ---
 
@@ -75,6 +75,15 @@ Azure Container Apps 會進一步採用受控 Kubernetes 叢集的概念，並�
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
+
++ 摘要說明建立及設定 Azure Container App 的步驟。
++ 比較和對比 Azure Container Apps 與 Azure Kubernetes Service。
+
+## 透過自學型訓練深入了解
+
++ [在 Azure Container Apps 中設定容器應用程式](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/)。 檢查 Azure Container Apps 的功能，然後著重於如何使用 Azure Container Apps 建立、設定、調整及管理容器應用程式。
 
 
 ## 重要心得
@@ -85,7 +94,4 @@ Azure Container Apps 會進一步採用受控 Kubernetes 叢集的概念，並�
 + Container Apps 提供伺服器組態、容器協調流程和部署詳細數據。 
 + ACA 上的工作負載通常是長時間執行的進程，例如 Web 應用程式。
 
-## 透過自學型訓練深入了解
-
-+ [在 Azure Container Apps 中設定容器應用程式](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/)。 檢查 Azure Container Apps 的功能，然後著重於如何使用 Azure Container Apps 建立、設定、調整及管理容器應用程式。
      

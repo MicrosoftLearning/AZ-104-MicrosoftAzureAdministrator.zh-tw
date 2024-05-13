@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 09a：實作 Web Apps
+  title: 實驗室 09a：實作 Web 應用程式
   module: Administer PaaS Compute Options
 ---
 
@@ -136,7 +136,7 @@ lab:
 
 在這項工作中，您將設定 Azure Web 應用程式的自動調整。 自動調整可讓您在 Web 應用程式流量增加時維持 Web 應用程式的最佳效能。 若要判斷應用程式何時應調整規模，您可以監視計量，例如CPU使用量、記憶體或頻寬。
 
-1. 在 **[設定]** 區段中，選取 [**向外延展][App Service 方案]。**
+1. 在 **[設定]** 區段中，選取 [**相應放大][App Service 方案]。**
 
     >**注意：** 請確定您使用的是生產位置，而不是預備位置。  
 
@@ -177,7 +177,16 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
 
++ 摘要說明建立和設定 Azure Web 應用程式的步驟。
++ 我可以如何調整 Azure Web 應用程式？
+
+## 透過自學型訓練深入了解
+
++ [使用 App Service 部署位置來預備 Web 應用程式部署，以進行測試和復原](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/)。 在 Azure App Service 中使用部署位置來簡化部署及復原 Web 應用程式。
++ [調整 App Service Web 應用程式，以有效率地滿足 App Service 相應增加和相應放大](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/)的需求。藉由累加增加可用的資源來響應活動增加的期間，然後降低成本，並在活動下降時減少這些資源。
 
 ## 重要心得
 
@@ -188,8 +197,3 @@ lab:
 + 部署位置可讓您建立不同的環境，以部署及測試 Web 應用程式。
 + 您可以手動或自動調整 Web 應用程式以處理其他需求。
 + 提供各種不同的診斷和測試工具。 
-
-## 透過自學型訓練深入了解
-
-+ [使用 App Service 部署位置來預備 Web 應用程式部署，以進行測試和復原](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/)。 在 Azure App Service 中使用部署位置來簡化部署及復原 Web 應用程式。
-+ [調整 App Service Web 應用程式，以有效率地滿足 App Service 相應增加和相應放大](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/)的需求。藉由累加增加可用的資源來響應活動增加的期間，然後降低成本，並在活動下降時減少這些資源。

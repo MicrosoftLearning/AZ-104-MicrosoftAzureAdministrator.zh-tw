@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 01：管理 Microsoft Entra ID 身分識別
+  title: '實驗室 01:管理 Microsoft Entra ID 身分識別'
   module: Administer Identity
 ---
 
@@ -144,14 +144,14 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
   
-## 重要心得
 
-恭喜您完成實驗室。 以下是此實驗室的一些主要方法：
+## 使用 Copilot 擴充學習
 
-+ 租使用者代表您的組織，並協助您管理內部和外部使用者的特定 Microsoft 雲端服務實例。
-+ Microsoft Entra ID 具有使用者和來賓帳戶。 每個帳戶都有一個層級的存取權，專屬於預期要完成的工作範圍。
-+ 群組會將相關用戶或裝置結合在一起。 有兩種類型的群組，包括安全性和 Microsoft 365。
-+ 群組成員資格可以靜態或動態指派。
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
++ 建立名為 IT 管理員 的安全組有哪些 Azure PowerShell 和 CLI 命令？ 提供官方命令參考頁面。  
++ 提供在 Microsoft Entra ID 中管理使用者和群組的逐步策略。
++ 大量建立使用者和群組 Azure 入口網站 中的步驟為何？
++ 提供內部和外部 Microsoft Entra ID 使用者帳戶的比較數據表。 
 
 
 ## 透過自學型訓練深入了解
@@ -161,4 +161,11 @@ lab:
 + [允許使用者使用 Microsoft Entra 自助式密碼重設來重設其密碼](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/)。 評估自助式密碼重設，以允許組織中的使用者重設其密碼或解除鎖定其帳戶。 安裝、設定及測試自助式密碼重設。
 
 
+## 重要心得
 
+恭喜您完成實驗室。 以下是此實驗室的一些主要方法：
+
++ 租使用者代表您的組織，並協助您管理內部和外部使用者的特定 Microsoft 雲端服務實例。
++ Microsoft Entra ID 具有使用者和來賓帳戶。 每個帳戶都有一個層級的存取權，專屬於預期要完成的工作範圍。
++ 群組會將相關用戶或裝置結合在一起。 有兩種類型的群組，包括安全性和 Microsoft 365。
++ 群組成員資格可以靜態或動態指派。

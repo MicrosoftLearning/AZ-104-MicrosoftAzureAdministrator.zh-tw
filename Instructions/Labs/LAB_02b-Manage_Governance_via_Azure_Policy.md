@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室 02b：透過 Azure 原則 管理控管
+  title: 實驗室 02b：透過 Azure 原則管理治理
   module: Administer Governance and Compliance
 ---
 
@@ -118,7 +118,7 @@ lab:
 
 1. 按一下 [檢閱 + 建立]，然後按一下 [建立]。
 
-    >**注意**：現在，您會嘗試在資源群組中建立 Azure 儲存體 帳戶，確認新的原則指派生效。 您將建立記憶體帳戶，而不需要新增必要的標籤。 
+    >**注意**：現在，您會嘗試在資源群組中建立 Azure 儲存體 帳戶，以確認新的原則指派生效。 您將建立記憶體帳戶，而不需要新增必要的標籤。 
     
     >**注意**：原則可能需要 5 到 10 分鐘才會生效。
 
@@ -211,7 +211,7 @@ lab:
 
 1. 搜尋並選取您的資源群組。
    
-1. 在 **[設定]** 刀鋒視窗中，選取 [**鎖定**]。
+1. 在 **[設定] 刀鋒視窗中**，選取 [**鎖定**]。
 
 1. 選取 [ **新增** ] 並完成資源鎖定資訊。 完成時，選取 [ **確定**]。 
 
@@ -238,18 +238,24 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
++ 在資源群組上新增和刪除資源鎖定的 Azure PowerShell 和 CLI 命令為何？
++ 表化 Azure 原則與 Azure RBAC 之間的差異，包括範例。
++ 強制執行 Azure 原則並補救不符合規範的資源的步驟為何？
++ 如何取得具有特定標籤的 Azure 資源報告？
+
+## 透過自學型訓練深入了解
+
++ [設計企業治理策略](https://learn.microsoft.com/training/modules/enterprise-governance/)。 使用 RBAC 和 Azure 原則 來限制對 Azure 解決方案的存取，並判斷哪一種方法適合您的安全性目標。
+
 ## 重要心得
 
 恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
 
 + Azure 標籤是包含索引鍵/值組的元數據。 標籤會描述您環境中的特定資源。 特別是，在 Azure 中標記可讓您在邏輯環境中標記資源。
 + Azure 原則可建立資源的慣例。 原則定義會描述資源合規性條件，以及符合條件時所要採取的效果。 條件會與必要值比較資源屬性欄位或值。 有許多內建原則定義，您可以自定義原則。 
-+ Azure 原則 補救工作功能可用來根據定義和指派，將資源帶入合規性。 不符合修改或 deployIfNotExist 定義指派規範的資源，可以使用補救工作進入合規性。
++ Azure 原則 補救工作功能可用來根據定義和指派，將資源帶入合規性。 不符合 修改 或 deployIfNotExist 定義指派的資源，可以使用補救工作進入合規性。
 + 您可以在訂用帳戶、資源群組或資源上設定資源鎖定。 鎖定可保護資源免於意外刪除和修改使用者。 鎖定會覆寫使用者的任何權限。
-+ Azure 原則 是部署前的安全性做法。 RBAC 和資源鎖定是部署后的安全性做法。 
-
-## 透過自學型訓練深入了解
-
-+ [設計企業治理策略](https://learn.microsoft.com/training/modules/enterprise-governance/)。 使用 RBAC 和 Azure 原則 來限制對 Azure 解決方案的存取，並判斷哪一種方法適合您的安全性目標。
-  
++ Azure 原則 是預先部署的安全性做法。 RBAC 和資源鎖定是部署后的安全性做法。
 

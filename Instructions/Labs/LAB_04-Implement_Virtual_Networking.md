@@ -92,7 +92,7 @@ lab:
 
 1. 等候虛擬網路部署，然後選取 **[移至資源**]。
 
-1. 花一分鐘的時間確認 **位址空間** 和 **子網**。 請注意您在 [設定]** 刀鋒視窗中**的其他選擇。 
+1. 花一分鐘的時間確認 **位址空間** 和 **子網**。 請注意您在 [設定]** 刀鋒視窗中**的其他選項。 
 
 1. 在 [自動化 **] 區**段中，選取 **[導出範本**]，然後等候產生範本。
 
@@ -192,7 +192,7 @@ lab:
 
 1. 部署 NSG 之後，按兩下 **[移至資源**]。
 
-1. 在 **[設定 下按兩下按一下** **[子網**]，然後按兩下 [**關聯**]。
+1. 在 **[設定 下**，按兩下 [**子網**]，然後按兩下 [**關聯**]。
 
     | 設定 | 值 |
     | -- | -- |
@@ -343,7 +343,23 @@ lab:
 + 在 Azure 入口網站 中，選取資源群組、選取 **[刪除資源群組**]、**輸入資源組名**，然後按兩下 [**刪除**]。
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
- 
+
+## 使用 Copilot 擴充學習
+
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
++ 在 Azure 中部署和設定虛擬網路時，共用前 10 個最佳做法。
++ 如何? 使用 Azure PowerShell 和 Azure CLI 命令來建立具有公用 IP 位址和一個子網的虛擬網路。 
++ 說明 Azure 網路安全組輸入和輸出規則及其使用方式。
++ Azure 網路安全組與 Azure 應用程式 安全組之間的差異為何？ 共用何時使用這些群組的範例。 
++ 提供逐步指南，說明如何在 Azure 上部署網路時，針對我們面臨的任何網路問題進行疑難解答。 也請分享疑難解答的每個步驟所使用的思維程式。
+
+## 透過自學型訓練深入了解
+
++ [Azure 虛擬網路簡介](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/)。 設計和實作核心 Azure 網路基礎結構，例如虛擬網路、公用和私人 IP、DNS、虛擬網路對等互連、路由和 Azure 虛擬 NAT。
++ [設計IP尋址配置](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/)。 識別 Azure 和內部部署虛擬網路的私人和公用 IP 尋址功能。
++ [使用網路安全組和服務端點](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/)保護及隔離對 Azure 資源的存取。 網路安全性群組和服務端點可協助您保護虛擬機器和 Azure 服務，以防止未經授權的網路存取。
++ [在 Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/) 上裝載您的網域。 為網域名稱建立 DNS 區域。 建立 DNS 記錄，將網域對應到 IP 位址。 測試網域名稱是否解析為網頁伺服器。
+  
 ## 重要心得
 
 恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
@@ -354,11 +370,3 @@ lab:
 + 網路安全組包含允許或拒絕網路流量的安全性規則。 有預設的傳入和傳出規則，您可以自訂您的需求。
 + 應用程式安全組是用來保護具有一般功能的伺服器群組，例如網頁伺服器或資料庫伺服器。
 + Azure DNS 是 DNS 網域的裝載服務，可提供名稱解析。 您可以設定 Azure DNS 以解析您公用網域中的主機名稱。  您也可以使用私人 DNS 區域，將 DNS 名稱指派給 Azure 虛擬網路中的虛擬機（VM）。
-
-## 透過自學型訓練深入了解
-
-+ [Azure 虛擬網路簡介](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/)。 設計和實作核心 Azure 網路基礎結構，例如虛擬網路、公用和私人 IP、DNS、虛擬網路對等互連、路由和 Azure 虛擬 NAT。
-+ [設計IP尋址配置](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/)。 識別 Azure 和內部部署虛擬網路的私人和公用 IP 尋址功能。
-+ [使用網路安全組和服務端點](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/)保護及隔離對 Azure 資源的存取。 網路安全性群組和服務端點可協助您保護虛擬機器和 Azure 服務，以防止未經授權的網路存取。
-+ [在 Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/) 上裝載您的網域。 為網域名稱建立 DNS 區域。 建立 DNS 記錄，將網域對應到 IP 位址。 測試網域名稱是否解析為網頁伺服器。
-  

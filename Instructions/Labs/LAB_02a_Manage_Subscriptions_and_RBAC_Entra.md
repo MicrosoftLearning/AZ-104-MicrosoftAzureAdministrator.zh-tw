@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 實驗室02a：管理訂用帳戶和 RBAC
+  title: 實驗室 02a：管理訂用帳戶與 RBAC
   module: Administer Governance and Compliance
 ---
 
@@ -72,7 +72,7 @@ lab:
 
 1. **重新整理** 管理群組頁面，以確保新的管理群組顯示。 這可能需要一分鐘的時間。 
 
-   >**注意：** 您是否注意到根管理群組？ 根管理群組內建於階層中，讓所有管理群組和訂用帳戶都折疊在階層中。 此根管理群組允許在目錄層級套用全域原則和 Azure 角色指派。 建立管理群組之後，您會新增任何應該包含在群組中的訂用帳戶。 
+   >**注意：** 您是否注意到根管理群組？ 這個根管理群組會建置於階層內，讓所有的管理群組和訂閱摺疊於其中。 這個根管理群組可讓全域原則和 Azure 角色指派在目錄層級套用。 建立管理群組之後，您會新增任何應該包含在群組中的訂用帳戶。 
 
 ## 工作 2：檢閱並指派內建 Azure 角色
 
@@ -157,6 +157,19 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
   
+## 使用 Copilot 擴充學習
+
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
++ 建立兩個醒目提示重要 PowerShell 和 CLI 命令的數據表，以取得 Azure 上組織訂用帳戶的相關信息，並說明「說明」數據行中的每個命令。 
++ Azure RBAC JSON 檔案的格式為何？
++ 建立自定義 Azure RBAC 角色的基本步驟為何？
++ Azure RBAC 角色與 Microsoft Entra ID 角色之間的差異為何？
+
+## 透過自學型訓練深入了解
+
++ [使用 Azure 角色型存取控制（Azure RBAC）](https://learn.microsoft.com/training/modules/secure-azure-resources-with-rbac/)保護您的 Azure 資源。 使用 Azure RBAC 來管理 Azure 中資源的存取權。
++ [使用角色型訪問控制 （RBAC）](https://learn.microsoft.com/training/modules/create-custom-azure-roles-with-rbac/) 建立 Azure 資源的自定義角色。 了解存取控制之角色定義的結構。 識別能定義您自訂角色權限的要使用角色屬性。 建立 Azure 自訂角色並指派給使用者。
+
 ## 重要心得
 
 恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
@@ -166,13 +179,7 @@ lab:
 + Azure 有許多內建角色。 您可以指派這些角色來控制資源的存取權。
 + 您可以建立新的角色或自定義現有的角色。
 + 角色會以 JSON 格式的檔案定義，並包含 *Actions*、 *NotActions* 和 *AssignableScopes*。
-+ 您可以使用活動記錄檔來監視角色指派。 
-
-## 透過自學型訓練深入了解
-
-+ [使用 Azure 角色型存取控制（Azure RBAC）](https://learn.microsoft.com/training/modules/secure-azure-resources-with-rbac/)保護您的 Azure 資源。 使用 Azure RBAC 來管理 Azure 中資源的存取權。
-+ [使用角色型訪問控制 （RBAC）](https://learn.microsoft.com/training/modules/create-custom-azure-roles-with-rbac/) 建立 Azure 資源的自定義角色。 了解存取控制之角色定義的結構。 識別能定義您自訂角色權限的要使用角色屬性。 建立 Azure 自訂角色並指派給使用者。
-
++ 您可以使用活動記錄檔來監視角色指派。
 
 
 

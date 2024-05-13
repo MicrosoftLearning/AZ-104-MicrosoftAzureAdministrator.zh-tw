@@ -23,7 +23,7 @@ lab:
 
 + [部署 Azure 容器執行個體](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203)。 使用 Azure 容器執行個體 建立、設定及部署 Docker 容器。
   
-+ [實作 Azure 容器執行個體](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)。  使用 Azure 容器執行個體 部署 Docker 映射。 
++ [實作](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014) Azure 容器執行個體。  使用 Azure 容器執行個體 部署 Docker 映射。 
 
 ## 架構圖
 
@@ -83,7 +83,7 @@ lab:
 
 1. 確認 [歡迎使用 Azure 容器執行個體] 頁面顯示。 重新整理頁面數次，以建立一些記錄專案，然後關閉瀏覽器索引標籤。  
 
-1. **在容器實例刀鋒視窗的 [設定]** 區段中，按兩下 **[容器**]，然後按兩下 [**記錄**]。
+1. **在容器實例刀鋒視窗的 [設定**] 區段中，按兩下 **[容器**]，然後按兩下 [**記錄**]。
 
 1. 在瀏覽器中顯示應用程式，確認您看到所產生代表 HTTP GET 要求的記錄項目。
    
@@ -95,6 +95,15 @@ lab:
 + 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI， `az group delete --name resourceGroupName`。
 
+## 使用 Copilot 擴充學習
+Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以協助實驗室中未涵蓋的區域，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 [Copilot][右上方]，或流覽至 *[copilot.microsoft.com*]。 請花幾分鐘的時間嘗試這些提示。
+
++ 摘要說明建立和設定 Azure 容器實例的步驟。
++ 我可以在 Azure 上執行無伺服器容器的方式為何？
+
+## 透過自學型訓練深入了解
+
++ [在 Azure 容器執行個體中執行容器映像](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/)。 了解 Azure 容器執行個體如何協助您快速部署容器、如何設定環境變數，以及指定容器重新啟動原則。
 
 ## 重要心得
 
@@ -104,9 +113,5 @@ lab:
 + ACI 不需要您布建或管理任何基礎結構。
 + ACI 同時支援 Linux 容器和 Windows 容器。
 + ACI 上的工作負載通常會由某種程式或觸發程序啟動和停止，且通常短期運作。 
-
-## 透過自學型訓練深入了解
-
-+ [在 Azure 容器執行個體中執行容器映像](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/)。 了解 Azure 容器執行個體如何協助您快速部署容器、如何設定環境變數，以及指定容器重新啟動原則。
 
     
