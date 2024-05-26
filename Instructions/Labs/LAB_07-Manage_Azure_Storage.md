@@ -212,11 +212,11 @@ lab:
 
 1. 等候虛擬網路部署，然後選取 **[移至資源**]。
 
-1. 在 **[設定]** 區段中，選取 [**子網]** 刀鋒視窗。
-    + 選取 [預設] 子網路。****
-    + 在 [**服務端點] 區**段中，選擇 **[服務 **] 下拉式清單中的 [Microsoft.儲存體****]。
-    + 請勿進行任何其他變更。    
-    + 請務必**儲存**您的變更。 
+1. 在 **[設定]** 區段中，選取 [**服務端點]** 刀鋒視窗。
+    + 選取 [新增]。 
+    + 在 [**服務**] 下拉式清單中，選取 **[Microsoft.儲存體**]。
+    + 在 [ **子網]** 下拉式清單中，檢查 [ **預設** 子網]。
+    + 按兩下 [ **新增** ] 以儲存變更。  
 
 1. 返回您的儲存體帳戶。
 
@@ -230,7 +230,7 @@ lab:
 
     >**注意：** 記憶體帳戶現在應該只能從您剛才建立的虛擬網路存取。 
 
-1. 選取 **儲存體 瀏覽器**並**重新**整理頁面。 流覽至您的檔案共享或 Blob 內容。  
+1. **選取 儲存體 瀏覽器**並**重新**整理頁面。 流覽至您的檔案共享或 Blob 內容。  
 
     >**注意：** 您應該會收到未獲授權執行此作業*的訊息*。 您不是從虛擬網路連線。 這可能需要幾分鐘的時間才會生效。
 
@@ -254,8 +254,8 @@ Copilot 可協助您瞭解如何使用 Azure 腳本工具。 Copilot 也可以�
 
 ## 透過自學型訓練深入了解
 
-+ [使用 Azure Blob 儲存體](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/) 優化您的成本。 瞭解如何使用 Azure Blob 儲存體 將成本優化。
-+ [使用共用存取簽章控制對 Azure 儲存體的](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/)存取。 使用共用存取簽章，以安全方式授與 Azure 儲存體帳戶中所儲存資料的存取權。
++ [使用 Azure Blob 儲存體](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/) 優化您的成本。 瞭解如何使用 Azure Blob 儲存體 來優化您的成本。
++ [使用共用存取簽章控制 Azure 儲存體 的](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/)存取權。 使用共用存取簽章，以安全方式授與 Azure 儲存體帳戶中所儲存資料的存取權。
 
 ## 重要心得
 
