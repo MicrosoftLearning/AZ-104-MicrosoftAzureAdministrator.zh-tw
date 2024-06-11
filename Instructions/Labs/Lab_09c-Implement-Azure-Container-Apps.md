@@ -1,22 +1,22 @@
 ---
 lab:
-  title: 實驗室 09c：實作 Azure Container Apps
+  title: 實驗室 09c：實作 Azure 容器應用程式
   module: Administer PaaS Compute Options
 ---
 
-# 實驗室 09c - 實作 Azure Container Apps
+# 實驗室 09c - 實作 Azure 容器應用程式
 
 ## 實驗室簡介
 
-在此實驗室中，您將瞭解如何實作及部署 Azure Container Apps。
+在此實驗室中，您會了解如何實作及部署 Azure 容器應用程式。
 
-此實驗室需要 Azure 訂用帳戶。 您的訂用帳戶類型可能會影響此實驗室中功能的可用性。 您可以變更區域，但步驟是使用 **美國**東部撰寫。
+此實驗室需要 Azure 訂用帳戶。 您的訂用帳戶類型可能會影響此實驗室中的功能可用性。 您可以變更區域，但這些步驟是使用**美國東部**撰寫而成。
 
-## 預估時間：15 分鐘
+## 預計時間：15 分鐘
 
 ## 實驗案例
 
-您的組織有 Web 應用程式，可在內部部署資料中心的虛擬機上執行。 組織想要將所有應用程式移至雲端，但不想要管理大量的伺服器。 您決定評估 Azure Container Apps。
+您的組織有一個在內部部署資料中心之虛擬機器上執行的 Web 應用程式。 組織想要將所有應用程式移至雲端，但不想管理大量的伺服器。 您決定評估 Azure 容器應用程式。
 
 ## 互動式實驗室模擬
 
@@ -28,64 +28,70 @@ lab:
 
 ## 作業技能
 
-- 工作 1：建立及設定 Azure 容器應用程式和環境。
-- 工作 2：測試及驗證 Azure 容器應用程式的部署。
+- 工作 1：建立及設定 Azure 容器應用程式與環境。
+- 工作 2：測試並驗證 Azure 容器應用程式的部署。
 
-## 工作 1：建立及設定 Azure 容器應用程式和環境
+## 工作 1：建立及設定 Azure 容器應用程式與環境
 
-Azure Container Apps 會進一步採用受控 Kubernetes 叢集的概念，並進一步管理叢集環境，並在叢集上提供其他受控服務。 不同於 Azure Kubernetes 叢集，您仍必須管理叢集，Azure Container Apps 實例會移除設定 Kubernetes 叢集的一些複雜度。
+Azure 容器應用程式會進一步採用受控 Kubernetes 叢集的概念及管理叢集環境，並在叢集上提供其他受控服務。 不同於 Azure Kubernetes 叢集，您仍必須管理叢集，Azure 容器應用程式執行個體會消除設定 Kubernetes 叢集的一些複雜度。
 
-1. 從 Azure 入口網站 搜尋並選取 `Container Apps`。
+1. 在 Azure 入口網站中搜尋並選取 `Container Apps`。
 
-1. 從 **[容器應用程式**] 中，選取 [ **建立**]。
+1. 在**容器應用程式**中，選取 **[建立]**。
 
-1. 使用下列資訊填寫 [基本] 索引標籤上 **的詳細數據** 。*。
+1. 使用下列資訊填寫 **[基本]** 索引標籤*上的詳細資料。
 
     | 設定 | 動作 |
     |---|---|
     | 訂用帳戶 | 選取您的 Azure 訂用帳戶 |
     | 資源群組 | `az104-rg9` |
     | 容器應用程式名稱 |  `my-app` |
-    | 區域    | **美國** 東部 （或您附近可用的區域） |
-    | Container Apps 環境 | 「保留預設」 |
+    | 區域    | **美國東部** (或您附近可用的區域) |
+    | 容器應用程式環境 | 「保留預設」 |
 
-1. 在 [ **容器]** 索引標籤上，確定 **[使用快速入門映射** ] 已啟用，且快速入門映射已設定為 **Simple hello world 容器**。
+1. 在 **[容器]** 索引標籤上，請確保 **[使用快速入門映像]** 已啟用，且快速入門映像已設定為**簡易 Hello World 容器**。
 
-1. 選取 [檢閱**並建立]，然後**選取** [建立**]。
+1. 選取 **[檢閱並建立]**，然後選取 **[建立]**。
 
-    >**注意：** 等候容器應用程式部署。 這需要幾分鐘的時間。 
+    >**注意：** 等候部署容器應用程式。 這需要幾分鐘的時間。 
  
-## 工作 2：測試及驗證 Azure 容器應用程式的部署
+## 工作 2：測試並驗證 Azure 容器應用程式的部署
 
-根據預設，您建立的 Azure 容器應用程式會使用範例 Hello World 應用程式，接受埠 80 上的流量。 Azure Container Apps 將提供應用程式的 DNS 名稱。 複製並流覽至此 URL，以確保應用程式已啟動並執行。
+根據預設，您建立的 Azure 容器應用程式會使用範例 Hello World 應用程式來接受連接埠 80 上的流量。 Azure 容器應用程式會為應用程式提供 DNS 名稱。 複製並瀏覽至此 URL，以確保應用程式啟動並執行。
 
-1. 選取 **[移至資源** ] 以檢視新的容器應用程式。
+1. 選取 **[移至資源]**，以檢視您新的容器應用程式。
 
-1. 選取 [應用程式 URL *] 旁*的連結，以檢視您的應用程式。
+1. 選取 *[應用程式 URL]* 旁的連結，以檢視您的應用程式。
 
-    ![入口網站中 ACA 概觀頁面的螢幕快照。](../media/az104-lab09b-aca-overview.png)
+    ![入口網站中 ACA 概觀頁面的螢幕擷取畫面。](../media/az104-lab09b-aca-overview.png)
 
-1. 確認您收到 **Azure Container Apps 應用程式的即時** 訊息。
+1. 驗證您是否收到**您的 Azure 容器應用程式應用程式正在執行**的訊息。
    
 ## 清除您的資源
 
-如果您使用自己的訂用 **帳戶** ，需要一分鐘的時間才能刪除實驗室資源。 這可確保資源可以釋出，並將成本降到最低。 刪除實驗室資源最簡單的方式是刪除實驗室資源群組。 
+如果您使用**自己的訂用帳戶**，請花點時間刪除實驗室資源。 如此可確保釋出資源，並將成本降到最低。 刪除實驗室資源的最簡單方式是刪除實驗室資源群組。 
 
-+ 在 Azure 入口網站 中，選取資源群組、選取 **[刪除資源群組**]、**輸入資源組名**，然後按兩下 [**刪除**]。
-+ 使用 Azure PowerShell， `Remove-AzResourceGroup -Name resourceGroupName`。
-+ 使用 CLI， `az group delete --name resourceGroupName`。
++ 在 Azure 入口網站中，選取資源群組，選取 [刪除資源群組]****，[輸入資源群組名稱]****，然後按一下 [刪除]****。
++ 使用 Azure PowerShell `Remove-AzResourceGroup -Name resourceGroupName`。
++ 使用 CLI `az group delete --name resourceGroupName`。
 
+## 利用 Copilot 延伸學習
+Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域提供協助，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 Copilot (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花幾分鐘的時間嘗試下列提示。
+
++ 摘要說明建立和設定 Azure 容器應用程式的步驟。
++ 將 Azure 容器應用程式與 Azure Kubernetes 服務進行比較和對照。
+
+## 透過自學型訓練深入了解
+
++ [在 Azure 容器應用程式中設定容器應用程式](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/)。 探究 Azure 容器應用程式的特性和功能，然後專注於如何使用 Azure 容器應用程式來建立、設定、調整及管理容器應用程式。
 
 
 ## 重要心得
 
-恭喜您完成實驗室。 以下是此實驗室的主要外賣。 
+恭喜您完成此實驗室。 以下是此實驗室的主要重點。 
 
-+ Azure Container Apps （ACA） 是無伺服器平臺，可讓您在執行容器化應用程式時維護較少的基礎結構並節省成本。
-+ Container Apps 提供伺服器組態、容器協調流程和部署詳細數據。 
-+ ACA 上的工作負載通常是長時間執行的進程，例如 Web 應用程式。
++ Azure 容器應用程式 (ACA) 是無伺服器平台，可讓您在執行容器化應用程式時維護較少的基礎結構並節省成本。
++ 容器應用程式可提供伺服器設定、容器協調流程和部署詳細資料。 
++ ACA 上的工作負載通常是長時間執行的流程，例如 Web 應用程式。
 
-## 透過自學型訓練深入了解
-
-+ [在 Azure Container Apps 中設定容器應用程式](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/)。 檢查 Azure Container Apps 的功能，然後著重於如何使用 Azure Container Apps 建立、設定、調整及管理容器應用程式。
      
