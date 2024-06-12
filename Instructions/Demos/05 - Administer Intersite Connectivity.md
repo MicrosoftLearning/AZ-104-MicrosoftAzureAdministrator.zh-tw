@@ -1,70 +1,71 @@
 ---
 demo:
-  title: 示範 05：管理員 ister Intersite 連線 ivity
-  module: Administer Intersite Connectivity
+    title: 'Demonstration 05: Administer Intersite Connectivity'
+    module: 'Administer Intersite Connectivity'
 ---
 
-# 05 - 管理員 ister Intersite 連線 ivity
+# 05 - Administer Intersite Connectivity
 
-## 設定 VNet 對等互連
+## Configure VNet Peering
 
-**注意：** 針對此示範，您將需要兩個虛擬網路。
+**Note:** For this demonstration you will need two virtual networks.
 
-**參考**：[使用 VNet 對等互連 連線 虛擬網路 - 教學課程](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
+**Reference**: [Connect virtual networks with VNet peering - tutorial](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
 
-**在第一個虛擬網路上設定 VNet 對等互連**
+**Configure VNet peering on the first virtual network**
 
-1. 在 ** Azure 入口網站** 中，選取第一個虛擬網路。 檢閱對等互連的值。 
+1. In the **Azure portal**, select the first virtual network. Review the value of peering. 
 
-1. 在 ** 設定** 下，選取 **[對等互連**] 和 [**+ 新增**對等互連]。
+1. Under **Settings**, select **Peerings** and **+ Add** a new peering.
 
-1. 設定第二個虛擬網路的對等互連。 使用資訊圖示來檢閱不同的設定。 
+1. Configure the peering the second virtual network. Use the information icons to review the different settings. 
 
-1. 當對等互連完成時，請檢閱 **對等互連狀態**。 
+1. When the peering is complete, review the **Peering status**. 
 
-**確認第二個虛擬網路上的 VNet 對等互連**
+**Confirm VNet peering on the second virtual network**
 
-1. 在 Azure 入口網站 **** 中，選取第二個虛擬網路
+1. In the **Azure portal**, select the second virtual network
 
-1. 在 ** 設定** 下，選取 **[對等互連**]。
+1. Under **Settings**, select **Peerings**.
 
-1. 請注意，已自動建立對等互連。 請注意，對 **等互連狀態** 連線 **。**
+1. Notice that a peering has automatically been created. Notice that the **Peering Status** is **Connected**.
 
-1. 在實驗室中，學生會建立對等互連，並測試虛擬機之間的連線。 
+1. In the lab, students will create peering and test the connection between virtual machines. 
 
-## 設定網路路由和端點
+## Configure Network Routing and Endpoints
 
-在此示範中，我們將了解如何建立路由表、定義自訂路由，以及將路由與子網路建立關聯。
+In this demonstration, we will learn how to create a route table, define
+a custom route, and associate the route with a subnet.
 
-**注意：** 此示範需要至少有一個子網的虛擬網路。
+**Note:** This demonstration requires a virtual network with at least one subnet.
 
-**參考**：路由網路流量 - 教學課程 [- Azure 入口網站](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
+**Reference**: [Route network traffic - tutorial - Azure portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
 
-**建立路由表**
+**Create a routing table**
 
-1. 當您有時間檢閱教學課程圖表時。 說明為何您需要建立使用者定義的路由。 
+1. As you have time review the tutorial diagram. Explain why you need to create a user-defined route. 
 
-1. 存取 Azure 入口網站。
+1. Access the Azure portal.
 
-1. 搜尋並選取 [路由表]****。 **討論何時應該使用傳播閘道路由**。 
+1. Search for and select **Route tables**. Discuss when **propagate gateway routes** should be used. 
 
-1. 建立路由表，說明任何不常見的設定。 
+1. Create a routing table, explain any uncommon settings. 
 
-1. 等候新的路由表部署。
+1. Wait for the new routing table to be deployed.
 
-**新增路由**
+**Add a route**
 
-1.  選取新的路由表，然後選取 [ **路由**]。
+1.  Select your new routing table, and then select **Routes**.
 
-1.  建立新的 **路由**。 討論可用的不同 **躍點類型** 。 
+1.  Create a new **route**. Discuss the different **hop types** that are available. 
 
-1.  建立新的路由，並等候部署資源。
+1.  Create the new route and wait for the resource to be deployed.
  
-**將路由表關聯至子網**
+**Associate a route table to a subnet**
 
-1.  瀏覽至您想要與路由表建立關聯的子網路。
+1.  Navigate to the subnet you want to associate with the routing table.
 
-1.  選取 [ **路由表** ]，然後選擇新的路由表。 
+1.  Select **Route table** and choose your new routing table. 
 
-1.  **儲存** 您的變更。
+1.  **Save** your changes.
 

@@ -1,65 +1,65 @@
 ---
 demo:
-  title: 示範 06：管理員 註冊網路流量管理
-  module: Administer Network Traffic Management
+    title: 'Demonstration 06: Administer Network Traffic Management'
+    module: 'Administer Network Traffic Management'
 ---
 
 
-# 06 - 管理員 註冊網路流量管理
+# 06 - Administer Network Traffic Management
 
-## 設定 Azure Load Balancer
+## Configure Azure Load Balancer
 
-在此示範中，我們將瞭解如何建立公用負載平衡器。 
+In this demonstration, we will learn how to create a public load balancer. 
 
-**注意：** 此示範需要至少有一個子網的虛擬網路。 
+**Note:** This demonstration requires a virtual network with at least one subnet. 
 
-**參考**：快速入門：[使用 Azure 入口網站 建立公用負載平衡器以負載平衡 VM](https://learn.microsoft.com/azure/load-balancer/quickstart-load-balancer-standard-public-portal)
+**Reference**: [Quickstart: Create a public load balancer to load balance VMs using the Azure portal](https://learn.microsoft.com/azure/load-balancer/quickstart-load-balancer-standard-public-portal)
 
-**顯示入口網站的協助我選擇功能**
+**Show the portal's help me choose feature**
 
-1. 存取 Azure 入口網站。
+1. Access the Azure portal.
 
-1. 搜尋並選取 **[負載平衡 - 協助我選擇**]。
+1. Search for and select **Load balancing - help me choose**.
 
-1. 使用精靈來逐步解說不同的案例。
+1. Use the wizard to walk-through different scenarios.
    
-**建立負載平衡器**
+**Create a load balancer**
 
-1. 繼續 Azure 入口網站。
+1. Continue in the Azure portal.
 
-1. 搜尋並選取 **[負載平衡器**]。 **建立** 負載平衡器。 
+1. Search for and select **Load balancer**. **Create** a load balancer. 
 
-1. 在 [**基本] 索引**標籤上，討論 **SKU**、**類型和****階層**。
+1. On the **Basics** tab, discuss **SKU**, **Type**, and **Tier**.
 
-1. 在 [ **前端 IP 組態** ] 索引標籤上，討論使用公用 IP 位址。
+1. On the **Frontend IP configuration** tab, discuss using a public IP address.
 
-1. 在 [ **後端集區]** 索引標籤上，選取具有IP位址範圍的虛擬網路。
+1. On the **Backend pools** tab, select the virtual network with IP address range.
 
-1. 在 [ **輸入規則]** 索引標籤上，建立負載平衡規則。 討論通訊協定、埠、健康情況探查**和工作階段持續性**等**參數。********** 
+1. On the **Inbound rules** tab, create a load balancing rule. Discuss parameters like **Protocol**, **Ports**, **Health probes**, and **Session persistence**. 
 
 
-## 設定 Azure 應用程式閘道
+## Configure Azure Application Gateway
 
-在此示範中，我們將瞭解如何建立 Azure 應用程式閘道。 
+In this demonstration, we will learn how to create an Azure Application Gateway. 
 
-**注意**：若要保持簡單，請在完成設定時建立新的虛擬網路和子網。 
+**Note**: To keep things simple, create new virtual networks and subnets as you go through the configuration. 
 
-**參考**：快速入門：[使用 Azure 應用程式閘道 引導 Web 流量 - Azure 入口網站](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
+**Reference**: [Quickstart: Direct web traffic with Azure Application Gateway - Azure portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
 
-**建立 Azure 應用程式閘道**
+**Create the Azure Application Gateway**
 
-1. 存取 Azure 入口網站。
+1. Access the Azure portal.
 
-1. 搜尋並選取 **[Azure 應用程式閘道**]。
+1. Search for and select **Azure Application Gateway**.
 
-1. **建立** 新的閘道。
+1. **Create** a new gateway.
 
-1. 在 [ **基本] 索引** 標籤上，討論 **[** 階層]、 **[自動調整**] 和 **[實例計數**]。
+1. On the **Basics** tab, discuss **Tiers**, **Autoscaling**, and **Instance counts**.
 
-1. 在 [ **前端] 索引** 標籤上，討論IP位址類型。
+1. On the **Frontends** tab, discuss the IP address types.
 
-1. 在 [ **後端] 索引卷標上** ，討論何時使用空的後端集區。
+1. On the **Backends** tab, discuss when to use an empty backend pool.
 
-1. 在 [組態]** 索引標籤上**，討論路由規則。 與負載平衡器規則比較。
+1. On the **Configuration** tab, discuss routing rules. Compare to the load balancer rules.
 
-1. 說明建立閘道之後，您接著會新增後端目標並進行測試。 
+1. Explain that after gateway is created, you would then add backend targets and test. 

@@ -1,27 +1,27 @@
 ---
 demo:
-  title: 示範指示
-  module: All
+    title: 'Demonstration Instructions'
+    module: 'All'
 ---
 
-# 目的
+# Purpose
 
-此目錄提供 AZ-104 Azure 管理員 istrator 課程的講師示範。 **它不適合您執行每個示範。挑選最適合您對象的物件。**
+This directory provides instructor demonstrations for the AZ-104 Azure Administrator course. **It is not intended for you to do every demonstration. Pick the ones most applicable to your audience.**
 
-# 要考量的事項
+# Things to think about
 
-- 大部分領域都會提供示範。 請花點時間了解每一個示範，並決定要使用哪些。 有些示範是針對 Azure 入口網站的簡易「展示與討論」逐步解說，其他則需要具備指令碼技能。
+- Most areas have a demonstration. Take the time to work through each one and decide which to use. Some of the demonstrations are simple show and tell walk-throughs of the Azure portal; others require scripting skills.
 
-- 請考慮讓學生跟著做示範，或讓其中一名學生的「開車」，並指導他們通過步驟。
+- Consider having the students follow along as you do the demonstration or have one of the students' "drive" and coach them through the steps.
 
-- 考慮先進行示範，然後再使用投影片來回答問題，並確保已涵蓋所有內容。
+- Consider doing the demonstration first and then using the slides to answer questions and ensure everything is covered.
 
-- 考慮與正式實驗之間的重疊性，並以最佳方式運用您的時間。
+- Consider the overlap with the formal labs and make the best use of your time.
 
-- 這些示範是為具備 Azure 系統管理體驗的講師所提供。 這些步驟的等級超過學生將執行的課程實驗等級。
+- These demonstrations are provided for an instructor with Azure administration experience. The steps are at a higher level than the course labs that students will perform.
 
-- 這些示範提供一組基本功能來向您的學生展示。 如果時間允許，可隨意新增、顯示及討論更多內容。
+- These demonstrations provide a minimal set of features to show your students. As time permits feel free to add, show, and discuss more things.
 
-- [ *摘要和資源]* 頁面會識別 Learn 沙盒可供使用的位置。 請考慮使用沙箱來引導學生完成這些步驟。
+- The *Summary and Resources* page identifies where Learn sandboxes are available. Consider using a sandbox to walk students through the steps.
 
-- 如果您沒有示範環境，請考慮使用提供的教學課程和快速入門頁面。 
+- If you don't have a demonstration environment consider using the Tutorial and QuickStart pages that are provided. 

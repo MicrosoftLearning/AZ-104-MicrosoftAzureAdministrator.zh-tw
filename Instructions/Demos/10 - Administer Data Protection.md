@@ -1,62 +1,62 @@
 ---
 demo:
-  title: 示範 10：管理員 註冊數據保護
-  module: Administer Data Protection
+    title: 'Demonstration 10: Administer Data Protection'
+    module: 'Administer Data Protection'
 ---
 
-# 10 - 管理資料保護
+# 10 - Administer Data Protection
 
-## 備份 Azure 檔案共用
+## Backup Azure File Shares
 
-在此示範中，我們將探索如何在 Azure 入口網站中備份檔案共用。
+In this demonstration, we will explore backing up a file share in the Azure portal.
 
-> **注意：** 此示範需要具有檔案共享的記憶體帳戶。 
+> **Note:** This demonstration requires a storage account with a file share. 
 
-**參考**：[備份 Azure 入口網站 中的 Azure 檔案共用](https://docs.microsoft.com/azure/backup/backup-afs)
+**Reference**: [Back up Azure file shares in the Azure portal](https://docs.microsoft.com/azure/backup/backup-afs)
 
-**建立復原服務保存庫**
+**Create a Recovery Services vault**
 
-1. 使用 Azure 入口網站。
+1. Use the Azure portal.
 
-1. 搜尋選取 **的復原服務保存庫**。
+1. Search for an select **Recovery Services vaults**.
 
-1. 建立 **復原服務保存庫**。 檢閱保存庫與檔案共享位於相同區域的需求。 
+1. Create a **Recovery Services Vault**. Review the requirement that the vault be in the same region as the file share. 
 
-1. 等候建立保存庫。 
+1. Wait for the vault to be created. 
 
-**設定 Azure 檔案備份**
+**Configure the Azure files backup**
 
-1. 移至 **備份中心** 並建立新的 **備份** 實例。
+1. Go to **Backup center** and create a new **Backup** instance.
 
-1. 檢閱並討論 [數據源類型 **] 下拉式清單中的選項**。 選取 **[Azure 檔案] [Azure 記憶體]。** 
+1. Review and discuss the choices in the **Datasource type** drop-down. Select **Azure files (Azure storage)**. 
 
-1. 選取您的保存 **庫**。
+1. Select your **vault**.
 
-1. **繼續** 設定備份。 選取您要備份的特定記憶體帳戶和檔案共用。  
+1. **Continue** configuring the backup. Select the specific storage account and file share that you want to backup.  
 
-1. 在 [原則詳細數據] 中 **，按兩下 [**編輯此原則**]。** 討論備份原則的用途。 檢閱 **備份排程** 和 **保留範圍**。  
+1. In the **Policy details** click **Edit this policy**. Discuss the purpose of backup policies. Review the **backup schedule** and **retention range**.  
 
-1. **啟用備份** 以儲存變更。 
+1. **Enable backup** to save your changes. 
 
-1. 當您有時間時，請檢閱如何**還原**** 備份實例**。 此外，如何監視備份 **作業**。 
+1. As you have time, review how to **Restore** a **Backup instance**. Also, how to monitor your **Backup jobs**. 
 
-## 備份 Azure 虛擬機器
+## Backup Azure Virtual Machines
 
-在此示範中，我們會排程每日將虛擬機器備份到復原服務保存庫。
+In this demonstration, we will schedule a daily backup of a virtual machine to a Recovery Services vault.
 
-> **注意：** 此示範需要虛擬機器和復原服務保存庫。
+> **Note:** This demonstration requires a virtual machine and a recovery service vault.
 
-**參考：教學**課程 [- 備份多個 Azure 虛擬機](https://docs.microsoft.com/azure/backup/tutorial-backup-vm-at-scale)
+**Reference**: [Tutorial - Back up multiple Azure virtual machines](https://docs.microsoft.com/azure/backup/tutorial-backup-vm-at-scale)
 
-1. 使用 Azure 入口網站。
+1. Use the Azure portal.
 
-1. 移至 **備份中心** 並建立新的 **備份** 實例。
+1. Go to **Backup center** and create a new **Backup** instance.
 
-1. 選取 **[Azure 虛擬機** ] 作為 **[數據源類型** ]，然後選取保存庫。
+1. Select **Azure Virtual machines** as the **Datasource type** and select the vault.
 
-1. 檢閱 **DefaultPolicy**。 默認原則會每天備份虛擬機一次。 每日備份會保留 30 天。 立即復原快照集會保留兩天。
+1. Review the **DefaultPolicy**. The default policy backs up the virtual machine once a day. The daily backups are retained for 30 days. Instant recovery snapshots are retained for two days.
 
-1. 使用 **[啟用備份** ] 來儲存您的設定。
+1. Use **Enable backup** to save your configuration.
 
-1. 當您有時間時，請檢閱如何 **立即**備份。 此外，如何檢閱備份 **作業**。  
+1. As you have time, review how to **Backup now**. Also, how to review your **Backup jobs**.  
 

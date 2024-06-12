@@ -1,67 +1,67 @@
 ---
 demo:
-  title: 示範 08：管理員 註冊 Azure 虛擬機器
-  module: Administer Azure Virtual Machines
+    title: 'Demonstration 08: Administer Azure Virtual Machines'
+    module: 'Administer Azure Virtual Machines'
 ---
 
 
-# 08 - 管理員 註冊 Azure 虛擬機器
+# 08 - Administer Azure Virtual Machines
 
-## 示範 -- 在入口網站中建立 虛擬機器
+## Demonstration -- Create Virtual Machines in the portal
 
-在此示範中，我們將在入口網站中建立及存取 Azure 虛擬機。
+In this demonstration, we will create and access an Azure virtual machine in the portal.
 
-**參考**
+**References**
 
-[快速入門 - 在 Azure 入口網站 中建立 Windows VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal)
+[Quickstart - Create a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal)
 
-[快速入門 - 在 Azure 入口網站 中建立 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-portal)
+[Quickstart - Create a Linux VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-portal)
 
-[使用 Bastion 將 連線 至虛擬機](https://learn.microsoft.com/azure/bastion/tutorial-create-host-portal#connect)
+[Connect to a virtual machine with Bastion](https://learn.microsoft.com/azure/bastion/tutorial-create-host-portal#connect)
 
-**建立虛擬機**
+**Create the virtual machine**
 
-**注意：** 這些步驟僅涵蓋數個虛擬機器參數。 請隨意探索並涵蓋其他區域。 視您的物件而定，您可以建立 Windows 或 Linux 虛擬機。
+**Note:** These steps only cover a few virtual machine parameters. Feel free to explore and cover other areas. You can create either Windows or Linux virtual machine, depending on your audience.
 
-1. 使用 Azure 入口網站。
+1. Use the Azure portal.
 
-1. 搜尋 **虛擬機**。 
+1. Search for **Virtual machines**. 
 
-1. 建立基本虛擬機。 檢閱可用性選項、映像和輸入規則。
+1. Create a basic virtual machine. Review the availability options, images, and inbound rules.
 
-1. 討論建立安全系統管理員帳戶的重要性。
+1. Discuss the importance of creating a secure administrator account.
 
-1. 建立虛擬機，並等候資源部署。  
+1. Create the virtual machine and wait for the resource to deploy.  
 
-**連線至虛擬機器**
+**Connect to the virtual machine**
 
-1. 有數種方式可以 **連線** 虛擬機。 
+1. There are several ways to **Connect** to the virtual machine. 
 
-1. 針對 Windows 伺服器，您可以使用 **RDP**，如快速入門所示。 
+1. For a Windows server you can use **RDP**, as shown in the QuickStart. 
 
-1. 針對 Linux 伺服器，您可以 **SSH**，如快速入門所示。 
+1. For a Linux server you can **SSH**, as shown in the QuickStart. 
 
-1. 針對任一部伺服器，您可以連線到 **Bastion** 服務 （快速入門）。 請檢閱為何建議使用 Bastion 來 RDP 或 SSH。 
+1. For either server you can connect with the **Bastion** service (QuickStart). Review why Bastion is preferred to RDP or SSH. 
 
-## 設定虛擬機器可用性
+## Configure Virtual Machine Availability
 
-在此示範中，我們將探索虛擬機器調整規模選項。
+In this demonstration, we will explore virtual machine scaling options.
 
-**參考**
+**References**
 
-[使用 Azure 入口網站 在擴展集中建立虛擬機](https://learn.microsoft.com/azure/virtual-machine-scale-sets/flexible-virtual-machine-scale-sets-portal)
+[Create virtual machines in a scale set using Azure portal](https://learn.microsoft.com/azure/virtual-machine-scale-sets/flexible-virtual-machine-scale-sets-portal)
 
-1. 使用 Azure 入口網站。
+1. Use the Azure Portal.
 
-1. 搜尋並選取 **[虛擬機器擴展集**]。 
+1. Search for and select **Virtual Machine Scale Sets**. 
 
-1. 建立 **虛擬機器擴展集**。 檢閱虛擬機擴展集的用途。 檢閱統一**與**彈性**協調流程模式之間的差異**。 說明您的選取專案可能會影響您的調整選項。 
+1. Create a **Virtual Machine Scale Sets**. Review the purpose of virtual machine scale sets. Review the difference between the **Uniform** and **Flexible** orchestration modes. Explain your selection can affect your scaling options. 
 
-1. 移至 [ **調整]** 索引標籤。 
+1. Move to **Scaling** tab. 
 
-1. 檢閱如何使用 **手動調整** 和 **相應縮小原則** 。 
+1. Review how **Manual scale** and **Scale-in policy** is used. 
 
-1. 變更為自定義**調整**原則。 
+1. Change to a **Custom** scaling policy. 
 
-1. 檢閱 CPU 閾值 \** 如何**用來相應放大和相應放大虛擬機實例。 
+1. Review how **CPU threshold (%)** is used to scale out and scale in the virtual machine instances. 
 
