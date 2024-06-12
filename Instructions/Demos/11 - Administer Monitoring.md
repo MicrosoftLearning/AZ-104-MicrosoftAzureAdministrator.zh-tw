@@ -1,52 +1,52 @@
 ---
 demo:
-  title: 示範 11：管理員 ister 監視
-  module: Administer Monitoring
+    title: 'Demonstration 11: Administer Monitoring'
+    module: 'Administer Monitoring'
 ---
 
-# 11 - 管理監視
+# 11 - Administer Monitoring
 
-## 設定 Azure 警示
+## Configure Azure Alerts
 
-在此示範中，我們將建立警示規則。
+In this demonstration, we will create an alert rule.
 
-**參考**： [使用 Azure 監視器建立、檢視及管理計量警示](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-metric)
+**Reference**: [Create, view, and manage Metric Alerts Using Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-metric)
 
-**建立警示規則**
+**Create an alert rule**
 
-1. 使用 Azure 入口網站。
+1. Use the Azure portal.
 
-1. 搜尋並選取 [監視]，然後選取 **[警示****]。**
+1. Search for and select **Monitor** and then **Alerts**.
 
-1. 選取警示規則的範圍。 討論如何依訂用帳戶、資源類型或資源位置進行篩選。
+1. Select a scope for the alert rule. Discuss how You can filter by subscription, resource type, or resource location.
 
-1. 設定警示規則的條件。 討論訊號如何定義您想要測量的專案。 
+1. Set the conditions for the alert rule. Discuss how signals define what you want to measure. 
 
-1. 設定警示規則的動作。 檢閱動作群組和可用的通知類型。 
+1. Set the actions for the alert rule. Review action groups and the type of notifications that are available. 
 
-1. 設定警示規則的詳細數據。 檢閱常見的詳細數據，例如嚴重性。 
+1. Set the details for the alert rule. Review common details like severity. 
 
-1. 完成警示的設定，並檢閱已引發的任何警示。 
+1. Finish configuring your alert and review any alerts which have fired. 
 
-## 設定 Log Analytics
+## Configure Log Analytics
 
-在此示範中，您將使用 Log Analytics 查詢語言。
+In this demonstration, you will work with the Log Analytics query language.
 
-1. 使用 Azure 入口網站。
+1. Use the Azure portal.
 
-1. 搜尋並選取 [監視 **]，然後**選取 **[記錄**]。
+1. Search for and select **Monitor** and then **Logs**.
 
-1. 如果顯示，請關閉啟動顯示畫面。
+1. If shown, close the splash screen.
 
-1. 選取範圍並 **套用** 您的變更。 
+1. Select a scope and **apply** your changes. 
 
-1. 檢閱記錄資訊在數據表中的組織方式。 瀏覽數個數據表。
+1. Review how log information is organized in tables. Browse several of the tables.
 
-1. 移至 [查詢] 索引**標籤。選取查詢並**載入編輯器**。** 討論已建立多少個常見的查詢。
+1. Move to the **queries** tab. Select a query and **load to editor**. Discuss how many common queries have already been created.
 
-1. 簡短檢閱 KQL 語法。 
+1. Briefly review the KQL syntax. 
 
-1. 當您有時間時，請試驗 **[我的最愛] 和 **[已儲存的** 查詢**]。
+1. As you have time, experiment with **Favorites** and **Saved Queries**.
 
 
 

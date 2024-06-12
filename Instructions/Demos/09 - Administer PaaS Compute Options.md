@@ -1,106 +1,106 @@
 ---
 demo:
-  title: 示範 09：管理員ister PaaS 計算選項
-  module: Administer PaaS Compute Options
+    title: 'Demonstration 09: Administer PaaS Compute Options'
+    module: 'Administer PaaS Compute Options'
 ---
 
-# 09 - 管理員ister PaaS 計算選項
+# 09 - Administer PaaS Compute Options
 
-## 設定 Azure App Service 方案
+## Configure Azure App Service Plans
 
-在此示範中，我們將建立和使用 Azure App Service 方案。
+In this demonstration, we will create and work with Azure App Service plans.
 
-**參考 ** ： [ 管理 App Service 方案 - Azure App 服務](https://docs.microsoft.com/azure/app-service/app-service-plan-manage)
+**Reference**: [Manage App Service plan - Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-plan-manage)
 
-**參考 ** ： [ 在 Azure App 服務 中相應增加應用程式](https://learn.microsoft.com/azure/app-service/manage-scale-up)
+**Reference**: [Scale up an app in Azure App Service](https://learn.microsoft.com/azure/app-service/manage-scale-up)
 
-**參考 ** ： [ 自動調整Azure App 服務](https://learn.microsoft.com/azure/app-service/manage-automatic-scaling?tabs=azure-portal)
+**Reference**: [Automatic scaling in Azure App Service](https://learn.microsoft.com/azure/app-service/manage-automatic-scaling?tabs=azure-portal)
 
-1. 使用 Azure 入口網站。 
+1. Use the Azure portal. 
 
-1. 搜尋並選取  ** [App Service 方案 ** ]。
+1. Search for and select **App Service plans**.
 
-1. 建立簡單的 App Service 方案。 討論選取 Windows 或 Linux 的需求。 立即或後續步驟中討論定價方案。 
+1. Create a simple App Service plan. Discuss the need to select Windows or Linux. Discuss pricing plans now or in the next steps. 
 
-1. 部署新的 App Service 方案。 
+1. Deploy your new app service plan. 
 
-1. 檢閱相應 ** 增加 （App Service 方案） ** 刀鋒視窗。 討論開發/測試和 ** ** 生產 ** 計畫之間的差異 ** 。 檢閱功能清單。 
+1. Review the **Scale up (App Service Plan)** blade. Discuss the difference between **Dev/Test** and **Production** plans. Review the feature list. 
 
-1. 檢閱相應 ** 放大 （App Service 方案） ** 刀鋒視窗。 檢閱手動 ** 與 ** 規則型 ** 之間的差異 ** 。 
+1. Review the **Scale out (App Service Plan)** blade. Review the difference between **Manual** and **Rule-based**. 
 
-## 設定 Azure 應用程式服務
+## Configure Azure App Services
 
-在此示範中，我們將建立一個執行 Docker 容器的新 Web 應用程式。 容器會顯示歡迎訊息。
+In this demonstration, we will create a new web app that runs a Docker container. The container displays a Welcome message.
 
-**參考 ** ： [ 建立 Web 應用程式](https://learn.microsoft.com/training/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=csharp)
+**Reference**: [Create a Web App](https://learn.microsoft.com/training/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=csharp)
 
-在這項工作中，我們將建立Azure App 服務 Web 應用程式。
+In this task, we will create an Azure App Service Web App.
 
-1. 使用 Azure 入口網站。 
+1. Use the Azure portal. 
 
-1. 搜尋並選取  ** [應用程式服務 ** ]。
+1. Search for and select **App Services**.
 
-1. **建立 ** ** Web 應用程式 ** 。
+1. **Create** a **Web App**.
 
-    - 發佈： ** 程式碼 ** 。 檢閱其他選項。
-    - 執行時間堆疊： ** .Net ** 。 檢閱其他選項。
-    - 作業系統： ** Linux**
+    - Publish: **Code**. Review other choices.
+    - Runtime stack: **.Net**. Review other choices.
+    - Operating system: **Linux**
 
-1. **選取 [免費 F1 ** 服務方案]。
+1. Select the **Free F1** service plan.
 
-1. **檢閱 + 建立 ** Web 應用程式。 等候資源部署。
+1. **Review + create** the web app. Wait for the resource to deploy.
 
-1. 在 [概觀] ** 頁面上，確定 ** [狀態 ** ] 為 ** [正在執行 ** ]。 **
+1. On the **Overview** page, ensure the **Status** is **Running**.
 
-1. **選取 URL ** ，並確定預設預留位置頁面會載入。
+1. Select the **URL** and ensure the default placeholder page loads.
 
-1. 當您有時間時，請流覽 ** [部署位置] ** 選項。
+1. As you have time, explore the **Deployment slots** options.
    
-## 設定 Azure 容器執行個體
+## Configure Azure Container Instances
 
-在此示範中，我們會使用 Azure 入口網站中的 Azure 容器執行個體 （ACI） 來建立、設定及部署容器。 ACI 應用程式會顯示具有公用 Microsoft Hello World 影像的靜態 HTML 頁面。 
+In this demonstration we create, configure, and deploy a container by using Azure Container Instances (ACI) from the Azure Portal. The ACI application displays a static HTML page with the public Microsoft Hello World image. 
 
-**參考 ** ： [ 快速入門 - 將 Docker 容器部署至容器實例](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
+**Reference**: [Quickstart - Deploy Docker container to container instance](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
 
-1. 使用 Azure 入口網站。
+1. Use the Azure portal.
 
-1. 搜尋並選取  ** [容器實例 ** ]。
+1. Search for and select **Container instances**.
 
-1. **建立 ** 新的容器實例。 
+1. **Create** a new container instance. 
 
-1. 填入 [資源群組 ** ] 和 ** [ ** 容器名稱 ** ]。 
+1. Fill in the **Resource group** and **Container name**. 
 
-1. 討論影像 ** 來源 ** 選項。 使用 ** 快速入門映射 ** 。
+1. Discuss the **Image source** options. Use **Quickstart images**.
 
-1. 針對 ** 容器映射 ** ，請使用 ** mcr.microsoft.com/azuredocs/aci-helloworld:latest （Linux） ** 。 此範例 Linux 映射會封裝以 Node.js 撰寫的小型 Web 應用程式，以提供靜態 HTML 頁面。
+1. For **Container image** use **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)**. This sample Linux image packages a small web app written in Node.js that serves a static HTML page.
 
-1. 在 [ ** 網路] ** 頁面上，指定 ** 容器的 DNS 名稱標籤 ** 。 
+1. On the **Networking** page, specify a **DNS name label** for your container. 
 
-1. 將所有其他設定保留為預設值，然後選取 [ ** 檢閱 + 建立 ** ]。
+1. Leave all other settings as their defaults, then select **Review + create**.
 
-1. 等候資源部署。
+1. Wait for the resource to deploy.
 
-1. 在資源的 [ ** 概觀 ** ] 頁面上，確定 [狀態 ** ] 為 ** [ ** 正在執行 ** ]。
+1. On the **Overview** page for the resource, ensure the **Status** is **Running**.
 
-1. 流覽至 ** 容器實例的 FQDN ** ，並確定歡迎頁面會顯示。 
+1. Navigate to the **FQDN** for the container instance and ensure the welcome page displays. 
 
-**注意 ** ：若要避免額外的成本，請刪除資源。 
+**Note**: To avoid additional costs, delete the resource. 
 
-## 設定 Azure Container Apps
+## Configure Azure Container Apps
 
-在此示範中，我們將建立及使用 Azure Container Apps。 
+In this demonstration, we will create and work with Azure Container Apps. 
 
-**參考 ** ：快速入門： [ 使用 Azure 入口網站 部署您的第一個容器應用程式](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
+**Reference**: [Quickstart: Deploy your first container app using the Azure portal](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
 
-1. 搜尋並選取 ** [容器應用程式 ** ]。
+1. Search for and select **Container Apps**.
 
-1. 完成專案詳細資料 ** ** 並建立容器應用程式 ** 環境 ** 。
+1. Complete the **Project details** and create the container apps **environment**.
 
-1. **檢閱並建立 ** 容器應用程式。
+1. **Review and create** the container app.
 
-1. 使用 [ ** 應用程式 URL] ** 連結來檢視您的應用程式。
+1. Use the **Application URL** link to view your application.
 
-1. 確認瀏覽器會顯示歡迎 ** 使用 Azure Container Apps ** 訊息。 
+1. Verify the browser displays the **Welcome to Azure Container Apps** message. 
 
 
 

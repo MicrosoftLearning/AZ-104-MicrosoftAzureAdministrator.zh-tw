@@ -1,55 +1,58 @@
 ---
 demo:
-  title: 示範 01：管理員 ister Identity
-  module: Administer Identity
+    title: 'Demonstration 01: Administer Identity'
+    module: 'Administer Identity'
 ---
 
-# 01 - 管理員 ister Identity
+# 01 - Administer Identity
 
-## 設定 Entra ID 身分識別
+## Configure Entra ID Identities
 
-此領域沒有正式的示範。 請考慮逐步執行學生實驗室 01 的互動式實驗室模擬。 
+This area does not have a formal demonstration. Consider walking through the interactive lab simulation for student Lab 01. 
 
-[互動式實驗室模擬實驗室 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
+[Interactive Lab Simulation Lab 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
 
-或者，您可以使用下列其中一個快速入門。 
+Alternatively, you could use one of these QuickStarts. 
 
-**參考**： [快速入門 - Access & 在 Microsoft Entra ID 中建立新租使用者](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+**Reference**: [Quickstart - Create a group with members and view all groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
-**參考**： [快速入門 - 建立具有成員的群組，並檢視所有群組和成員](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
+## Configure User and Group Accounts
 
-## 設定使用者和群組帳戶
+In this demonstration, we will explore Entra ID identities.
 
-在此示範中，我們將探索 Entra ID 身分識別。
+**Reference**: [Add or delete users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
-**參考**： [新增或刪除使用者](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+**Reference**: [Create a basic group and add members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
-**參考**： [建立基本群組並新增成員](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+**Note:** Depending on your subscription not all areas of the Microsoft Entra ID blade will be available. 
 
-**注意：** 根據您的訂用帳戶，Microsoft Entra ID 刀鋒視窗的所有區域都無法使用。 
+**Review license and domain information**
 
-**檢閱授權和網域資訊**
+1.  Access the Azure portal and navigate to the **Microsoft Entra ID** blade.
 
-1.  存取 Azure 入口網站 並流覽至 **[Microsoft Entra ID** ] 刀鋒視窗。
+2.  On the Overview blade, review the **Tenant information** including license and primary domain.
 
-2.  在 [概觀] 刀鋒視窗中，檢閱 **租用戶資訊** ，包括授權和主要網域。
+**Explore user accounts**
 
-**探索用戶帳戶**
+1.  Select the **Users** blade.
 
-1.  選取 [ **使用者]** 刀鋒視窗。
+2.  Explain the choices for **New user** and **New guest user**.
 
-2.  說明 [新增使用者  **] 和 **[新增來賓使用者] 的選項****。
+3.  Select **New user** and discuss the differences between **Create
+    user** and **Invite user**.
 
-3.  選取 [ **新增使用者** ]，並討論 [建立使用者 ** ] 和 **[邀請使用者**] 之間的差異**。
+4.  Create a **New user** reviewing the **Identity**, **Groups and
+    roles**, **Settings**, and **Job Info** parameters.
 
-4.  建立檢 **閱身分 **識別、 **群組和角色**、 **設定** 和 **作業資訊 **參數的新使用者**。** 
+5.  After the user is created, review **Reset password**, **Delete
+    user**, and **Sign-ins**.
 
-5.  建立用戶之後，請檢閱 **重設密碼**、 **刪除使用者**和 **登入**。
+**Explore group accounts**
 
-**探索組帳戶**
+1.  Return to the **Microsoft Entra ID** page and select
+    the **Groups** blade.
 
-1.  返回 **[Microsoft Entra 標識符** ] 頁面，然後選取 [ **群組** ] 刀鋒視窗。
+2.  Create a **New group** or select an existing group to review.
 
-2.  建立新的 **群組** ，或選取要檢閱的現有群組。
-
-3.  檢閱群組的相關信息，包括 **成員資格類型和類型 **** **。
+3.  Review information about a group including **Membership
+    type** and **Type**.

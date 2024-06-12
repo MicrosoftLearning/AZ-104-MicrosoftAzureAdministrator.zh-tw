@@ -1,111 +1,112 @@
 ---
+
 demo:
-  title: 示範 02：管理員註冊治理與合規性
-  module: Administer Governance and Compliance
+    title: 'Demonstration 02: Administer Governance and Compliance'
+    module: 'Administer Governance and Compliance'
 ---
 
-# 02 - 管理員註冊治理與合規性
+# 02 - Administer Governance and Compliance
 
-## 設定訂用帳戶
+## Configure Subscriptions
 
-此領域沒有正式的示範。 
+This area does not have a formal demonstration. 
 
-**參考 ** ： [ 建立其他 Azure 訂用帳戶](https://docs.microsoft.com/azure/cost-management-billing/manage/create-subscription)
+**Reference**: [Create an additional Azure subscription](https://docs.microsoft.com/azure/cost-management-billing/manage/create-subscription)
 
-## 設定 Azure 原則
+## Configure Azure Policy
 
-在此示範中，我們將使用 Azure 原則。
+In this demonstration, we will work with Azure policies.
 
-**參考 ** ：教學課程： [ 建置原則以強制執行合規性 - Azure 原則](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage)
+**Reference**: [Tutorial: Build policies to enforce compliance - Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage)
 
-**指派原則**
+**Assign a policy**
 
-1.  存取 Azure 入口網站。
+1.  Access the Azure portal.
 
-2.  搜尋並選取  ** [原則 ** ]。
+2.  Search for and select **Policy**.
 
-3.  選取 [指派  **   ]，然後 ** 選取 ** [指派原則 ** ]。
+3.  Select **Assignments** and then **Assign Policy**.
 
-5.   **討論決定強制執行原則指派之資源或資源群組的範圍 **   。
+5.  Discuss the **Scope** which determines what resources or grouping of resources the policy assignment is enforced on.
 
-6.  選取 [原則  ** 定義 ** 省略號] 以開啟可用的定義清單。 請花點時間來檢閱內建原則定義。
+6.  Select the **Policy definition** ellipsis to open the list of available definitions. Take some time to review the built-in policy definitions.
 
-7.  搜尋並選取 [  ** 允許的位置] ** 原則。 此原則可讓您限制您的組織在部署資源時可指定的位置。
+7.  Search for and select the **Allowed locations** policy. This policy enables you to restrict the locations your organization can specify when deploying resources.
 
-8.  移動 [  ** 參數] **   索引標籤，並使用下拉式清單選取一或多個允許的位置。
+8.  Move the **Parameters** tab and using the drop-down select one or more allowed locations.
 
-9.  按一下 [  ** 檢閱 + 建立   ** ]，然後按一下  ** [建立 **   ] 以建立原則。
+9.  Click **Review + create** and then **Create** to create the policy.
 
-**建立並指派方案定義**
+**Create and assign an initiative definition**
 
-1.  返回 [Azure 原則] 頁面，然後選取 [撰寫] 底下的 [  ** 定義 **   ]。
+1.  Return to the Azure Policy page and select **Definitions** under Authoring.
 
-2.  選取頁面頂端的 [  ** 計畫定義 **   ]。
+2.  Select **Initiative Definition** at the top of the page.
 
-3.  提供  ** 名稱和  ** **   描述。 **
+3.  Provide a **Name** and **Description**.
 
-4.  **建立新的 **   類別。
+4.  **Create new** Category.
 
-5.  從右側面板  ** 新增 **  **   [允許的位置] 原則。 **  
+5.  From the right panel **Add** the **Allowed locations** policy.
 
-6.  新增您選擇的另一個原則。
+6.  Add one additional policy of your choosing.
 
-7.  **儲存 **   您的變更，然後將  ** 方案定義指派 **   給您的訂用帳戶。
+7.  **Save** your changes and then **Assign** your initiative definition to your subscription.
 
-**檢查合規性**
+**Check for compliance**
 
-1.  返回 Azure 原則服務頁面。
+1.  Return to the Azure Policy service page.
 
-2.  選取 [  ** 合規性 ** ]。
+2.  Select **Compliance**.
 
-3.  檢閱原則的狀態和定義。
+3.  Review the status of your policy and your definition.
 
-**檢查補救工作**
+**Check for remediation tasks**
 
-1.  返回 Azure 原則服務頁面。
+1.  Return to the Azure Policy service page.
 
-2.  選取 [  ** 補救 ** ]。
+2.  Select **Remediation**.
 
-3.  檢閱列出的任何補救工作。
+3.  Review any remediation tasks that are listed.
 
-4. 當您有時間時，請移除原則和方案。 
+4. As you have time, remove the policy and the initiative. 
 
-## 設定角色型存取控制
+## Configure Role-Based Access Control
 
-在此示範中，我們將了解角色指派。
+In this demonstration, we will learn about role assignments.
 
-**參考 ** ：教學課程： [ 使用 Azure 入口網站 授與使用者對 Azure 資源的存取權 - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal)
+**Reference**: [Tutorial: Grant a user access to Azure resources using the Azure portal - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal)
 
-**參考 ** ： [ 快速入門 - 檢查使用者對 Azure 資源的存取權 - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/check-access)
+**Reference**: [Quickstart - Check access for a user to Azure resources - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/check-access)
 
-**尋找存取控制刀鋒視窗**
+**Locate Access Control blade**
 
-1.  存取 Azure 入口網站，然後選取資源群組。 記下您使用的資源群組。
+1.  Access the Azure portal and select a resource group. Make a note of what resource group you use.
 
-2.   **選取存取控制 （IAM） **   ] 刀鋒視窗。
+2.  Select the **Access Control (IAM)** blade.
 
-3.  此刀鋒視窗適用于許多不同的資源，因此您可以控制許可權。
+3.  This blade will be available for many different resources so you can control permissions.
 
-**檢視角色權限**
+**Review role permissions**
 
-1.  選取 [角色]  **   索引 ** 標籤（頂端）。
+1.  Select the **Roles** tab (top).
 
-1.  檢閱可用的大量內建角色。
+1.  Review the large number of built-in roles that are available.
 
-1.  按兩下角色，然後選取 [  ** 許可權 **   ] （top）。
+1.  Double-click a role, and then select **Permissions** (top).
 
-1.  繼續鑽研角色，直到您可以檢視該角色的  ** 讀取、寫入和刪除 **   動作為止。
+1.  Continue drilling into the role until you can view the **Read, Write, and Delete** actions for that role.
 
-1.   **返回存取控制 （IAM） **   刀鋒視窗。
+1.  Return to the **Access Control (IAM)** blade.
 
-**新增角色指派**
+**Add a role assignment**
 
-1.  建立使用者或選取現有的使用者。
+1.  Create a user or select an existing user.
 
-1.  選取  ** [新增角色指派 ** ]，然後選取角色。 例如， * 擁有者 * 。
+1.  Select **Add role assignment** and select a role. For example, *owner*.
 
-1.  選取 [  ** 檢查存取權 ** ]。
+1.  Select **Check access**.
 
-1.  檢閱使用者權限。
+1.  Review the user permissions.
 
-1.  請注意，您可以  ** 拒絕指派 ** 。
+1.  Note that you can **Deny assignments**.
