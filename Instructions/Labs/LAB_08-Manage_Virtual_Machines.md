@@ -20,7 +20,7 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現互動式實驗室模擬對本主題很有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。
+您可能會發現部分互動式實驗室模擬對本主題十分有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。
 
 + [在入口網站中建立虛擬機器](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%201)。 建立虛擬機器、連線並安裝 Web 伺服器角色。
 
@@ -32,8 +32,8 @@ lab:
 
 ## 作業技能
 
-+ 工作 1：使用 Azure 入口網站部署具有區域復原性的 Azure 虛擬機器。
-+ 工作 2：管理虛擬機器的計算能力和儲存體調整能力。
++ 工作 1：使用 Azure 入口網站部署區域復原性 Azure 虛擬機器。
++ 工作 2：管理 Azure 虛擬機器的計算與儲存空間。
 + 工作 3：建立並設定 Azure 虛擬機器擴展集。
 + 工作 4：調整 Azure 虛擬機器擴展集。
 + 工作 5：使用 Azure PowerShell (選項 1) 建立虛擬機器。
@@ -354,7 +354,7 @@ lab:
     -Location 'East US' `
     -Image 'Win2019Datacenter' `
     -Zone '1' `
-    -Size 'Standard_D2s_v3' ` 
+    -Size 'Standard_D2s_v3' `
     -Credential (Get-Credential)
     ```
 
@@ -419,7 +419,7 @@ lab:
 + 使用 CLI `az group delete --name resourceGroupName`。
 
 ## 利用 Copilot 延伸學習
-Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域提供協助，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 Copilot (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花幾分鐘的時間嘗試下列提示。
+Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域或您需要更多資訊的地方提供協助。 開啟 Edge 瀏覽器，然後選擇 [Copilot] (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花幾分鐘的時間嘗試下列提示。
 
 + 提供建立 Linux 虛擬機器的步驟和 Azure CLI 命令。 
 + 檢閱您可以調整虛擬機器並改善效能的方式。
