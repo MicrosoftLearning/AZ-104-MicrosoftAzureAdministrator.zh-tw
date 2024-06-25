@@ -169,38 +169,21 @@ lab:
 
 1. 在 CoreServicesVnet 的 [設定]**** 底下，選取 [對等互連]****。
 
-1. 在 [CoreServicesVnet | 對等互連] 上，選取 [+ 新增]****。
-
-1. 請使用下表中的資訊來建立對等互連。
+1. 在 [CoreServicesVnet | 對等互連] 上，選取 [+ 新增]****。 如果未指定，請採用預設值。 
 
 | **參數**                                    | **值**                             |
-| --------------------------------------------- | ------------------------------------- |
-| **此虛擬網路**                                       |                                       |
+| --------------------------------------------- | ------------------------------------- |                                
 | 對等互連連結名稱                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| 允許 CoreServicesVnet 存取對等互連虛擬網路            | 已選取 (預設)                       |
-| 允許 CoreServicesVnet 接收來自對等互連虛擬網路的轉送流量 | 已選取                       |
-| 允許 CoreServicesVnet 中的閘道將流量轉送至對等互連虛擬網路 | 未選取 (預設) |
-| 啟用 CoreServicesVnt 以使用對等互連網路的遠端閘道       | 未選取 (預設)                        |
-| **遠端虛擬網路**                                   |                                       |
-| 對等互連連結名稱                             | `ManufacturingVnet-to-CoreServicesVnet` |
-| 虛擬網路部署模型              | **資源管理員**                      |
-| 我知道我的資源識別碼                         | 未選取                          |
-| 訂用帳戶                                  | *訂用帳戶*    |
-| 虛擬網路                               | **ManufacturingVnet**                     |
+| 虛擬網路    | **ManufacturingVM-net （az104-rg5）**  |
 | 允許 ManufacturingVnet 存取 CoreServicesVnet  | 已選取 (預設)                       |
 | 允許 ManufacturingVnet 接收來自 CoreServicesVnet 的轉送流量 | 已選取                        |
-| 允許 CoreServicesVnet 中的閘道將流量轉送至對等互連虛擬網路 | 未選取 (預設) |
-| 啟用 ManufacturingVnet 以使用 CoreServicesVnet 的遠端閘道       | 未選取 (預設)                        |
+| 對等互連連結名稱                             | `ManufacturingVnet-to-CoreServicesVnet` |
+| 允許 CoreServicesVnet 存取對等互連虛擬網路            | 已選取 (預設)                       |
+| 允許 CoreServicesVnet 接收來自對等互連虛擬網路的轉送流量 | 已選取                       |
 
-1. 檢閱設定並選取 [新增]****。
-
-![對點互連頁面的螢幕擷取畫面。](../media/az104-lab05-peering.png)
-
- 
 1. 在 [CoreServicesVnet | 對等互連] 上，確認已列出 [CoreServicesVnet-to-ManufacturingVnet]**** 對等互連。 重新整理頁面以確保 [對等互連狀態]**** 為 [已連線]****。
 
 1. 切換至 [ManufacturingVnet]****，並確認已列出 [ManufacturingVnet-to-CoreServicesVnet]**** 對等互連。 請確保 [對等互連狀態]**** 為 [已連線]****。 您可能需要**重新整理**頁面。 
-
 
 ## 工作 5：使用 Azure PowerShell 以測試虛擬機器之間的連線
 
@@ -281,14 +264,14 @@ lab:
 
 ## 清除您的資源
 
-如果您使用自己的訂用帳戶****，請花點時間刪除實驗室資源。 如此可確保釋出資源，並將成本降到最低。 刪除實驗室資源的最簡單方式是刪除實驗室資源群組。 
+如果您使用**自己的訂用帳戶**，請花點時間刪除實驗室資源。 如此可確保釋出資源，並將成本降到最低。 刪除實驗室資源的最簡單方式是刪除實驗室資源群組。 
 
 + 在 Azure 入口網站中，選取資源群組，選取 [刪除資源群組]****，[輸入資源群組名稱]****，然後按一下 [刪除]****。
 + 使用 Azure PowerShell `Remove-AzResourceGroup -Name resourceGroupName`。
 + 使用 CLI `az group delete --name resourceGroupName`。
 
 ## 利用 Copilot 延伸學習
-Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可針對實驗室中未涵蓋的區域或您需要更多資訊的地方提供協助。 開啟 Edge 瀏覽器，然後選擇 Copilot (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花幾分鐘的時間嘗試下列提示。
+Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域或您需要更多資訊的地方提供協助。 開啟 Edge 瀏覽器，然後選擇 [Copilot] (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花幾分鐘的時間嘗試下列提示。
 
 + 如何使用 Azure PowerShell 或 Azure CLI 命令以在 vnet1 和 vnet2 之間新增虛擬網路對等互連？
 + 建立資料表，醒目提示 Azure 支援的各種 Azure 和第三方監視工具。 醒目提示使用每個工具的時機。 
