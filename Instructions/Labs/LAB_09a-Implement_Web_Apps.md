@@ -106,7 +106,7 @@ lab:
 
 1. 在 [存放庫] 欄位中輸入 `https://github.com/Azure-Samples/php-docs-hello-world`
 
-1. 在 [分支] 欄位中輸入 `main`。
+1. 在 [分支] 欄位中輸入 `master`。
 
 1. 選取 [儲存]。
 
