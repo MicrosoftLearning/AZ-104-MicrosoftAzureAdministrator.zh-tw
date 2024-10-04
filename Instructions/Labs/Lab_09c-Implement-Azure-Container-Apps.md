@@ -47,7 +47,7 @@ Azure 容器應用程式會進一步採用受控 Kubernetes 叢集的概念及�
     | 資源群組 | `az104-rg9` |
     | 容器應用程式名稱 |  `my-app` |
     | 區域    | **美國東部** (或您附近可用的區域) |
-    | 容器應用程式環境 | 「保留預設」 |
+    | 容器應用程式環境 | 選取 **[建立新的**>將環境名稱設定為 **my-environment > ****Create** |
 
 1. 在 **[容器]** 索引標籤上，請確保 **[使用快速入門映像]** 已啟用，且快速入門映像已設定為**簡易 Hello World 容器**。
 
@@ -76,7 +76,7 @@ Azure 容器應用程式會進一步採用受控 Kubernetes 叢集的概念及�
 + 使用 CLI `az group delete --name resourceGroupName`。
 
 ## 利用 Copilot 延伸學習
-Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域提供協助，或您需要更多資訊的地方。 開啟 Edge 瀏覽器，然後選擇 Copilot (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花幾分鐘的時間嘗試下列提示。
+Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域或您需要更多資訊的地方提供協助。 開啟 Edge 瀏覽器，然後選擇 [Copilot] (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花幾分鐘的時間嘗試下列提示。
 
 + 摘要說明建立和設定 Azure 容器應用程式的步驟。
 + 將 Azure 容器應用程式與 Azure Kubernetes 服務進行比較和對照。
