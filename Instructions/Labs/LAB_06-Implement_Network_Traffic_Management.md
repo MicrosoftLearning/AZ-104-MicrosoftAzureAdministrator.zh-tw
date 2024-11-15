@@ -326,10 +326,10 @@ lab:
 
 Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域或您需要更多資訊的地方提供協助。 開啟 Edge 瀏覽器，然後選擇 [Copilot] (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花一點時間嘗試下列提示。
 
-+ 比較和對比 Azure Load Balancer 與 Azure 應用程式閘道。
-+ 如何對 Azure Load Balancer 的輸入連線進行疑難排解?
-+ 設定 Azure 應用程式閘道的基本步驟為何?
-+ 建立醒目提示 Azure 負載平衡解決方案的資料表。 包含這些數據行：支持的通訊協定、路由原則、會話親和性和 TLS 卸除。
++ 比較和對比 Azure Load Balancer 與 Azure 應用程式閘道。 協助我決定應該使用每個產品的案例。
++ 哪些工具可用來針對 Azure Load Balancer 的連線進行疑難解答？ 
++ 設定 Azure 應用程式閘道的基本步驟為何? 提供高階檢查清單。 
++ 建立醒目提示三個 Azure 負載平衡解決方案的數據表。 針對每個解決方案，顯示支援的通訊協定、路由原則、會話親和性和 TLS 卸除。
   
 ## 透過自學型訓練深入了解
 
