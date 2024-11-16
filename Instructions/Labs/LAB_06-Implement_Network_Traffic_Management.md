@@ -326,11 +326,11 @@ lab:
 
 Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可在實驗室中未涵蓋的區域或您需要更多資訊的地方提供協助。 開啟 Edge 瀏覽器，然後選擇 [Copilot] (右上方)，或瀏覽至 *copilot.microsoft.com*。 請花一點時間嘗試下列提示。
 
-+ 比較和對比 Azure Load Balancer 與 Azure 應用程式閘道。
-+ 如何對 Azure Load Balancer 的輸入連線進行疑難排解?
-+ 設定 Azure 應用程式閘道的基本步驟為何?
-+ 建立醒目提示 Azure 負載平衡解決方案的資料表。 包含下列資料行:支援的通訊協定、私人負載平衡、全域負載平衡、路由原則、支援的環境、連線清空、工作階段親和性、主機和路徑型負載平衡、TLS 卸載、網站加速、安全性、快取和壓縮。
-
++ 比較和對比 Azure Load Balancer 與 Azure 應用程式閘道。 協助我決定應該使用每個產品的案例。
++ 哪些工具可用來針對 Azure Load Balancer 的連線進行疑難解答？ 
++ 設定 Azure 應用程式閘道的基本步驟為何? 提供高階檢查清單。 
++ 建立醒目提示三個 Azure 負載平衡解決方案的數據表。 針對每個解決方案，顯示支援的通訊協定、路由原則、會話親和性和 TLS 卸除。
+  
 ## 透過自學型訓練深入了解
 
 + [使用 Azure Load Balancer 改善應用程式可擴縮性和復原能力](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/)。 討論 Azure 中的不同負載平衡器，以及如何選擇符合您需求的適當 Azure Load Balancer 解決方案。
@@ -338,7 +338,7 @@ Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可�
 
 ## 重要心得
 
-恭喜您完成此實驗室。 以下是本實驗室的主要重點。
+恭喜您完成此實驗室。 以下是此實驗室的重點。
 
 + Azure Load Balancer 是將網路流量分散到傳輸層 (OSI 第 4 層 - TCP 和 UDP) 之多部虛擬機器的絕佳選擇。
 + 公用負載平衡器可用來對進入 VM 的網際網路流量進行負載平衡。 只有在前端需要私人 IP 時，才會使用內部 (或私人) 負載平衡器。
