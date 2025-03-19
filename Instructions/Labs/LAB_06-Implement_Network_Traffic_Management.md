@@ -1,10 +1,10 @@
 ---
 lab:
-  title: 實驗室 06：實作流量管理
+  title: 實驗室06：實作網路流量管理
   module: Administer Network Traffic Management
 ---
 
-# 實驗 06 - 實作流量管理
+# 實驗室06 - 實作網路流量管理
 
 ## 實驗室簡介
 
