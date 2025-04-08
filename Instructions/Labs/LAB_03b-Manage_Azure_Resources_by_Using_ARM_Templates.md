@@ -44,8 +44,8 @@ lab:
 
 1. 登入 **Azure 入口網站** - `https://portal.azure.com`。
 
-1. 搜尋並選取 `Disks`。
-
+1. 搜尋並選取 `Disks`。 
+   
 1. 在 [磁碟] 頁面上，選取 **[建立]**。
 
 1. 在 **[建立受控磁碟]** 頁面上，設定磁碟，然後選取 **[確定]**。 
@@ -213,23 +213,27 @@ lab:
 
 在此工作中，您會使用 Bicep 檔案來部署受控磁碟。 Bicep 是依據 ARM 範本建置的宣告式自動化工具。
 
+1. **找出 \Allfiles\Lab03\azuredeploydisk.bicep** 檔案。
+
 1. 繼續在 **Bash** 工作階段的 **Cloud Shell** 中工作。
 
-1. 找出並下載 **\Allfiles\Lab03\azuredeploydisk.bicep** 檔案。
+1. 選取 [ **管理檔案** ]，然後將 **Bicep 檔案上傳** 至 Cloud Shell。 
 
-1. 將 Bicep 檔案**上傳**至 Cloud Shell。 
+1. 按兩下 [ **編輯器** ]，並在出現提示 **時確認** 切換至傳統CloudShell。
 
-1. 選取 **[編輯器]** (大括弧) 圖示，然後瀏覽至檔案。
+1. **選取 azuredeploydisk.bicep** 檔案 
 
-1. 請花一分鐘的時間仔細閱讀 Bicep 範本檔案。 請注意磁碟資源的定義方式。 
+1. 花一分鐘的時間閱讀 Bicep 範本檔案。 請注意磁碟資源的定義方式。 
    
 1. 進行下列變更：
 
-    + 將 **managedDiskName** 值變更為 `Disk4`。
-    + 將 **sku name** 值變更為 `StandardSSD_LRS`。
-    + 將 **diskSizeinGiB** 值變更為 `32`。
+    + 將 **managedDiskName** 值第 4 行變更為 Disk4。
+    + 將 **sku 名稱** 值第 26 行變更為 StandardSSD_LRS。
+    + 將 **diskSizeinGiB** 值變更為第 7 行，變更為 32。
 
-1. 使用 **Ctrl+S** 儲存變更。
+    >**注意：** 實驗室檔案中提供已完成的 Bicep 範本。
+    
+1. 使用 **Ctrl + S** 儲存變更。
 
 1. 現在請部署範本。
 
