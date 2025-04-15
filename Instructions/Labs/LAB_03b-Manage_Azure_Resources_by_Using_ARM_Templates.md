@@ -227,7 +227,7 @@ lab:
    
 1. 進行下列變更：
 
-    + 將 **managedDiskName** 值第 4 行變更為 Disk4。
+    + 將 **managedDiskName** 值第 2 行變更為 Disk4。
     + 將 **sku 名稱** 值第 26 行變更為 StandardSSD_LRS。
     + 將 **diskSizeinGiB** 值變更為第 7 行，變更為 32。
 
