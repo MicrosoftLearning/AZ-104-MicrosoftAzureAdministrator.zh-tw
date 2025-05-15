@@ -49,7 +49,7 @@ lab:
 
 ## 工作 1：透過 Azure 入口網站指派標籤
 
-在此工作中，您將透過 Azure 入口網站建立標籤，並將其指派給 Azure 資源群組。 標籤是治理策略的重要元件，如 Microsoft Well-Architected Framework 和雲端採用架構中所述。 標籤可讓您快速識別資源擁有者、終止日期、群組連絡人，以及貴組織認為重要的其他名稱/值組。 針對這項工作，您會指派一個標籤，以識別資源角色 ('Infra' 表示 'Infrastructure')。
+在此工作中，您將透過 Azure 入口網站建立標籤，並將其指派給 Azure 資源群組。 標籤是治理策略的重要元件，如 Microsoft Well-Architected Framework 和雲端採用架構中所述。 標籤可讓您快速識別資源擁有者、終止日期、群組連絡人，以及貴組織認為重要的其他名稱/值組。 針對這項工作，您會指派識別資源成本中心的標記。 
 
 1. 登入 **Azure 入口網站** - `https://portal.azure.com`。
       
