@@ -73,7 +73,7 @@ lab:
 
 1. 在 [網路]**** 索引標籤上，針對 [虛擬網路]，選取 [新建]****。
 
-1. 使用下列資訊來設定虛擬網路，然後選取 [確定]****。 如有必要，請移除或取代現有資訊。
+1. 使用下列資訊來設定虛擬網路，然後選取 [ **確定**]。 如有必要，請移除或取代現有資訊。
 
     | 設定 | 值 | 
     | --- | --- |
@@ -118,7 +118,7 @@ lab:
 
 1. 在 [網路] 索引標籤上，針對 [虛擬網路]，選取 [新建]****。
 
-1. 使用下列資訊來設定虛擬網路，然後選取 [確定]****。  如有必要，請移除或取代現有的位址範圍。
+1. 使用下列資訊來設定虛擬網路，然後選取 [ **確定**]。  如有必要，請移除或取代現有的位址範圍。
 
     | 設定 | 值 | 
     | --- | --- |
@@ -169,23 +169,23 @@ lab:
 
 1. 在 CoreServicesVnet 的 [設定]**** 底下，選取 [對等互連]****。
 
-1. 在 [CoreServicesVnet | 對等互連] 上，選取 [+ 新增]****。 如果未指定，請採用預設值。 
+1. 在 CoreServicesVnet 的 [對等互連] 底下，選取 **[+ 新增**]。 如果未指定，請採用預設值。 
 
-| **參數**                                    | **ReplTest1**                             |
-| --------------------------------------------- | ------------------------------------- |                                
-| 對等互連連結名稱                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| 虛擬網路    | **ManufacturingVM-net （az104-rg5）**  |
-| 允許 ManufacturingVnet 存取 CoreServicesVnet  | 已選取 (預設)                       |
-| 允許 ManufacturingVnet 接收來自 CoreServicesVnet 的轉送流量 | 已選取                        |
-| 對等互連連結名稱                             | `ManufacturingVnet-to-CoreServicesVnet` |
-| 允許 CoreServicesVnet 存取對等互連虛擬網路            | 已選取 (預設)                       |
-| 允許 CoreServicesVnet 接收來自對等互連虛擬網路的轉送流量 | 已選取                       |
+    | **參數**                                    | **ReplTest1**                             |
+    | --------------------------------------------- | ------------------------------------- |                                
+    | 對等互連連結名稱                             | `CoreServicesVnet-to-ManufacturingVnet` |
+    | 虛擬網路    | **ManufacturingVM-net （az104-rg5）**  |
+    | 允許 ManufacturingVnet 存取 CoreServicesVnet  | 已選取 (預設) |
+    | 允許 ManufacturingVnet 接收來自 CoreServicesVnet 的轉送流量 | 已選取  |
+    | 對等互連連結名稱                             | `ManufacturingVnet-to-CoreServicesVnet` |
+    | 允許 CoreServicesVnet 存取對等互連虛擬網路            | 已選取 (預設) |
+    | 允許 CoreServicesVnet 接收來自對等互連虛擬網路的轉送流量 | 已選取 |
 
-1. 按一下**新增**。
+4. 按一下**新增**。
 
-1. 在 [CoreServicesVnet | 對等互連] 上，確認已列出 [CoreServicesVnet-to-ManufacturingVnet]**** 對等互連。 重新整理頁面以確保 [對等互連狀態]**** 為 [已連線]****。
+5. 在 CoreServicesVnet 的 [對等互連] 下，確認 **已列出 CoreServicesVnet 對 ManufacturingVnet** 對等互連。 重新整理頁面以確保 [對等互連狀態]**** 為 [已連線]****。
 
-1. 切換至 [ManufacturingVnet]****，並確認已列出 [ManufacturingVnet-to-CoreServicesVnet]**** 對等互連。 請確保 [對等互連狀態]**** 為 [已連線]****。 您可能需要**重新整理**頁面。 
+6. 切換至 [ManufacturingVnet]****，並確認已列出 [ManufacturingVnet-to-CoreServicesVnet]**** 對等互連。 請確保 [對等互連狀態]**** 為 [已連線]****。 您可能需要**重新整理**頁面。 
 
 ## 工作 5：使用 Azure PowerShell 以測試虛擬機器之間的連線
 
@@ -231,7 +231,7 @@ lab:
     | 子網路位址範圍 | `10.0.1.0/24`  |
 
    
-1. 在 Azure 入口網站中，搜尋並選取 `Route tables`，然後選取 [建立]****。 
+1. 在 Azure 入口網站 中，搜尋並選取 ，選取 `Route tables`**[檢閱 + 建立**]，然後選取 [**建立**]。 
 
     | 設定 | 值 | 
     | --- | --- |
@@ -245,7 +245,7 @@ lab:
    
 1. 選取資源 （而非複選框） **rt-CoreServices**
 
-1. 展開 **[設定**]，然後選取 [路由 **]，然後選取 **[**+ 新增**]。 建立從未來網路虛擬設備 （NVA） 到 CoreServices 虛擬網路的路由。 
+1. 展開 **[設定**]，然後選取 [路由 **]，然後選取 **[**新增**]。 建立從未來網路虛擬設備 （NVA） 到 CoreServices 虛擬網路的路由。 
 
     | 設定 | 值 | 
     | --- | --- |
