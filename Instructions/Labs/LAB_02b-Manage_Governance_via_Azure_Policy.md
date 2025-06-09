@@ -164,9 +164,9 @@ lab:
     | --- | --- |
     | 指派名稱 | `Inherit the Cost Center tag and its value 000 from the resource group if missing` |
     | 描述 | `Inherit the Cost Center tag and its value 000 from the resource group if missing` |
-    | 強制執行原則 | 啟用 |
+    | 強制執行原則 | 已啟用 |
 
-1. 按兩下 [下一步]，並將 [參數] 設定為下列值：
+1. 按 [下一步]****，並將 [參數]**** 設定為下列值：
 
     | 設定 | 值 |
     | --- | --- |
