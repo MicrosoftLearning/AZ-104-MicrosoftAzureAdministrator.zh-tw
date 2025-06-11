@@ -20,13 +20,7 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現幾個互動式實驗室模擬對本主題很有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。 
-
-+ [使用全域虛擬網路對等互連來連線兩個 Azure 虛擬網路](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)。 測試不同虛擬網路中兩個虛擬機器之間的連線。 建立虛擬網路對等互連並重新測試。
-
-+ [設定對虛擬網路的監視](https://learn.microsoft.com/training/modules/configure-monitoring-virtual-networks/)。 了解如何使用 Azure 網路監看員連線監視器、流量記錄、NSG 診斷和封包擷取來監視 Azure IaaS 網路資源的連線。
-
-+ [實作站台間連線能力](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%209)。 虛擬網路本以使用多個虛擬機器建立虛擬網路基礎結構。 設定虛擬網路對等互連並測試連線。 
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 架構圖
 
@@ -231,7 +225,7 @@ lab:
     | 起始位址 | `10.0.1.0/24`  |
 
    
-1. 在 Azure 入口網站 中，搜尋並選取 ，選取 `Route tables`[**+ 建立**]。
+1. 在 Azure 入口網站 中，搜尋並選取 ，選取 `Route tables`**[+ 建立**]。
 
 1. 輸入下列詳細數據，選取 **[檢閱 + 建立**]，然後選取 [ **建立**]。 
 

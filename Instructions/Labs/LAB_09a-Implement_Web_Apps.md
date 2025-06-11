@@ -21,11 +21,7 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現部分互動式實驗室模擬對本主題十分有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂閱。
-
-+ [建立 Web 應用程式](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%202)。 建立一個執行 Docker 容器的 Web 應用程式。
-    
-+ [實作 Azure Web 應用程式](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)。 建立 Azure Web 應用程式、管理部署及縮放應用程式。 
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 架構圖
 

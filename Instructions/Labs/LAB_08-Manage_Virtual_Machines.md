@@ -20,20 +20,12 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現部分互動式實驗室模擬對本主題十分有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。
-
-+ [在入口網站中建立虛擬機器](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%201)。 建立虛擬機器、連線並安裝 Web 伺服器角色。
-
-+ [使用範本部署虛擬機器](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209)。 探索快速入門資源庫並定位虛擬機器範本。 部署範本並驗證部署。
-
-+ [使用 PowerShell 建立虛擬機器](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2010)。 使用 Azure PowerShell 部署虛擬機器。 檢閱 Azure Advisor 建議。
-
-+ [使用 CLI 建立虛擬機器](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2011)。 使用 CLI 部署虛擬機器。 檢閱 Azure Advisor 建議。
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 作業技能
 
-+ 工作 1：使用 Azure 入口網站部署區域復原性 Azure 虛擬機器。
-+ 工作 2：管理 Azure 虛擬機器的計算與儲存空間。
++ 工作 1：使用 Azure 入口網站部署具有區域復原性的 Azure 虛擬機器。
++ 工作 2：管理虛擬機器的計算能力和儲存體調整能力。
 + 工作 3：建立並設定 Azure 虛擬機器擴展集。
 + 工作 4：調整 Azure 虛擬機器擴展集。
 + 工作 5：使用 Azure PowerShell (選項 1) 建立虛擬機器。

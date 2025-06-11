@@ -20,11 +20,10 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現互動式實驗室模擬對本主題很有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂閱。
-
-+ [實作監視](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)。 建立 Log Analytics 工作區與 Azure 自動化解決方案。 檢閱虛擬機器的監視和診斷設定。 檢閱 Azure 監視器和 Log Analytics 功能。 
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 架構圖
+
 
 ![結構工作圖表](../media/az104-lab11-architecture.png)
 
