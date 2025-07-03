@@ -16,13 +16,9 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現部分互動式實驗室模擬對本主題十分有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 Azure 訂用帳戶並非必要項。 
-
-+ [使用 Azure Resource Manager 範本管理 Azure 資源](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)。 使用範本檢閱、建立及部署受控磁碟。
+>**注意**：先前提供的實驗室模擬已淘汰。
   
-+ [使用範本建立虛擬機器](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209)。 使用快速入門範本部署虛擬機器。
-  
-## 實驗案例
+## 實驗室場景
 
 您的小組想要查看自動化及簡化資源部署的方式。 貴組織正在尋找減少系統管理負荷、降低人為錯誤並增加一致性的方法。  
 

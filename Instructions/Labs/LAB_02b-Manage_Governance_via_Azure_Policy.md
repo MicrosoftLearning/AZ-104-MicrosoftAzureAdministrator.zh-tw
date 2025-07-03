@@ -28,13 +28,7 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現幾個互動式實驗室模擬對本主題很有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂閱。 
-
-+ [管理資源鎖定](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2015)。 新增資源鎖定並測試以確認。
-  
-+ [建立 Azure 原則](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2017)。 建立可限制位置資源所在位置的 Azure 原則。 建立新的資源，並確保強制執行原則。 
-
-+ [透過 Azure 原則管理治理](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)。 透過 Azure 入口網站建立和指派標籤。 建立需要標記的 Azure 原則。 補救不符合規範的資源。
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 架構圖
 

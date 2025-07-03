@@ -20,11 +20,7 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現部分互動式實驗室模擬對本主題十分有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要有 Azure 訂閱。
-
-+ [建立並設定 Azure Load Balancer](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)。 建立虛擬網路、後端伺服器、負載平衡器，然後測試負載平衡器。
-+ [部署 Azure 應用程式閘道](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)。 建立應用程式閘道、建立虛擬機器、建立後端集區，以及測試閘道。
-+ [實作流量管理](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)。 實作完整的中樞和輪輻網路，這包括虛擬機器、虛擬網路、對等互連、負載平衡器和應用程式閘道。
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 作業技能
 

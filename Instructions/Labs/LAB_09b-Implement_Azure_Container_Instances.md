@@ -17,13 +17,10 @@ lab:
 ## 實驗案例
 
 您的組織有一個在內部部署資料中心之虛擬機器上執行的 Web 應用程式。 組織想要將所有應用程式移至雲端，但不想管理大量的伺服器。 您決定評估 Azure 容器執行個體和 Docker。 
+
 ## 互動式實驗室模擬
 
-您可能會發現部分互動式實驗室模擬對本主題十分有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂閱。
-
-+ [部署 Azure 容器執行個體](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203)。 使用 Azure 容器執行個體建立、設定及部署 Docker 容器。
-  
-+ [實作 Azure 容器執行個體](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)。  使用 Azure 容器執行個體部署 Docker 映像。 
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 架構圖
 

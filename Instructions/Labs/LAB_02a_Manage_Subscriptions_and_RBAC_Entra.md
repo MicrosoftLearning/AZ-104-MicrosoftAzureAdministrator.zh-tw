@@ -28,13 +28,7 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現一些互動式實驗室模擬對本主題十分有用。 模擬可讓您按自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂用帳戶。 
-
-+ [使用 RBAC 管理存取權](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2014)。 將內建角色指派給使用者，並監視活動記錄。 
-
-+ [管理訂用帳戶與 RBAC](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)。 實作管理群組並建立及指派自訂 RBAC 角色。
-
-+ [開啟支援要求](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022)。 檢閱支援方案選項，然後建立及監視支援要求、技術或計費。
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 架構圖
 

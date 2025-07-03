@@ -24,15 +24,7 @@ lab:
 
 ## 互動式實驗室模擬
 
-您可能會發現幾個互動式實驗室模擬對本主題很有用。 模擬可讓您以自己的步調點選類似的案例。 互動式模擬與此實驗室之間有所差異，但許多核心概念都相同。 不需要 Azure 訂閱。 
-
-+ [保護網路流量](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2013)。 建立虛擬機器、虛擬網路和網路安全性群組。 新增網路安全性群組規則，以允許和不允許流量。
-  
-+ [建立簡單的虛擬網路](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204)。 建立具有兩部虛擬機器的虛擬網路。 示範虛擬機器可以通訊。 
-
-+ [在 Azure 中設計和實作虛擬網路](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)。 建立資源群組，並建立具有子網路的虛擬網路。  
-
-+ [實作虛擬網路](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)。 建立和設定虛擬網路、部署虛擬機器、設定網路安全性群組，以及設定 Azure DNS。
+>**注意**：先前提供的實驗室模擬已淘汰。
 
 ## 架構圖
 
