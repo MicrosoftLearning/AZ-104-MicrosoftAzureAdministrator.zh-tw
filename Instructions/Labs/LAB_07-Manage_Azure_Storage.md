@@ -257,7 +257,6 @@ Copilot 可協助您了解如何使用 Azure 指令碼工具。 Copilot 也可�
 
 + [建立 Azure 儲存體帳戶](https://learn.microsoft.com/training/modules/create-azure-storage-account/)。 針對您的業務需求，使用正確的選項來建立 Azure 儲存體帳戶。
 + [管理 Azure Blob 儲存體生命週期](https://learn.microsoft.com/training/modules/manage-azure-blob-storage-lifecycle)。 了解如何管理整個 Azure Blob 儲存體生命週期中的資料可用性。
-+ [使用 Azure Blob 儲存體最佳化您的成本](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/)。 了解如何使用 Azure Blob 儲存體最佳化您的成本。
 
 ## 重要心得
 
