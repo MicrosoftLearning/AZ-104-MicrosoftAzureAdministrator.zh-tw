@@ -91,7 +91,7 @@ lab:
 
     | 設定 | 值 |
     | --- | --- |
-    | 指派名稱 | '需要成本中心標籤及其對資源的價值 |
+    | 指派名稱 | `Require Cost Center tag and its value on resources` |
     | 描述 | `Require Cost Center tag and its value on all resources in the resource group`|
     | 強制執行原則 | 啟用 |
 

@@ -1,11 +1,3 @@
-#README
-
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
 # AZ-104：Microsoft Azure 系統管理員
 
 ## 歡迎使用
@@ -18,7 +10,7 @@ Or, if you are a trainer with a microsoft.com email address, please create a tic
 
 ## 安全性問題 - 2023 年 4 月
 
-立即生效，管理員密碼將會從 JSON 範本參數檔案中移除。 這表示學生在部署範本時必須提供密碼。 這會影響 Labs 4、5、6、7、10 和 11。  實驗室指示將會變更以反映這項變更。 
+立即生效，管理員密碼將會從 JSON 範本參數檔案中移除。 這表示學生在部署範本時必須提供密碼。 這會影響實驗室 4、5、6、7、10 和 11。  實驗室指示將會變更以反映這項變更。 
 
 ## 我們要做什麼？
 
@@ -38,7 +30,7 @@ Or, if you are a trainer with a microsoft.com email address, please create a tic
 
 - 任何 MCT 都可以對 GitHub 存放庫的程式碼或內容提交提取要求，Microsoft 和課程製作者會視需要分級和歸納內容和實驗室程式碼。
 
-- 可以提交 bug、變更、改進和想法。  在我們有之前尋找新的 Azure 功能嗎？  提交新的示範！
+- 可以提交 bug、變更、改進和想法。  在我們之前發現了新的 Azure 功能嗎？  提交新的示範！
 
 ## 那對學生手冊的改動呢？
 
