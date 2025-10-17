@@ -26,10 +26,6 @@ lab:
 
 - 使用資源鎖定來保護已設定的資源
 
-## 互動式實驗室模擬
-
->**附註**： 先前提供的實驗室模擬已淘汰。
-
 ## 架構圖
 
 ![工作結構的圖表。](../media/az104-lab02b-architecture.png)
@@ -95,7 +91,7 @@ lab:
 
     | 設定 | 值 |
     | --- | --- |
-    | 指派名稱 | '需要成本中心標籤及其對資源的價值 |
+    | 指派名稱 | `Require Cost Center tag and its value on resources` |
     | 描述 | `Require Cost Center tag and its value on all resources in the resource group`|
     | 強制執行原則 | 啟用 |
 
