@@ -54,7 +54,7 @@ lab:
     | 可用性選項 | **可用性區域** |
     | 可用性區域 | **區域 1、2** (讀取有關使用虛擬機器擴展集的附註) |
     | 安全性類型 | **標準** |
-    | 映像 | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | 圖片 （查看所有圖片） | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Azure Spot 執行個體 | **unchecked** |
     | 大小 | **標準 D2s v3** |
     | 使用者名稱 | `localadmin` |
@@ -172,7 +172,7 @@ lab:
     | 協調流程模式 | **Uniform** |
     | 安全性類型 | **標準** |
     | 調整選項 | **檢閱並採用預設值**。 我們將在下一個任務中更改此設置。 |
-    | 映像 | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | 圖片 （查看所有圖片） | **Windows Server 2019 Datacenter - x64 Gen2** |
     | 使用 Azure 現成 VM 折扣執行 | **未選取** |
     | 大小 | **標準 D2s_v3** |
     | 使用者名稱 | `localadmin` |
