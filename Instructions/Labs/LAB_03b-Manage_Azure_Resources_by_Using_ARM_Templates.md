@@ -198,7 +198,7 @@ lab:
 1. 確認磁碟已建立。
 
      ```sh
-     az disk list --output table
+     az disk list --resource-group az104-rg3 --output table
      ```
    
 ## 工作 5：使用 Azure Bicep 部署資源
@@ -234,7 +234,7 @@ lab:
 1. 確認磁碟已建立。
 
     ```sh
-    az disk list --output table
+    az disk list --resource-group az104-rg3 --output table
     ```
 
     >**注意：** 您已成功部署五個受控磁碟，每個的部署方式都不同。 做得好！
